@@ -1,0 +1,257 @@
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s 			page 1
+
+
+   1              		.file	"lseek.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text._lseek,"ax",@progbits
+  10              		.align	1
+  11              		.globl	_lseek
+  13              	_lseek:
+  14              	.LFB1:
+  15              		.file 1 "./../../firmware/RISCV/stubs/lseek.c"
+   1:./../../firmware/RISCV/stubs/lseek.c **** /* See LICENSE of license details. */
+   2:./../../firmware/RISCV/stubs/lseek.c **** 
+   3:./../../firmware/RISCV/stubs/lseek.c **** #include <errno.h>
+   4:./../../firmware/RISCV/stubs/lseek.c **** #include <unistd.h>
+   5:./../../firmware/RISCV/stubs/lseek.c **** #include <sys/types.h>
+   6:./../../firmware/RISCV/stubs/lseek.c **** #include "stub.h"
+   7:./../../firmware/RISCV/stubs/lseek.c **** 
+   8:./../../firmware/RISCV/stubs/lseek.c **** off_t _lseek(int fd, off_t ptr, int dir)
+   9:./../../firmware/RISCV/stubs/lseek.c **** {
+  16              		.loc 1 9 1
+  17              		.cfi_startproc
+  18              	.LVL0:
+  10:./../../firmware/RISCV/stubs/lseek.c ****   if (isatty(fd))
+  19              		.loc 1 10 3
+   9:./../../firmware/RISCV/stubs/lseek.c ****   if (isatty(fd))
+  20              		.loc 1 9 1 is_stmt 0
+  21 0000 4111     		addi	sp,sp,-16
+  22              	.LCFI0:
+  23              		.cfi_def_cfa_offset 16
+  24 0002 06C6     		sw	ra,12(sp)
+  25              		.cfi_offset 1, -4
+  26              		.loc 1 10 7
+  27 0004 97000000 		call	isatty
+  27      E7800000 
+  28              	.LVL1:
+  11:./../../firmware/RISCV/stubs/lseek.c ****     return 0;
+  12:./../../firmware/RISCV/stubs/lseek.c **** 
+  13:./../../firmware/RISCV/stubs/lseek.c ****   return _stub(EBADF);
+  14:./../../firmware/RISCV/stubs/lseek.c **** }
+  29              		.loc 1 14 1
+  30 000c B240     		lw	ra,12(sp)
+  31              		.cfi_restore 1
+  10:./../../firmware/RISCV/stubs/lseek.c ****     return 0;
+  32              		.loc 1 10 6
+  33 000e 13351500 		seqz	a0,a0
+  34              		.loc 1 14 1
+  35 0012 3305A040 		neg	a0,a0
+  36 0016 4101     		addi	sp,sp,16
+  37              	.LCFI1:
+  38              		.cfi_def_cfa_offset 0
+  39 0018 8280     		jr	ra
+  40              		.cfi_endproc
+  41              	.LFE1:
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s 			page 2
+
+
+  43              		.text
+  44              	.Letext0:
+  45              		.file 2 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\lib\\gcc\\risc
+  46              		.file 3 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+  47              		.file 4 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+  48              		.file 5 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+  49              		.file 6 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+  50              		.file 7 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+  51              		.file 8 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+  52              		.file 9 "./../../firmware/RISCV/stubs/stub.h"
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 lseek.c
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:13     .text._lseek:0000000000000000 _lseek
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:17     .text._lseek:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:19     .text._lseek:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:20     .text._lseek:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:21     .text._lseek:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:23     .text._lseek:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:25     .text._lseek:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:27     .text._lseek:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:30     .text._lseek:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:31     .text._lseek:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:33     .text._lseek:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:35     .text._lseek:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:38     .text._lseek:0000000000000018 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:40     .text._lseek:000000000000001a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:43     .text._lseek:000000000000001a .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:1600   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2441   .debug_str:0000000000000487 .LASF130
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2321   .debug_str:000000000000024d .LASF131
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2233   .debug_str:0000000000000071 .LASF132
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2205   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2211   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2305   .debug_str:0000000000000204 .LASF0
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2323   .debug_str:0000000000000272 .LASF1
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2247   .debug_str:00000000000000fd .LASF2
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2353   .debug_str:00000000000002fc .LASF3
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2337   .debug_str:00000000000002bd .LASF10
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2249   .debug_str:000000000000010b .LASF4
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2373   .debug_str:000000000000035c .LASF5
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2379   .debug_str:0000000000000378 .LASF6
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2265   .debug_str:0000000000000150 .LASF7
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2313   .debug_str:0000000000000228 .LASF8
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2231   .debug_str:000000000000005a .LASF9
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2367   .debug_str:0000000000000339 .LASF11
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2215   .debug_str:000000000000000c .LASF12
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2425   .debug_str:000000000000044a .LASF13
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2461   .debug_str:0000000000000567 .LASF14
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2333   .debug_str:00000000000002af .LASF15
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2307   .debug_str:0000000000000211 .LASF16
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2417   .debug_str:0000000000000428 .LASF17
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2419   .debug_str:0000000000000430 .LASF18
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2389   .debug_str:00000000000003a0 .LASF19
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2447   .debug_str:000000000000051d .LASF20
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2371   .debug_str:000000000000034a .LASF21
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2291   .debug_str:00000000000001c7 .LASF22
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2295   .debug_str:00000000000001d8 .LASF27
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2437   .debug_str:0000000000000474 .LASF23
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2411   .debug_str:0000000000000413 .LASF24
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2289   .debug_str:00000000000001c1 .LASF25
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2455   .debug_str:0000000000000552 .LASF26
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2303   .debug_str:00000000000001ff .LASF28
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2245   .debug_str:00000000000000f4 .LASF29
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2431   .debug_str:000000000000045e .LASF30
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2255   .debug_str:0000000000000123 .LASF31
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2485   .debug_str:00000000000005d2 .LASF32
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s 			page 4
+
+
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2359   .debug_str:0000000000000316 .LASF33
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2347   .debug_str:00000000000002e2 .LASF34
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2457   .debug_str:0000000000000557 .LASF35
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2381   .debug_str:0000000000000382 .LASF36
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2471   .debug_str:0000000000000592 .LASF37
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2259   .debug_str:0000000000000132 .LASF38
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2285   .debug_str:00000000000001b4 .LASF39
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2213   .debug_str:0000000000000000 .LASF40
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2443   .debug_str:000000000000050f .LASF41
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2269   .debug_str:0000000000000160 .LASF42
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2361   .debug_str:000000000000031f .LASF43
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2403   .debug_str:00000000000003e3 .LASF44
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2287   .debug_str:00000000000001bc .LASF45
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2383   .debug_str:000000000000038c .LASF46
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2253   .debug_str:000000000000011d .LASF47
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2219   .debug_str:000000000000001b .LASF48
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2391   .debug_str:00000000000003ab .LASF49
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2267   .debug_str:0000000000000159 .LASF50
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2315   .debug_str:000000000000023a .LASF51
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2235   .debug_str:00000000000000bd .LASF52
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2261   .debug_str:0000000000000140 .LASF53
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2299   .debug_str:00000000000001ef .LASF54
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2345   .debug_str:00000000000002db .LASF55
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2421   .debug_str:0000000000000438 .LASF56
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2475   .debug_str:00000000000005ac .LASF57
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2251   .debug_str:0000000000000117 .LASF58
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2467   .debug_str:0000000000000584 .LASF59
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2273   .debug_str:000000000000016f .LASF60
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2279   .debug_str:000000000000018d .LASF61
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2225   .debug_str:0000000000000034 .LASF62
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2339   .debug_str:00000000000002c4 .LASF63
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2395   .debug_str:00000000000003bd .LASF64
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2341   .debug_str:00000000000002ca .LASF65
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2413   .debug_str:000000000000041b .LASF66
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2427   .debug_str:0000000000000452 .LASF67
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2271   .debug_str:0000000000000168 .LASF68
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2309   .debug_str:0000000000000218 .LASF69
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2293   .debug_str:00000000000001d0 .LASF70
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2401   .debug_str:00000000000003de .LASF71
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2223   .debug_str:0000000000000029 .LASF72
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2409   .debug_str:00000000000003fa .LASF73
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2405   .debug_str:00000000000003e8 .LASF74
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2365   .debug_str:000000000000032e .LASF75
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2407   .debug_str:00000000000003f0 .LASF76
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2331   .debug_str:00000000000002a7 .LASF77
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2301   .debug_str:00000000000001f5 .LASF78
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2483   .debug_str:00000000000005cd .LASF79
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2369   .debug_str:0000000000000340 .LASF80
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2311   .debug_str:0000000000000220 .LASF81
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2277   .debug_str:0000000000000185 .LASF82
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2375   .debug_str:000000000000036a .LASF83
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2325   .debug_str:0000000000000285 .LASF84
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2465   .debug_str:000000000000057a .LASF85
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2263   .debug_str:0000000000000148 .LASF86
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2257   .debug_str:000000000000012d .LASF87
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2429   .debug_str:0000000000000459 .LASF88
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2387   .debug_str:0000000000000399 .LASF89
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s 			page 5
+
+
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2459   .debug_str:0000000000000561 .LASF90
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2319   .debug_str:0000000000000246 .LASF91
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2385   .debug_str:0000000000000393 .LASF92
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2221   .debug_str:0000000000000021 .LASF93
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2415   .debug_str:0000000000000422 .LASF94
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2435   .debug_str:000000000000046e .LASF95
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2445   .debug_str:0000000000000518 .LASF96
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2453   .debug_str:0000000000000545 .LASF97
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2439   .debug_str:000000000000047a .LASF98
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2329   .debug_str:000000000000029a .LASF99
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2473   .debug_str:000000000000059d .LASF100
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2297   .debug_str:00000000000001e0 .LASF101
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2397   .debug_str:00000000000003c6 .LASF102
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2477   .debug_str:00000000000005b3 .LASF103
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2399   .debug_str:00000000000003d1 .LASF104
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2481   .debug_str:00000000000005bf .LASF105
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2243   .debug_str:00000000000000e6 .LASF106
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2463   .debug_str:0000000000000570 .LASF107
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2327   .debug_str:000000000000028e .LASF108
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2449   .debug_str:0000000000000525 .LASF109
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2283   .debug_str:00000000000001a6 .LASF110
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2241   .debug_str:00000000000000d7 .LASF111
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2281   .debug_str:0000000000000195 .LASF112
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2227   .debug_str:000000000000003a .LASF113
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2229   .debug_str:0000000000000049 .LASF114
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2377   .debug_str:000000000000036f .LASF115
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2357   .debug_str:000000000000030f .LASF116
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2349   .debug_str:00000000000002ec .LASF117
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2469   .debug_str:000000000000058a .LASF118
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2237   .debug_str:00000000000000c6 .LASF133
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2423   .debug_str:000000000000043e .LASF119
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2451   .debug_str:0000000000000532 .LASF120
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2275   .debug_str:0000000000000178 .LASF121
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2393   .debug_str:00000000000003b3 .LASF122
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2317   .debug_str:0000000000000240 .LASF123
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2335   .debug_str:00000000000002b5 .LASF124
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2351   .debug_str:00000000000002f5 .LASF125
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2355   .debug_str:0000000000000308 .LASF126
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2433   .debug_str:0000000000000467 .LASF127
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2479   .debug_str:00000000000005b8 .LASF128
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2343   .debug_str:00000000000002d2 .LASF129
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2363   .debug_str:0000000000000327 .LASF134
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:14     .text._lseek:0000000000000000 .LFB1
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:41     .text._lseek:000000000000001a .LFE1
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2132   .debug_loc:0000000000000000 .LLST0
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2150   .debug_loc:000000000000002c .LLST1
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2164   .debug_loc:000000000000004d .LLST2
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2178   .debug_loc:000000000000006e .LLST3
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:28     .text._lseek:000000000000000c .LVL1
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2239   .debug_str:00000000000000d1 .LASF135
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:2217   .debug_str:0000000000000014 .LASF136
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:22     .text._lseek:0000000000000002 .LCFI0
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:37     .text._lseek:0000000000000018 .LCFI1
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:18     .text._lseek:0000000000000000 .LVL0
+C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s:54     .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccftmVQV.s 			page 6
+
+
+isatty

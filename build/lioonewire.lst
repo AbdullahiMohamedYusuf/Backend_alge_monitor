@@ -1,0 +1,1306 @@
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 1
+
+
+   1              		.file	"lioonewire.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.dpin_drive,"ax",@progbits
+  10              		.align	1
+  11              		.globl	dpin_drive
+  13              	dpin_drive:
+  14              	.LFB2:
+  15              		.file 1 "lioonewire.c"
+   1:lioonewire.c  **** /*
+   2:lioonewire.c  ****  * File:   onewire.c
+   3:lioonewire.c  ****  * Author: remahl
+   4:lioonewire.c  ****  *
+   5:lioonewire.c  ****  * Created on September 19, 2019, 11:40 AM
+   6:lioonewire.c  ****  */
+   7:lioonewire.c  **** 
+   8:lioonewire.c  **** #include <stdint.h>
+   9:lioonewire.c  **** #include "lioonewire.h"
+  10:lioonewire.c  **** #include "gd32vf103.h"
+  11:lioonewire.c  **** 
+  12:lioonewire.c  **** #define SKIP_ROM            0xCC
+  13:lioonewire.c  **** #define WRITE_SCRATCH_PAD   0x4E
+  14:lioonewire.c  **** #define READ_SCRATCH_PAD    0xBE
+  15:lioonewire.c  **** #define START_CONVERSION    0x44
+  16:lioonewire.c  **** #define COPY_SCRATCHPAD     0x48
+  17:lioonewire.c  **** #define RECALL_EEPROM       0xB8
+  18:lioonewire.c  **** #define READ_POWER_SUPPLY   0xB4
+  19:lioonewire.c  **** 
+  20:lioonewire.c  **** #define CONFIG_9BIT         0x1F
+  21:lioonewire.c  **** #define CONFIG_10BIT        0x3F
+  22:lioonewire.c  **** #define CONFIG_11BIT        0x5F
+  23:lioonewire.c  **** #define CONFIG_12BIT        0x7F
+  24:lioonewire.c  **** 
+  25:lioonewire.c  **** #define T_A 6
+  26:lioonewire.c  **** #define T_B 64
+  27:lioonewire.c  **** #define T_C 60
+  28:lioonewire.c  **** #define T_D 10
+  29:lioonewire.c  **** #define T_E 9
+  30:lioonewire.c  **** #define T_F 55
+  31:lioonewire.c  **** #define T_G 0
+  32:lioonewire.c  **** #define T_H 480
+  33:lioonewire.c  **** #define T_I 70
+  34:lioonewire.c  **** #define T_J 410
+  35:lioonewire.c  **** 
+  36:lioonewire.c  **** #define DPIN  GPIO_PIN_5   
+  37:lioonewire.c  **** #define DPORT GPIOB
+  38:lioonewire.c  **** 
+  39:lioonewire.c  **** 
+  40:lioonewire.c  **** 
+  41:lioonewire.c  **** 
+  42:lioonewire.c  **** void dpin_drive(){
+  16              		.loc 1 42 18
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 2
+
+
+  17              		.cfi_startproc
+  43:lioonewire.c  ****     gpio_bit_reset(DPORT, DPIN);
+  18              		.loc 1 43 5
+  19 0000 37150140 		li	a0,1073811456
+  20 0004 93050002 		li	a1,32
+  21 0008 130505C0 		addi	a0,a0,-1024
+  22 000c 17030000 		tail	gpio_bit_reset
+  22      67000300 
+  23              	.LVL0:
+  24              		.cfi_endproc
+  25              	.LFE2:
+  27              		.section	.text.dpin_release,"ax",@progbits
+  28              		.align	1
+  29              		.globl	dpin_release
+  31              	dpin_release:
+  32              	.LFB3:
+  44:lioonewire.c  **** }
+  45:lioonewire.c  **** void dpin_release(){
+  33              		.loc 1 45 20
+  34              		.cfi_startproc
+  46:lioonewire.c  ****     gpio_bit_set(DPORT, DPIN);
+  35              		.loc 1 46 5
+  36 0000 37150140 		li	a0,1073811456
+  37 0004 93050002 		li	a1,32
+  38 0008 130505C0 		addi	a0,a0,-1024
+  39 000c 17030000 		tail	gpio_bit_set
+  39      67000300 
+  40              	.LVL1:
+  41              		.cfi_endproc
+  42              	.LFE3:
+  44              		.section	.text.dpin_sample,"ax",@progbits
+  45              		.align	1
+  46              		.globl	dpin_sample
+  48              	dpin_sample:
+  49              	.LFB4:
+  47:lioonewire.c  **** }
+  48:lioonewire.c  **** 
+  49:lioonewire.c  **** uint8_t dpin_sample(){
+  50              		.loc 1 49 22
+  51              		.cfi_startproc
+  50:lioonewire.c  ****     return gpio_input_bit_get(DPORT, DPIN);
+  52              		.loc 1 50 5
+  53              		.loc 1 50 12 is_stmt 0
+  54 0000 37150140 		li	a0,1073811456
+  49:lioonewire.c  ****     return gpio_input_bit_get(DPORT, DPIN);
+  55              		.loc 1 49 22
+  56 0004 4111     		addi	sp,sp,-16
+  57              	.LCFI0:
+  58              		.cfi_def_cfa_offset 16
+  59              		.loc 1 50 12
+  60 0006 93050002 		li	a1,32
+  61 000a 130505C0 		addi	a0,a0,-1024
+  49:lioonewire.c  ****     return gpio_input_bit_get(DPORT, DPIN);
+  62              		.loc 1 49 22
+  63 000e 06C6     		sw	ra,12(sp)
+  64              		.cfi_offset 1, -4
+  65              		.loc 1 50 12
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 3
+
+
+  66 0010 97000000 		call	gpio_input_bit_get
+  66      E7800000 
+  67              	.LVL2:
+  51:lioonewire.c  **** }
+  68              		.loc 1 51 1
+  69 0018 B240     		lw	ra,12(sp)
+  70              		.cfi_restore 1
+  71 001a 1375F50F 		andi	a0,a0,0xff
+  72 001e 4101     		addi	sp,sp,16
+  73              	.LCFI1:
+  74              		.cfi_def_cfa_offset 0
+  75 0020 8280     		jr	ra
+  76              		.cfi_endproc
+  77              	.LFE4:
+  79              		.section	.text.lio_init_OW,"ax",@progbits
+  80              		.align	1
+  81              		.globl	lio_init_OW
+  83              	lio_init_OW:
+  84              	.LFB5:
+  52:lioonewire.c  **** 
+  53:lioonewire.c  **** 
+  54:lioonewire.c  **** int first_read = 1;
+  55:lioonewire.c  **** 
+  56:lioonewire.c  **** 
+  57:lioonewire.c  **** void lio_init_OW(){
+  85              		.loc 1 57 19 is_stmt 1
+  86              		.cfi_startproc
+  58:lioonewire.c  ****     rcu_periph_clock_enable(RCU_GPIOB);
+  87              		.loc 1 58 5
+  57:lioonewire.c  ****     rcu_periph_clock_enable(RCU_GPIOB);
+  88              		.loc 1 57 19 is_stmt 0
+  89 0000 4111     		addi	sp,sp,-16
+  90              	.LCFI2:
+  91              		.cfi_def_cfa_offset 16
+  92              		.loc 1 58 5
+  93 0002 13053060 		li	a0,1539
+  57:lioonewire.c  ****     rcu_periph_clock_enable(RCU_GPIOB);
+  94              		.loc 1 57 19
+  95 0006 06C6     		sw	ra,12(sp)
+  96              		.cfi_offset 1, -4
+  97              		.loc 1 58 5
+  98 0008 97000000 		call	rcu_periph_clock_enable
+  98      E7800000 
+  99              	.LVL3:
+  59:lioonewire.c  ****     gpio_init(DPORT, GPIO_MODE_OUT_OD, GPIO_OSPEED_50MHZ, DPIN);
+ 100              		.loc 1 59 5 is_stmt 1
+  60:lioonewire.c  **** }
+ 101              		.loc 1 60 1 is_stmt 0
+ 102 0010 B240     		lw	ra,12(sp)
+ 103              		.cfi_restore 1
+  59:lioonewire.c  ****     gpio_init(DPORT, GPIO_MODE_OUT_OD, GPIO_OSPEED_50MHZ, DPIN);
+ 104              		.loc 1 59 5
+ 105 0012 37150140 		li	a0,1073811456
+ 106              		.loc 1 60 1
+  59:lioonewire.c  ****     gpio_init(DPORT, GPIO_MODE_OUT_OD, GPIO_OSPEED_50MHZ, DPIN);
+ 107              		.loc 1 59 5
+ 108 0016 93060002 		li	a3,32
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 4
+
+
+ 109 001a 0D46     		li	a2,3
+ 110 001c D145     		li	a1,20
+ 111 001e 130505C0 		addi	a0,a0,-1024
+ 112              		.loc 1 60 1
+ 113 0022 4101     		addi	sp,sp,16
+ 114              	.LCFI3:
+ 115              		.cfi_def_cfa_offset 0
+  59:lioonewire.c  ****     gpio_init(DPORT, GPIO_MODE_OUT_OD, GPIO_OSPEED_50MHZ, DPIN);
+ 116              		.loc 1 59 5
+ 117 0024 17030000 		tail	gpio_init
+ 117      67000300 
+ 118              	.LVL4:
+ 119              		.cfi_endproc
+ 120              	.LFE5:
+ 122              		.section	.text.lio_OW_write_bit,"ax",@progbits
+ 123              		.align	1
+ 124              		.globl	lio_OW_write_bit
+ 126              	lio_OW_write_bit:
+ 127              	.LFB6:
+  61:lioonewire.c  **** 
+  62:lioonewire.c  **** 
+  63:lioonewire.c  **** void lio_OW_write_bit(uint8_t val){
+ 128              		.loc 1 63 35 is_stmt 1
+ 129              		.cfi_startproc
+ 130              	.LVL5:
+  64:lioonewire.c  ****     if(val){
+ 131              		.loc 1 64 5
+  63:lioonewire.c  ****     if(val){
+ 132              		.loc 1 63 35 is_stmt 0
+ 133 0000 4111     		addi	sp,sp,-16
+ 134              	.LCFI4:
+ 135              		.cfi_def_cfa_offset 16
+ 136 0002 06C6     		sw	ra,12(sp)
+ 137              		.cfi_offset 1, -4
+ 138              		.loc 1 64 7
+ 139 0004 15C5     		beq	a0,zero,.L8
+ 140              	.LVL6:
+ 141              	.LBB4:
+ 142              	.LBB5:
+  65:lioonewire.c  ****         dpin_drive();
+ 143              		.loc 1 65 9 is_stmt 1
+ 144 0006 97000000 		call	dpin_drive
+ 144      E7800000 
+ 145              	.LVL7:
+  66:lioonewire.c  ****         tick_delay(T_A);
+ 146              		.loc 1 66 9
+ 147 000e 1945     		li	a0,6
+ 148 0010 97000000 		call	delay_1us
+ 148      E7800000 
+ 149              	.LVL8:
+  67:lioonewire.c  ****         dpin_release();
+ 150              		.loc 1 67 9
+ 151 0018 97000000 		call	dpin_release
+ 151      E7800000 
+ 152              	.LVL9:
+  68:lioonewire.c  ****         tick_delay(T_B);
+ 153              		.loc 1 68 9
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 5
+
+
+ 154 0020 13050004 		li	a0,64
+ 155              	.L10:
+ 156              	.LBE5:
+ 157              	.LBE4:
+  69:lioonewire.c  ****     }
+  70:lioonewire.c  ****     else{
+  71:lioonewire.c  ****         dpin_drive();
+  72:lioonewire.c  ****         tick_delay(T_C);
+  73:lioonewire.c  ****         dpin_release();
+  74:lioonewire.c  ****         tick_delay(T_D);
+  75:lioonewire.c  ****     }
+  76:lioonewire.c  **** }
+ 158              		.loc 1 76 1 is_stmt 0
+ 159 0024 B240     		lw	ra,12(sp)
+ 160              		.cfi_remember_state
+ 161              		.cfi_restore 1
+ 162 0026 4101     		addi	sp,sp,16
+ 163              	.LCFI5:
+ 164              		.cfi_def_cfa_offset 0
+  74:lioonewire.c  ****     }
+ 165              		.loc 1 74 9
+ 166 0028 17030000 		tail	delay_1us
+ 166      67000300 
+ 167              	.LVL10:
+ 168              	.L8:
+ 169              	.LCFI6:
+ 170              		.cfi_restore_state
+  71:lioonewire.c  ****         tick_delay(T_C);
+ 171              		.loc 1 71 9 is_stmt 1
+ 172 0030 97000000 		call	dpin_drive
+ 172      E7800000 
+ 173              	.LVL11:
+  72:lioonewire.c  ****         dpin_release();
+ 174              		.loc 1 72 9
+ 175 0038 1305C003 		li	a0,60
+ 176 003c 97000000 		call	delay_1us
+ 176      E7800000 
+ 177              	.LVL12:
+  73:lioonewire.c  ****         tick_delay(T_D);
+ 178              		.loc 1 73 9
+ 179 0044 97000000 		call	dpin_release
+ 179      E7800000 
+ 180              	.LVL13:
+  74:lioonewire.c  ****     }
+ 181              		.loc 1 74 9
+ 182 004c 2945     		li	a0,10
+ 183 004e D9BF     		j	.L10
+ 184              		.cfi_endproc
+ 185              	.LFE6:
+ 187              		.section	.text.lio_OW_read_bit,"ax",@progbits
+ 188              		.align	1
+ 189              		.globl	lio_OW_read_bit
+ 191              	lio_OW_read_bit:
+ 192              	.LFB7:
+  77:lioonewire.c  **** 
+  78:lioonewire.c  **** uint8_t lio_OW_read_bit(){
+ 193              		.loc 1 78 26
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 6
+
+
+ 194              		.cfi_startproc
+  79:lioonewire.c  ****     uint8_t res = 0;
+ 195              		.loc 1 79 5
+ 196              	.LVL14:
+  80:lioonewire.c  ****     dpin_drive();
+ 197              		.loc 1 80 5
+  78:lioonewire.c  ****     uint8_t res = 0;
+ 198              		.loc 1 78 26 is_stmt 0
+ 199 0000 4111     		addi	sp,sp,-16
+ 200              	.LCFI7:
+ 201              		.cfi_def_cfa_offset 16
+ 202 0002 06C6     		sw	ra,12(sp)
+ 203 0004 22C4     		sw	s0,8(sp)
+ 204              		.cfi_offset 1, -4
+ 205              		.cfi_offset 8, -8
+ 206              		.loc 1 80 5
+ 207 0006 97000000 		call	dpin_drive
+ 207      E7800000 
+ 208              	.LVL15:
+  81:lioonewire.c  ****     tick_delay(T_A);
+ 209              		.loc 1 81 5 is_stmt 1
+ 210 000e 1945     		li	a0,6
+ 211 0010 97000000 		call	delay_1us
+ 211      E7800000 
+ 212              	.LVL16:
+  82:lioonewire.c  ****     dpin_release();
+ 213              		.loc 1 82 5
+ 214 0018 97000000 		call	dpin_release
+ 214      E7800000 
+ 215              	.LVL17:
+  83:lioonewire.c  ****     tick_delay(T_E);
+ 216              		.loc 1 83 5
+ 217 0020 2545     		li	a0,9
+ 218 0022 97000000 		call	delay_1us
+ 218      E7800000 
+ 219              	.LVL18:
+  84:lioonewire.c  ****     res = dpin_sample();
+ 220              		.loc 1 84 5
+ 221              		.loc 1 84 11 is_stmt 0
+ 222 002a 97000000 		call	dpin_sample
+ 222      E7800000 
+ 223              	.LVL19:
+ 224 0032 2A84     		mv	s0,a0
+ 225              	.LVL20:
+  85:lioonewire.c  ****     tick_delay(T_F);
+ 226              		.loc 1 85 5 is_stmt 1
+ 227 0034 13057003 		li	a0,55
+ 228 0038 97000000 		call	delay_1us
+ 228      E7800000 
+ 229              	.LVL21:
+  86:lioonewire.c  ****     return res;
+ 230              		.loc 1 86 5
+  87:lioonewire.c  **** }
+ 231              		.loc 1 87 1 is_stmt 0
+ 232 0040 2285     		mv	a0,s0
+ 233 0042 B240     		lw	ra,12(sp)
+ 234              		.cfi_restore 1
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 7
+
+
+ 235 0044 2244     		lw	s0,8(sp)
+ 236              		.cfi_restore 8
+ 237              	.LVL22:
+ 238 0046 4101     		addi	sp,sp,16
+ 239              	.LCFI8:
+ 240              		.cfi_def_cfa_offset 0
+ 241 0048 8280     		jr	ra
+ 242              		.cfi_endproc
+ 243              	.LFE7:
+ 245              		.section	.text.lio_OW_read_byte,"ax",@progbits
+ 246              		.align	1
+ 247              		.globl	lio_OW_read_byte
+ 249              	lio_OW_read_byte:
+ 250              	.LFB8:
+  88:lioonewire.c  **** 
+  89:lioonewire.c  **** uint8_t lio_OW_read_byte()
+  90:lioonewire.c  **** {
+ 251              		.loc 1 90 1 is_stmt 1
+ 252              		.cfi_startproc
+  91:lioonewire.c  ****     uint8_t result=0;
+ 253              		.loc 1 91 5
+ 254              	.LVL23:
+  92:lioonewire.c  **** 
+  93:lioonewire.c  ****     for (uint8_t i = 0; i < 8; i++){
+ 255              		.loc 1 93 5
+ 256              	.LBB6:
+ 257              		.loc 1 93 10
+ 258              	.LBE6:
+  90:lioonewire.c  ****     uint8_t result=0;
+ 259              		.loc 1 90 1 is_stmt 0
+ 260 0000 4111     		addi	sp,sp,-16
+ 261              	.LCFI9:
+ 262              		.cfi_def_cfa_offset 16
+ 263 0002 22C4     		sw	s0,8(sp)
+ 264 0004 26C2     		sw	s1,4(sp)
+ 265 0006 06C6     		sw	ra,12(sp)
+ 266              		.cfi_offset 8, -8
+ 267              		.cfi_offset 9, -12
+ 268              		.cfi_offset 1, -4
+  90:lioonewire.c  ****     uint8_t result=0;
+ 269              		.loc 1 90 1
+ 270 0008 A144     		li	s1,8
+  91:lioonewire.c  ****     uint8_t result=0;
+ 271              		.loc 1 91 13
+ 272 000a 0144     		li	s0,0
+ 273              	.LVL24:
+ 274              	.L15:
+ 275              	.LBB7:
+  94:lioonewire.c  ****             result >>= 1;
+ 276              		.loc 1 94 13 is_stmt 1
+ 277              		.loc 1 94 20 is_stmt 0
+ 278 000c 0580     		srli	s0,s0,1
+ 279              	.LVL25:
+  95:lioonewire.c  **** 
+  96:lioonewire.c  ****             if (lio_OW_read_bit())result |= 0x80;
+ 280              		.loc 1 96 13 is_stmt 1
+ 281              		.loc 1 96 17 is_stmt 0
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 8
+
+
+ 282 000e 97000000 		call	lio_OW_read_bit
+ 282      E7800000 
+ 283              	.LVL26:
+ 284              		.loc 1 96 16
+ 285 0016 09C5     		beq	a0,zero,.L14
+ 286              		.loc 1 96 35 is_stmt 1 discriminator 1
+ 287              		.loc 1 96 42 is_stmt 0 discriminator 1
+ 288 0018 136404F8 		ori	s0,s0,-128
+ 289              	.LVL27:
+ 290 001c 1374F40F 		andi	s0,s0,0xff
+ 291              	.LVL28:
+ 292              	.L14:
+ 293 0020 FD14     		addi	s1,s1,-1
+ 294              	.LVL29:
+ 295 0022 93F4F40F 		andi	s1,s1,0xff
+  93:lioonewire.c  ****             result >>= 1;
+ 296              		.loc 1 93 5 discriminator 2
+ 297 0026 FDF0     		bne	s1,zero,.L15
+ 298              	.LBE7:
+  97:lioonewire.c  ****     }
+  98:lioonewire.c  ****     return result;
+ 299              		.loc 1 98 5 is_stmt 1
+  99:lioonewire.c  **** }
+ 300              		.loc 1 99 1 is_stmt 0
+ 301 0028 2285     		mv	a0,s0
+ 302 002a B240     		lw	ra,12(sp)
+ 303              		.cfi_restore 1
+ 304 002c 2244     		lw	s0,8(sp)
+ 305              		.cfi_restore 8
+ 306              	.LVL30:
+ 307 002e 9244     		lw	s1,4(sp)
+ 308              		.cfi_restore 9
+ 309 0030 4101     		addi	sp,sp,16
+ 310              	.LCFI10:
+ 311              		.cfi_def_cfa_offset 0
+ 312 0032 8280     		jr	ra
+ 313              		.cfi_endproc
+ 314              	.LFE8:
+ 316              		.section	.text.lio_OW_write_byte,"ax",@progbits
+ 317              		.align	1
+ 318              		.globl	lio_OW_write_byte
+ 320              	lio_OW_write_byte:
+ 321              	.LFB9:
+ 100:lioonewire.c  **** 
+ 101:lioonewire.c  **** void lio_OW_write_byte(uint8_t data){
+ 322              		.loc 1 101 37 is_stmt 1
+ 323              		.cfi_startproc
+ 324              	.LVL31:
+ 102:lioonewire.c  ****     for(int i = 0; i < 8; i++){
+ 325              		.loc 1 102 5
+ 326              	.LBB8:
+ 327              		.loc 1 102 9
+ 328              	.LBE8:
+ 101:lioonewire.c  ****     for(int i = 0; i < 8; i++){
+ 329              		.loc 1 101 37 is_stmt 0
+ 330 0000 4111     		addi	sp,sp,-16
+ 331              	.LCFI11:
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 9
+
+
+ 332              		.cfi_def_cfa_offset 16
+ 333 0002 22C4     		sw	s0,8(sp)
+ 334 0004 26C2     		sw	s1,4(sp)
+ 335 0006 06C6     		sw	ra,12(sp)
+ 336              		.cfi_offset 8, -8
+ 337              		.cfi_offset 9, -12
+ 338              		.cfi_offset 1, -4
+ 101:lioonewire.c  ****     for(int i = 0; i < 8; i++){
+ 339              		.loc 1 101 37
+ 340 0008 AA84     		mv	s1,a0
+ 341              	.LVL32:
+ 342 000a 2144     		li	s0,8
+ 343              	.LVL33:
+ 344              	.L22:
+ 345              	.LBB9:
+ 103:lioonewire.c  ****         lio_OW_write_bit(data & 0x01);
+ 346              		.loc 1 103 9 is_stmt 1 discriminator 3
+ 347 000c 13F51400 		andi	a0,s1,1
+ 348 0010 7D14     		addi	s0,s0,-1
+ 349              	.LVL34:
+ 350 0012 97000000 		call	lio_OW_write_bit
+ 350      E7800000 
+ 351              	.LVL35:
+ 104:lioonewire.c  ****         data >>= 1;
+ 352              		.loc 1 104 9 discriminator 3
+ 353              		.loc 1 104 14 is_stmt 0 discriminator 3
+ 354 001a 8580     		srli	s1,s1,1
+ 355              	.LVL36:
+ 102:lioonewire.c  ****         lio_OW_write_bit(data & 0x01);
+ 356              		.loc 1 102 5 discriminator 3
+ 357 001c 65F8     		bne	s0,zero,.L22
+ 358              	.LBE9:
+ 105:lioonewire.c  ****     }
+ 106:lioonewire.c  **** }
+ 359              		.loc 1 106 1
+ 360 001e B240     		lw	ra,12(sp)
+ 361              		.cfi_restore 1
+ 362 0020 2244     		lw	s0,8(sp)
+ 363              		.cfi_restore 8
+ 364 0022 9244     		lw	s1,4(sp)
+ 365              		.cfi_restore 9
+ 366              	.LVL37:
+ 367 0024 4101     		addi	sp,sp,16
+ 368              	.LCFI12:
+ 369              		.cfi_def_cfa_offset 0
+ 370 0026 8280     		jr	ra
+ 371              		.cfi_endproc
+ 372              	.LFE9:
+ 374              		.section	.text.lio_OW_touch_reset,"ax",@progbits
+ 375              		.align	1
+ 376              		.globl	lio_OW_touch_reset
+ 378              	lio_OW_touch_reset:
+ 379              	.LFB10:
+ 107:lioonewire.c  **** 
+ 108:lioonewire.c  **** uint8_t lio_OW_touch_reset(void)
+ 109:lioonewire.c  **** {
+ 380              		.loc 1 109 1 is_stmt 1
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 10
+
+
+ 381              		.cfi_startproc
+ 110:lioonewire.c  ****     uint8_t res = 0;
+ 382              		.loc 1 110 5
+ 383              	.LVL38:
+ 111:lioonewire.c  ****     tick_delay(T_G);
+ 384              		.loc 1 111 5
+ 109:lioonewire.c  ****     uint8_t res = 0;
+ 385              		.loc 1 109 1 is_stmt 0
+ 386 0000 4111     		addi	sp,sp,-16
+ 387              	.LCFI13:
+ 388              		.cfi_def_cfa_offset 16
+ 389              		.loc 1 111 5
+ 390 0002 0145     		li	a0,0
+ 109:lioonewire.c  ****     uint8_t res = 0;
+ 391              		.loc 1 109 1
+ 392 0004 06C6     		sw	ra,12(sp)
+ 393 0006 22C4     		sw	s0,8(sp)
+ 394              		.cfi_offset 1, -4
+ 395              		.cfi_offset 8, -8
+ 396              		.loc 1 111 5
+ 397 0008 97000000 		call	delay_1us
+ 397      E7800000 
+ 398              	.LVL39:
+ 112:lioonewire.c  ****     dpin_drive();
+ 399              		.loc 1 112 5 is_stmt 1
+ 400 0010 97000000 		call	dpin_drive
+ 400      E7800000 
+ 401              	.LVL40:
+ 113:lioonewire.c  ****     tick_delay(T_H);
+ 402              		.loc 1 113 5
+ 403 0018 1305001E 		li	a0,480
+ 404 001c 97000000 		call	delay_1us
+ 404      E7800000 
+ 405              	.LVL41:
+ 114:lioonewire.c  ****     dpin_release();
+ 406              		.loc 1 114 5
+ 407 0024 97000000 		call	dpin_release
+ 407      E7800000 
+ 408              	.LVL42:
+ 115:lioonewire.c  ****     tick_delay(T_I);
+ 409              		.loc 1 115 5
+ 410 002c 13056004 		li	a0,70
+ 411 0030 97000000 		call	delay_1us
+ 411      E7800000 
+ 412              	.LVL43:
+ 116:lioonewire.c  ****     res = dpin_sample();
+ 413              		.loc 1 116 5
+ 414              		.loc 1 116 11 is_stmt 0
+ 415 0038 97000000 		call	dpin_sample
+ 415      E7800000 
+ 416              	.LVL44:
+ 417 0040 2A84     		mv	s0,a0
+ 418              	.LVL45:
+ 117:lioonewire.c  ****     tick_delay(T_J);
+ 419              		.loc 1 117 5 is_stmt 1
+ 420 0042 1305A019 		li	a0,410
+ 421 0046 97000000 		call	delay_1us
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 11
+
+
+ 421      E7800000 
+ 422              	.LVL46:
+ 118:lioonewire.c  ****     return res;
+ 423              		.loc 1 118 5
+ 119:lioonewire.c  **** }
+ 424              		.loc 1 119 1 is_stmt 0
+ 425 004e 2285     		mv	a0,s0
+ 426 0050 B240     		lw	ra,12(sp)
+ 427              		.cfi_restore 1
+ 428 0052 2244     		lw	s0,8(sp)
+ 429              		.cfi_restore 8
+ 430              	.LVL47:
+ 431 0054 4101     		addi	sp,sp,16
+ 432              	.LCFI14:
+ 433              		.cfi_def_cfa_offset 0
+ 434 0056 8280     		jr	ra
+ 435              		.cfi_endproc
+ 436              	.LFE10:
+ 438              		.section	.text.lio_read_temp,"ax",@progbits
+ 439              		.align	1
+ 440              		.globl	lio_read_temp
+ 442              	lio_read_temp:
+ 443              	.LFB11:
+ 120:lioonewire.c  **** 
+ 121:lioonewire.c  **** int16_t lio_read_temp(){ // Användbar.
+ 444              		.loc 1 121 24 is_stmt 1
+ 445              		.cfi_startproc
+ 122:lioonewire.c  ****     
+ 123:lioonewire.c  ****     uint8_t temp_L, temp_H = 0;
+ 446              		.loc 1 123 5
+ 447              	.LVL48:
+ 124:lioonewire.c  ****     
+ 125:lioonewire.c  ****     if(first_read){
+ 448              		.loc 1 125 5
+ 121:lioonewire.c  ****     
+ 449              		.loc 1 121 24 is_stmt 0
+ 450 0000 4111     		addi	sp,sp,-16
+ 451              	.LCFI15:
+ 452              		.cfi_def_cfa_offset 16
+ 453 0002 22C4     		sw	s0,8(sp)
+ 454              		.cfi_offset 8, -8
+ 455              		.loc 1 125 8
+ 456 0004 37040000 		lui	s0,%hi(.LANCHOR0)
+ 457 0008 13040400 		addi	s0,s0,%lo(.LANCHOR0)
+ 458              		.loc 1 125 7
+ 459 000c 1C40     		lw	a5,0(s0)
+ 121:lioonewire.c  ****     
+ 460              		.loc 1 121 24
+ 461 000e 06C6     		sw	ra,12(sp)
+ 462              		.cfi_offset 1, -4
+ 463              		.loc 1 125 7
+ 464 0010 A9C7     		beq	a5,zero,.L28
+ 126:lioonewire.c  ****         lio_OW_touch_reset();
+ 465              		.loc 1 126 9 is_stmt 1
+ 466 0012 97000000 		call	lio_OW_touch_reset
+ 466      E7800000 
+ 467              	.LVL49:
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 12
+
+
+ 127:lioonewire.c  ****         lio_OW_write_byte(SKIP_ROM);
+ 468              		.loc 1 127 9
+ 469 001a 1305C00C 		li	a0,204
+ 470 001e 97000000 		call	lio_OW_write_byte
+ 470      E7800000 
+ 471              	.LVL50:
+ 128:lioonewire.c  ****         lio_OW_write_byte(WRITE_SCRATCH_PAD);
+ 472              		.loc 1 128 9
+ 473 0026 1305E004 		li	a0,78
+ 474 002a 97000000 		call	lio_OW_write_byte
+ 474      E7800000 
+ 475              	.LVL51:
+ 129:lioonewire.c  ****         lio_OW_write_byte(0xFF);
+ 476              		.loc 1 129 9
+ 477 0032 1305F00F 		li	a0,255
+ 478 0036 97000000 		call	lio_OW_write_byte
+ 478      E7800000 
+ 479              	.LVL52:
+ 130:lioonewire.c  ****         lio_OW_write_byte(0xFF);
+ 480              		.loc 1 130 9
+ 481 003e 1305F00F 		li	a0,255
+ 482 0042 97000000 		call	lio_OW_write_byte
+ 482      E7800000 
+ 483              	.LVL53:
+ 131:lioonewire.c  ****         lio_OW_write_byte(CONFIG_12BIT);
+ 484              		.loc 1 131 9
+ 485 004a 1305F007 		li	a0,127
+ 486 004e 97000000 		call	lio_OW_write_byte
+ 486      E7800000 
+ 487              	.LVL54:
+ 132:lioonewire.c  ****         first_read = 0;
+ 488              		.loc 1 132 9
+ 489              		.loc 1 132 20 is_stmt 0
+ 490 0056 23200400 		sw	zero,0(s0)
+ 491              	.L28:
+ 133:lioonewire.c  ****     }
+ 134:lioonewire.c  ****               
+ 135:lioonewire.c  ****     lio_OW_touch_reset();
+ 492              		.loc 1 135 5 is_stmt 1
+ 493 005a 97000000 		call	lio_OW_touch_reset
+ 493      E7800000 
+ 494              	.LVL55:
+ 136:lioonewire.c  ****     lio_OW_write_byte(SKIP_ROM);
+ 495              		.loc 1 136 5
+ 496 0062 1305C00C 		li	a0,204
+ 497 0066 97000000 		call	lio_OW_write_byte
+ 497      E7800000 
+ 498              	.LVL56:
+ 137:lioonewire.c  ****     lio_OW_write_byte(START_CONVERSION);
+ 499              		.loc 1 137 5
+ 500 006e 13054004 		li	a0,68
+ 501 0072 97000000 		call	lio_OW_write_byte
+ 501      E7800000 
+ 502              	.LVL57:
+ 138:lioonewire.c  ****     for(int i = 1000; i > 0 && lio_OW_read_byte(); i--);
+ 503              		.loc 1 138 5
+ 504              	.LBB10:
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 13
+
+
+ 505              		.loc 1 138 9
+ 506              	.LBE10:
+ 137:lioonewire.c  ****     lio_OW_write_byte(START_CONVERSION);
+ 507              		.loc 1 137 5 is_stmt 0
+ 508 007a 1304803E 		li	s0,1000
+ 509              	.LVL58:
+ 510              	.L29:
+ 511              	.LBB11:
+ 512              		.loc 1 138 32 discriminator 3
+ 513 007e 97000000 		call	lio_OW_read_byte
+ 513      E7800000 
+ 514              	.LVL59:
+ 515              		.loc 1 138 29 discriminator 3
+ 516 0086 19C1     		beq	a0,zero,.L30
+ 517              		.loc 1 138 56 is_stmt 1 discriminator 4
+ 518              	.LVL60:
+ 519 0088 7D14     		addi	s0,s0,-1
+ 520              	.LVL61:
+ 521              		.loc 1 138 5 is_stmt 0 discriminator 4
+ 522 008a 75F8     		bne	s0,zero,.L29
+ 523              	.LVL62:
+ 524              	.L30:
+ 525              	.LBE11:
+ 139:lioonewire.c  ****     lio_OW_touch_reset();
+ 526              		.loc 1 139 5 is_stmt 1
+ 527 008c 97000000 		call	lio_OW_touch_reset
+ 527      E7800000 
+ 528              	.LVL63:
+ 140:lioonewire.c  ****     lio_OW_write_byte(SKIP_ROM);
+ 529              		.loc 1 140 5
+ 530 0094 1305C00C 		li	a0,204
+ 531 0098 97000000 		call	lio_OW_write_byte
+ 531      E7800000 
+ 532              	.LVL64:
+ 141:lioonewire.c  ****     lio_OW_write_byte(READ_SCRATCH_PAD);
+ 533              		.loc 1 141 5
+ 534 00a0 1305E00B 		li	a0,190
+ 535 00a4 97000000 		call	lio_OW_write_byte
+ 535      E7800000 
+ 536              	.LVL65:
+ 142:lioonewire.c  ****     temp_L = lio_OW_read_byte();
+ 537              		.loc 1 142 5
+ 538              		.loc 1 142 14 is_stmt 0
+ 539 00ac 97000000 		call	lio_OW_read_byte
+ 539      E7800000 
+ 540              	.LVL66:
+ 541 00b4 2A84     		mv	s0,a0
+ 542              	.LVL67:
+ 143:lioonewire.c  ****     temp_H = lio_OW_read_byte();
+ 543              		.loc 1 143 5 is_stmt 1
+ 544              		.loc 1 143 14 is_stmt 0
+ 545 00b6 97000000 		call	lio_OW_read_byte
+ 545      E7800000 
+ 546              	.LVL68:
+ 144:lioonewire.c  ****     return (int16_t) (((temp_H << 8) & 0xFF00) | temp_L);
+ 547              		.loc 1 144 5 is_stmt 1
+ 548              		.loc 1 144 32 is_stmt 0
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 14
+
+
+ 549 00be 2205     		slli	a0,a0,8
+ 550              	.LVL69:
+ 551              		.loc 1 144 12
+ 552 00c0 418D     		or	a0,a0,s0
+ 145:lioonewire.c  **** }
+ 553              		.loc 1 145 1
+ 554 00c2 B240     		lw	ra,12(sp)
+ 555              		.cfi_restore 1
+ 556 00c4 2244     		lw	s0,8(sp)
+ 557              		.cfi_restore 8
+ 558              	.LVL70:
+ 559 00c6 4205     		slli	a0,a0,16
+ 560 00c8 4185     		srai	a0,a0,16
+ 561 00ca 4101     		addi	sp,sp,16
+ 562              	.LCFI16:
+ 563              		.cfi_def_cfa_offset 0
+ 564 00cc 8280     		jr	ra
+ 565              		.cfi_endproc
+ 566              	.LFE11:
+ 568              		.globl	first_read
+ 569              		.section	.sdata.first_read,"aw"
+ 570              		.align	2
+ 571              		.set	.LANCHOR0,. + 0
+ 574              	first_read:
+ 575 0000 01000000 		.word	1
+ 576              		.text
+ 577              	.Letext0:
+ 578              		.file 2 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+ 579              		.file 3 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+ 580              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+ 581              		.file 5 "./delay.h"
+ 582              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
+ 583              		.file 7 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h"
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 lioonewire.c
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:13     .text.dpin_drive:0000000000000000 dpin_drive
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:17     .text.dpin_drive:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:18     .text.dpin_drive:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:19     .text.dpin_drive:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:24     .text.dpin_drive:0000000000000014 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:31     .text.dpin_release:0000000000000000 dpin_release
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:34     .text.dpin_release:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:35     .text.dpin_release:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:36     .text.dpin_release:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:41     .text.dpin_release:0000000000000014 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:48     .text.dpin_sample:0000000000000000 dpin_sample
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:51     .text.dpin_sample:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:52     .text.dpin_sample:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:53     .text.dpin_sample:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:54     .text.dpin_sample:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:56     .text.dpin_sample:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:58     .text.dpin_sample:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:60     .text.dpin_sample:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:63     .text.dpin_sample:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:64     .text.dpin_sample:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:66     .text.dpin_sample:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:69     .text.dpin_sample:0000000000000018 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:70     .text.dpin_sample:000000000000001a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:74     .text.dpin_sample:0000000000000020 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:76     .text.dpin_sample:0000000000000022 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:83     .text.lio_init_OW:0000000000000000 lio_init_OW
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:86     .text.lio_init_OW:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:87     .text.lio_init_OW:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:88     .text.lio_init_OW:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:89     .text.lio_init_OW:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:91     .text.lio_init_OW:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:93     .text.lio_init_OW:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:95     .text.lio_init_OW:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:96     .text.lio_init_OW:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:98     .text.lio_init_OW:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:101    .text.lio_init_OW:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:102    .text.lio_init_OW:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:103    .text.lio_init_OW:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:105    .text.lio_init_OW:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:107    .text.lio_init_OW:0000000000000016 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:108    .text.lio_init_OW:0000000000000016 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:113    .text.lio_init_OW:0000000000000022 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:115    .text.lio_init_OW:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:117    .text.lio_init_OW:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:119    .text.lio_init_OW:000000000000002c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:126    .text.lio_OW_write_bit:0000000000000000 lio_OW_write_bit
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:129    .text.lio_OW_write_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:131    .text.lio_OW_write_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:132    .text.lio_OW_write_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:133    .text.lio_OW_write_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:135    .text.lio_OW_write_bit:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:137    .text.lio_OW_write_bit:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:139    .text.lio_OW_write_bit:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:144    .text.lio_OW_write_bit:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:147    .text.lio_OW_write_bit:000000000000000e .L0 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 16
+
+
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:151    .text.lio_OW_write_bit:0000000000000018 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:154    .text.lio_OW_write_bit:0000000000000020 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:159    .text.lio_OW_write_bit:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:160    .text.lio_OW_write_bit:0000000000000026 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:161    .text.lio_OW_write_bit:0000000000000026 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:164    .text.lio_OW_write_bit:0000000000000028 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:166    .text.lio_OW_write_bit:0000000000000028 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:170    .text.lio_OW_write_bit:0000000000000030 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:172    .text.lio_OW_write_bit:0000000000000030 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:175    .text.lio_OW_write_bit:0000000000000038 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:179    .text.lio_OW_write_bit:0000000000000044 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:182    .text.lio_OW_write_bit:000000000000004c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:184    .text.lio_OW_write_bit:0000000000000050 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:191    .text.lio_OW_read_bit:0000000000000000 lio_OW_read_bit
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:194    .text.lio_OW_read_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:195    .text.lio_OW_read_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:197    .text.lio_OW_read_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:198    .text.lio_OW_read_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:199    .text.lio_OW_read_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:201    .text.lio_OW_read_bit:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:204    .text.lio_OW_read_bit:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:205    .text.lio_OW_read_bit:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:207    .text.lio_OW_read_bit:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:210    .text.lio_OW_read_bit:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:214    .text.lio_OW_read_bit:0000000000000018 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:217    .text.lio_OW_read_bit:0000000000000020 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:221    .text.lio_OW_read_bit:000000000000002a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:222    .text.lio_OW_read_bit:000000000000002a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:227    .text.lio_OW_read_bit:0000000000000034 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:231    .text.lio_OW_read_bit:0000000000000040 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:232    .text.lio_OW_read_bit:0000000000000040 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:234    .text.lio_OW_read_bit:0000000000000044 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:236    .text.lio_OW_read_bit:0000000000000046 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:240    .text.lio_OW_read_bit:0000000000000048 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:242    .text.lio_OW_read_bit:000000000000004a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:249    .text.lio_OW_read_byte:0000000000000000 lio_OW_read_byte
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:252    .text.lio_OW_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:253    .text.lio_OW_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:255    .text.lio_OW_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:257    .text.lio_OW_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:259    .text.lio_OW_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:260    .text.lio_OW_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:262    .text.lio_OW_read_byte:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:266    .text.lio_OW_read_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:267    .text.lio_OW_read_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:268    .text.lio_OW_read_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:270    .text.lio_OW_read_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:272    .text.lio_OW_read_byte:000000000000000a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:277    .text.lio_OW_read_byte:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:278    .text.lio_OW_read_byte:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:281    .text.lio_OW_read_byte:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:282    .text.lio_OW_read_byte:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:285    .text.lio_OW_read_byte:0000000000000016 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:287    .text.lio_OW_read_byte:0000000000000018 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:288    .text.lio_OW_read_byte:0000000000000018 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:297    .text.lio_OW_read_byte:0000000000000026 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:300    .text.lio_OW_read_byte:0000000000000028 .L0 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 17
+
+
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:301    .text.lio_OW_read_byte:0000000000000028 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:303    .text.lio_OW_read_byte:000000000000002c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:305    .text.lio_OW_read_byte:000000000000002e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:308    .text.lio_OW_read_byte:0000000000000030 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:311    .text.lio_OW_read_byte:0000000000000032 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:313    .text.lio_OW_read_byte:0000000000000034 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:320    .text.lio_OW_write_byte:0000000000000000 lio_OW_write_byte
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:323    .text.lio_OW_write_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:325    .text.lio_OW_write_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:327    .text.lio_OW_write_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:329    .text.lio_OW_write_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:330    .text.lio_OW_write_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:332    .text.lio_OW_write_byte:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:336    .text.lio_OW_write_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:337    .text.lio_OW_write_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:338    .text.lio_OW_write_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:340    .text.lio_OW_write_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:347    .text.lio_OW_write_byte:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:353    .text.lio_OW_write_byte:000000000000001a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:354    .text.lio_OW_write_byte:000000000000001a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:357    .text.lio_OW_write_byte:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:360    .text.lio_OW_write_byte:000000000000001e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:361    .text.lio_OW_write_byte:0000000000000020 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:363    .text.lio_OW_write_byte:0000000000000022 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:365    .text.lio_OW_write_byte:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:369    .text.lio_OW_write_byte:0000000000000026 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:371    .text.lio_OW_write_byte:0000000000000028 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:378    .text.lio_OW_touch_reset:0000000000000000 lio_OW_touch_reset
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:381    .text.lio_OW_touch_reset:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:382    .text.lio_OW_touch_reset:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:384    .text.lio_OW_touch_reset:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:385    .text.lio_OW_touch_reset:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:386    .text.lio_OW_touch_reset:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:388    .text.lio_OW_touch_reset:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:390    .text.lio_OW_touch_reset:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:392    .text.lio_OW_touch_reset:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:394    .text.lio_OW_touch_reset:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:395    .text.lio_OW_touch_reset:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:397    .text.lio_OW_touch_reset:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:400    .text.lio_OW_touch_reset:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:403    .text.lio_OW_touch_reset:0000000000000018 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:407    .text.lio_OW_touch_reset:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:410    .text.lio_OW_touch_reset:000000000000002c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:414    .text.lio_OW_touch_reset:0000000000000038 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:415    .text.lio_OW_touch_reset:0000000000000038 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:420    .text.lio_OW_touch_reset:0000000000000042 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:424    .text.lio_OW_touch_reset:000000000000004e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:425    .text.lio_OW_touch_reset:000000000000004e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:427    .text.lio_OW_touch_reset:0000000000000052 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:429    .text.lio_OW_touch_reset:0000000000000054 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:433    .text.lio_OW_touch_reset:0000000000000056 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:435    .text.lio_OW_touch_reset:0000000000000058 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:442    .text.lio_read_temp:0000000000000000 lio_read_temp
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:445    .text.lio_read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:446    .text.lio_read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:448    .text.lio_read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:449    .text.lio_read_temp:0000000000000000 .L0 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 18
+
+
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:450    .text.lio_read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:452    .text.lio_read_temp:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:454    .text.lio_read_temp:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:456    .text.lio_read_temp:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:459    .text.lio_read_temp:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:461    .text.lio_read_temp:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:462    .text.lio_read_temp:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:464    .text.lio_read_temp:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:466    .text.lio_read_temp:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:469    .text.lio_read_temp:000000000000001a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:473    .text.lio_read_temp:0000000000000026 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:477    .text.lio_read_temp:0000000000000032 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:481    .text.lio_read_temp:000000000000003e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:485    .text.lio_read_temp:000000000000004a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:489    .text.lio_read_temp:0000000000000056 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:490    .text.lio_read_temp:0000000000000056 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:493    .text.lio_read_temp:000000000000005a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:496    .text.lio_read_temp:0000000000000062 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:500    .text.lio_read_temp:000000000000006e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:505    .text.lio_read_temp:000000000000007a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:507    .text.lio_read_temp:000000000000007a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:508    .text.lio_read_temp:000000000000007a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:513    .text.lio_read_temp:000000000000007e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:516    .text.lio_read_temp:0000000000000086 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:519    .text.lio_read_temp:0000000000000088 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:522    .text.lio_read_temp:000000000000008a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:527    .text.lio_read_temp:000000000000008c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:530    .text.lio_read_temp:0000000000000094 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:534    .text.lio_read_temp:00000000000000a0 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:538    .text.lio_read_temp:00000000000000ac .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:539    .text.lio_read_temp:00000000000000ac .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:544    .text.lio_read_temp:00000000000000b6 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:545    .text.lio_read_temp:00000000000000b6 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:548    .text.lio_read_temp:00000000000000be .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:549    .text.lio_read_temp:00000000000000be .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:552    .text.lio_read_temp:00000000000000c0 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:554    .text.lio_read_temp:00000000000000c2 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:555    .text.lio_read_temp:00000000000000c4 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:557    .text.lio_read_temp:00000000000000c6 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:563    .text.lio_read_temp:00000000000000cc .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:565    .text.lio_read_temp:00000000000000ce .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:574    .sdata.first_read:0000000000000000 first_read
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:571    .sdata.first_read:0000000000000000 .LANCHOR0
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:27     .text.dpin_drive:0000000000000014 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:44     .text.dpin_release:0000000000000014 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:79     .text.dpin_sample:0000000000000022 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:122    .text.lio_init_OW:000000000000002c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:187    .text.lio_OW_write_bit:0000000000000050 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:245    .text.lio_OW_read_bit:000000000000004a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:316    .text.lio_OW_read_byte:0000000000000034 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:374    .text.lio_OW_write_byte:0000000000000028 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:438    .text.lio_OW_touch_reset:0000000000000058 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:569    .text.lio_read_temp:00000000000000ce .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:168    .text.lio_OW_write_bit:0000000000000030 .L8
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:155    .text.lio_OW_write_bit:0000000000000024 .L10
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:292    .text.lio_OW_read_byte:0000000000000020 .L14
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 19
+
+
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:274    .text.lio_OW_read_byte:000000000000000c .L15
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:344    .text.lio_OW_write_byte:000000000000000c .L22
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:491    .text.lio_read_temp:000000000000005a .L28
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:524    .text.lio_read_temp:000000000000008c .L30
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:510    .text.lio_read_temp:000000000000007e .L29
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:1448   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2356   .debug_str:000000000000001a .LASF73
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2442   .debug_str:00000000000002bf .LASF74
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2424   .debug_str:00000000000001fd .LASF75
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2308   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2350   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2436   .debug_str:0000000000000293 .LASF0
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2506   .debug_str:0000000000000428 .LASF2
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2426   .debug_str:0000000000000249 .LASF1
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2488   .debug_str:00000000000003c6 .LASF3
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2378   .debug_str:0000000000000112 .LASF4
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2452   .debug_str:00000000000002fe .LASF5
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2394   .debug_str:0000000000000167 .LASF6
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2372   .debug_str:00000000000000f2 .LASF7
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2476   .debug_str:0000000000000376 .LASF8
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2370   .debug_str:00000000000000e4 .LASF9
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2438   .debug_str:000000000000029f .LASF10
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2444   .debug_str:00000000000002cc .LASF11
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2382   .debug_str:0000000000000127 .LASF12
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2460   .debug_str:0000000000000332 .LASF13
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2440   .debug_str:00000000000002b6 .LASF14
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2358   .debug_str:00000000000000a2 .LASF53
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2464   .debug_str:0000000000000343 .LASF15
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2466   .debug_str:000000000000034c .LASF16
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2504   .debug_str:0000000000000420 .LASF17
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2502   .debug_str:0000000000000417 .LASF18
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2498   .debug_str:00000000000003ff .LASF19
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2410   .debug_str:00000000000001b1 .LASF20
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2412   .debug_str:00000000000001bc .LASF21
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2414   .debug_str:00000000000001c7 .LASF22
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2416   .debug_str:00000000000001d2 .LASF23
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2418   .debug_str:00000000000001dd .LASF24
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2402   .debug_str:0000000000000189 .LASF25
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2390   .debug_str:0000000000000151 .LASF26
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2420   .debug_str:00000000000001e8 .LASF27
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2400   .debug_str:0000000000000180 .LASF28
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2484   .debug_str:00000000000003b0 .LASF29
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2486   .debug_str:00000000000003bb .LASF30
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2492   .debug_str:00000000000003e1 .LASF31
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2494   .debug_str:00000000000003eb .LASF32
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2454   .debug_str:0000000000000311 .LASF33
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2456   .debug_str:000000000000031a .LASF34
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2386   .debug_str:000000000000013f .LASF35
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2388   .debug_str:0000000000000148 .LASF36
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2434   .debug_str:000000000000028a .LASF37
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2450   .debug_str:00000000000002f6 .LASF38
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2470   .debug_str:000000000000035a .LASF39
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2376   .debug_str:000000000000010a .LASF40
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2472   .debug_str:0000000000000362 .LASF41
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2360   .debug_str:00000000000000b2 .LASF42
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2362   .debug_str:00000000000000bc .LASF43
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2364   .debug_str:00000000000000c6 .LASF44
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 20
+
+
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2366   .debug_str:00000000000000d0 .LASF45
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2368   .debug_str:00000000000000da .LASF46
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2462   .debug_str:000000000000033a .LASF47
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2432   .debug_str:0000000000000281 .LASF48
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2408   .debug_str:00000000000001a6 .LASF49
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2396   .debug_str:0000000000000170 .LASF50
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2482   .debug_str:00000000000003a5 .LASF51
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2422   .debug_str:00000000000001f1 .LASF52
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2380   .debug_str:000000000000011c .LASF54
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2500   .debug_str:0000000000000409 .LASF57
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:443    .text.lio_read_temp:0000000000000000 .LFB11
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:566    .text.lio_read_temp:00000000000000ce .LFE11
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:1955   .debug_loc:0000000000000000 .LLST15
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2404   .debug_str:0000000000000194 .LASF55
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:1973   .debug_loc:000000000000002c .LLST16
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2398   .debug_str:0000000000000179 .LASF56
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:1980   .debug_loc:000000000000003f .LLST17
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:1992   .debug_loc:000000000000005e .LLST18
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:514    .text.lio_read_temp:0000000000000086 .LVL59
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:467    .text.lio_read_temp:000000000000001a .LVL49
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:471    .text.lio_read_temp:0000000000000026 .LVL50
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:475    .text.lio_read_temp:0000000000000032 .LVL51
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:479    .text.lio_read_temp:000000000000003e .LVL52
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:483    .text.lio_read_temp:000000000000004a .LVL53
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:487    .text.lio_read_temp:0000000000000056 .LVL54
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:494    .text.lio_read_temp:0000000000000062 .LVL55
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:498    .text.lio_read_temp:000000000000006e .LVL56
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:502    .text.lio_read_temp:000000000000007a .LVL57
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:528    .text.lio_read_temp:0000000000000094 .LVL63
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:532    .text.lio_read_temp:00000000000000a0 .LVL64
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:536    .text.lio_read_temp:00000000000000ac .LVL65
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:540    .text.lio_read_temp:00000000000000b4 .LVL66
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:546    .text.lio_read_temp:00000000000000be .LVL68
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2480   .debug_str:0000000000000392 .LASF58
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:379    .text.lio_OW_touch_reset:0000000000000000 .LFB10
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:436    .text.lio_OW_touch_reset:0000000000000058 .LFE10
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2015   .debug_loc:0000000000000097 .LLST13
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2033   .debug_loc:00000000000000c3 .LLST14
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:398    .text.lio_OW_touch_reset:0000000000000010 .LVL39
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:401    .text.lio_OW_touch_reset:0000000000000018 .LVL40
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:405    .text.lio_OW_touch_reset:0000000000000024 .LVL41
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:408    .text.lio_OW_touch_reset:000000000000002c .LVL42
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:412    .text.lio_OW_touch_reset:0000000000000038 .LVL43
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:416    .text.lio_OW_touch_reset:0000000000000040 .LVL44
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:422    .text.lio_OW_touch_reset:000000000000004e .LVL46
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2430   .debug_str:000000000000026f .LASF62
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:321    .text.lio_OW_write_byte:0000000000000000 .LFB9
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:372    .text.lio_OW_write_byte:0000000000000028 .LFE9
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2045   .debug_loc:00000000000000e2 .LLST10
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2468   .debug_str:0000000000000355 .LASF76
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2063   .debug_loc:000000000000010e .LLST11
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2074   .debug_loc:000000000000012c .LLST12
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:351    .text.lio_OW_write_byte:000000000000001a .LVL35
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2490   .debug_str:00000000000003d0 .LASF59
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:250    .text.lio_OW_read_byte:0000000000000000 .LFB8
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:314    .text.lio_OW_read_byte:0000000000000034 .LFE8
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2098   .debug_loc:000000000000015e .LLST7
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 21
+
+
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2354   .debug_str:0000000000000013 .LASF60
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2116   .debug_loc:000000000000018a .LLST8
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2132   .debug_loc:00000000000001b4 .LLST9
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:283    .text.lio_OW_read_byte:0000000000000016 .LVL26
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2384   .debug_str:000000000000012f .LASF61
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:192    .text.lio_OW_read_bit:0000000000000000 .LFB7
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:243    .text.lio_OW_read_bit:000000000000004a .LFE7
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2156   .debug_loc:00000000000001e6 .LLST5
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2174   .debug_loc:0000000000000212 .LLST6
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:208    .text.lio_OW_read_bit:000000000000000e .LVL15
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:212    .text.lio_OW_read_bit:0000000000000018 .LVL16
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:215    .text.lio_OW_read_bit:0000000000000020 .LVL17
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:219    .text.lio_OW_read_bit:000000000000002a .LVL18
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:223    .text.lio_OW_read_bit:0000000000000032 .LVL19
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:229    .text.lio_OW_read_bit:0000000000000040 .LVL21
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2448   .debug_str:00000000000002e5 .LASF77
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2446   .debug_str:00000000000002d9 .LASF64
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:84     .text.lio_init_OW:0000000000000000 .LFB5
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:120    .text.lio_init_OW:000000000000002c .LFE5
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2186   .debug_loc:0000000000000231 .LLST1
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:99     .text.lio_init_OW:0000000000000010 .LVL3
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:118    .text.lio_init_OW:000000000000002c .LVL4
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2392   .debug_str:000000000000015b .LASF63
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:49     .text.dpin_sample:0000000000000000 .LFB4
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:77     .text.dpin_sample:0000000000000022 .LFE4
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2204   .debug_loc:000000000000025d .LLST0
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:67     .text.dpin_sample:0000000000000018 .LVL2
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2474   .debug_str:0000000000000369 .LASF65
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:32     .text.dpin_release:0000000000000000 .LFB3
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:42     .text.dpin_release:0000000000000014 .LFE3
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:40     .text.dpin_release:0000000000000014 .LVL1
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2406   .debug_str:000000000000019b .LASF66
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:14     .text.dpin_drive:0000000000000000 .LFB2
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:25     .text.dpin_drive:0000000000000014 .LFE2
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:23     .text.dpin_drive:0000000000000014 .LVL0
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:127    .text.lio_OW_write_bit:0000000000000000 .LFB6
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:185    .text.lio_OW_write_bit:0000000000000050 .LFE6
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2222   .debug_loc:0000000000000289 .LLST2
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2245   .debug_loc:00000000000002c1 .LLST3
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:141    .text.lio_OW_write_bit:0000000000000006 .LBB4
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:157    .text.lio_OW_write_bit:0000000000000024 .LBE4
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2270   .debug_loc:00000000000002fb .LLST4
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:145    .text.lio_OW_write_bit:000000000000000e .LVL7
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:149    .text.lio_OW_write_bit:0000000000000018 .LVL8
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:152    .text.lio_OW_write_bit:0000000000000020 .LVL9
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:167    .text.lio_OW_write_bit:0000000000000030 .LVL10
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:173    .text.lio_OW_write_bit:0000000000000038 .LVL11
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:177    .text.lio_OW_write_bit:0000000000000044 .LVL12
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:180    .text.lio_OW_write_bit:000000000000004c .LVL13
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2496   .debug_str:00000000000003f5 .LASF67
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2428   .debug_str:0000000000000257 .LASF68
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2478   .debug_str:0000000000000388 .LASF69
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2352   .debug_str:0000000000000000 .LASF70
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2374   .debug_str:00000000000000fd .LASF71
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:2458   .debug_str:0000000000000323 .LASF72
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:451    .text.lio_read_temp:0000000000000002 .LCFI15
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:562    .text.lio_read_temp:00000000000000cc .LCFI16
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 22
+
+
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:542    .text.lio_read_temp:00000000000000b6 .LVL67
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:558    .text.lio_read_temp:00000000000000c6 .LVL70
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:447    .text.lio_read_temp:0000000000000000 .LVL48
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:550    .text.lio_read_temp:00000000000000c0 .LVL69
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:509    .text.lio_read_temp:000000000000007e .LVL58
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:518    .text.lio_read_temp:0000000000000088 .LVL60
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:520    .text.lio_read_temp:000000000000008a .LVL61
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:523    .text.lio_read_temp:000000000000008c .LVL62
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:387    .text.lio_OW_touch_reset:0000000000000002 .LCFI13
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:432    .text.lio_OW_touch_reset:0000000000000056 .LCFI14
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:383    .text.lio_OW_touch_reset:0000000000000000 .LVL38
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:418    .text.lio_OW_touch_reset:0000000000000042 .LVL45
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:430    .text.lio_OW_touch_reset:0000000000000054 .LVL47
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:331    .text.lio_OW_write_byte:0000000000000002 .LCFI11
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:368    .text.lio_OW_write_byte:0000000000000026 .LCFI12
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:324    .text.lio_OW_write_byte:0000000000000000 .LVL31
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:341    .text.lio_OW_write_byte:000000000000000a .LVL32
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:366    .text.lio_OW_write_byte:0000000000000024 .LVL37
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:343    .text.lio_OW_write_byte:000000000000000c .LVL33
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:349    .text.lio_OW_write_byte:0000000000000012 .LVL34
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:355    .text.lio_OW_write_byte:000000000000001c .LVL36
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:261    .text.lio_OW_read_byte:0000000000000002 .LCFI9
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:310    .text.lio_OW_read_byte:0000000000000032 .LCFI10
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:254    .text.lio_OW_read_byte:0000000000000000 .LVL23
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:273    .text.lio_OW_read_byte:000000000000000c .LVL24
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:289    .text.lio_OW_read_byte:000000000000001c .LVL27
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:291    .text.lio_OW_read_byte:0000000000000020 .LVL28
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:306    .text.lio_OW_read_byte:000000000000002e .LVL30
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:294    .text.lio_OW_read_byte:0000000000000022 .LVL29
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:200    .text.lio_OW_read_bit:0000000000000002 .LCFI7
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:239    .text.lio_OW_read_bit:0000000000000048 .LCFI8
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:196    .text.lio_OW_read_bit:0000000000000000 .LVL14
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:225    .text.lio_OW_read_bit:0000000000000034 .LVL20
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:237    .text.lio_OW_read_bit:0000000000000046 .LVL22
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:90     .text.lio_init_OW:0000000000000002 .LCFI2
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:114    .text.lio_init_OW:0000000000000024 .LCFI3
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:57     .text.dpin_sample:0000000000000006 .LCFI0
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:73     .text.dpin_sample:0000000000000020 .LCFI1
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:134    .text.lio_OW_write_bit:0000000000000002 .LCFI4
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:163    .text.lio_OW_write_bit:0000000000000028 .LCFI5
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:169    .text.lio_OW_write_bit:0000000000000030 .LCFI6
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:130    .text.lio_OW_write_bit:0000000000000000 .LVL5
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:140    .text.lio_OW_write_bit:0000000000000006 .LVL6
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:585    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:256    .text.lio_OW_read_byte:0000000000000000 .LBB6
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:258    .text.lio_OW_read_byte:0000000000000000 .LBE6
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:275    .text.lio_OW_read_byte:000000000000000c .LBB7
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:298    .text.lio_OW_read_byte:0000000000000028 .LBE7
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:326    .text.lio_OW_write_byte:0000000000000000 .LBB8
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:328    .text.lio_OW_write_byte:0000000000000000 .LBE8
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:345    .text.lio_OW_write_byte:000000000000000c .LBB9
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:358    .text.lio_OW_write_byte:000000000000001e .LBE9
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:504    .text.lio_read_temp:000000000000007a .LBB10
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:506    .text.lio_read_temp:000000000000007a .LBE10
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:511    .text.lio_read_temp:000000000000007e .LBB11
+C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s:525    .text.lio_read_temp:000000000000008c .LBE11
+
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccKJPghk.s 			page 23
+
+
+UNDEFINED SYMBOLS
+gpio_bit_reset
+gpio_bit_set
+gpio_input_bit_get
+rcu_periph_clock_enable
+gpio_init
+delay_1us

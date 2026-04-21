@@ -1,0 +1,633 @@
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 1
+
+
+   1              		.file	"adc.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.ADC3powerUpInit,"ax",@progbits
+  10              		.align	1
+  11              		.globl	ADC3powerUpInit
+  13              	ADC3powerUpInit:
+  14              	.LFB2:
+  15              		.file 1 "adc.c"
+   1:adc.c         **** #include "adc.h"
+   2:adc.c         **** #include "gd32vf103.h"
+   3:adc.c         **** 
+   4:adc.c         **** uint16_t adc_values[2];
+   5:adc.c         **** 
+   6:adc.c         **** void ADC3powerUpInit(int tmp)
+   7:adc.c         **** {
+  16              		.loc 1 7 1
+  17              		.cfi_startproc
+  18              	.LVL0:
+   8:adc.c         ****     rcu_periph_clock_enable(RCU_GPIOA);
+  19              		.loc 1 8 5
+   7:adc.c         ****     rcu_periph_clock_enable(RCU_GPIOA);
+  20              		.loc 1 7 1 is_stmt 0
+  21 0000 7971     		addi	sp,sp,-48
+  22              	.LCFI0:
+  23              		.cfi_def_cfa_offset 48
+  24 0002 26D2     		sw	s1,36(sp)
+  25              		.cfi_offset 9, -12
+  26 0004 AA84     		mv	s1,a0
+  27              		.loc 1 8 5
+  28 0006 13052060 		li	a0,1538
+  29              	.LVL1:
+   7:adc.c         ****     rcu_periph_clock_enable(RCU_GPIOA);
+  30              		.loc 1 7 1
+  31 000a 06D6     		sw	ra,44(sp)
+  32 000c 22D4     		sw	s0,40(sp)
+  33              		.cfi_offset 1, -4
+  34              		.cfi_offset 8, -8
+  35              		.loc 1 8 5
+  36 000e 97000000 		call	rcu_periph_clock_enable
+  36      E7800000 
+  37              	.LVL2:
+   9:adc.c         ****     rcu_periph_clock_enable(RCU_ADC0);
+  38              		.loc 1 9 5 is_stmt 1
+  39 0016 13059060 		li	a0,1545
+  40 001a 97000000 		call	rcu_periph_clock_enable
+  40      E7800000 
+  41              	.LVL3:
+  10:adc.c         ****     rcu_periph_clock_enable(RCU_DMA0);        
+  42              		.loc 1 10 5
+  43 0022 13050050 		li	a0,1280
+  44 0026 97000000 		call	rcu_periph_clock_enable
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 2
+
+
+  44      E7800000 
+  45              	.LVL4:
+  11:adc.c         ****     rcu_adc_clock_config(RCU_CKADC_CKAPB2_DIV8);
+  46              		.loc 1 11 5
+  47 002e 0D45     		li	a0,3
+  48 0030 97000000 		call	rcu_adc_clock_config
+  48      E7800000 
+  49              	.LVL5:
+  12:adc.c         **** 
+  13:adc.c         ****     gpio_init(GPIOA, GPIO_MODE_AIN, GPIO_OSPEED_50MHZ, GPIO_PIN_3 | GPIO_PIN_1);
+  50              		.loc 1 13 5
+  51 0038 37150140 		li	a0,1073811456
+  52 003c A946     		li	a3,10
+  53 003e 0D46     		li	a2,3
+  54 0040 8145     		li	a1,0
+  55 0042 13050580 		addi	a0,a0,-2048
+  56 0046 97000000 		call	gpio_init
+  56      E7800000 
+  57              	.LVL6:
+  14:adc.c         **** 
+  15:adc.c         ****     adc_deinit(ADC0);
+  58              		.loc 1 15 5
+  59 004e 37240140 		li	s0,1073815552
+  60 0052 13050440 		addi	a0,s0,1024
+  61 0056 97000000 		call	adc_deinit
+  61      E7800000 
+  62              	.LVL7:
+  16:adc.c         ****     adc_mode_config(ADC_MODE_FREE);
+  63              		.loc 1 16 5
+  64 005e 0145     		li	a0,0
+  65 0060 97000000 		call	adc_mode_config
+  65      E7800000 
+  66              	.LVL8:
+  17:adc.c         ****     adc_special_function_config(ADC0, ADC_CONTINUOUS_MODE, ENABLE);  
+  67              		.loc 1 17 5
+  68 0068 0546     		li	a2,1
+  69 006a 8945     		li	a1,2
+  70 006c 13050440 		addi	a0,s0,1024
+  71 0070 97000000 		call	adc_special_function_config
+  71      E7800000 
+  72              	.LVL9:
+  18:adc.c         ****     adc_special_function_config(ADC0, ADC_SCAN_MODE, ENABLE);
+  73              		.loc 1 18 5
+  74 0078 0546     		li	a2,1
+  75 007a 93050010 		li	a1,256
+  76 007e 13050440 		addi	a0,s0,1024
+  77 0082 97000000 		call	adc_special_function_config
+  77      E7800000 
+  78              	.LVL10:
+  19:adc.c         **** 
+  20:adc.c         ****     adc_data_alignment_config(ADC0, ADC_DATAALIGN_RIGHT);
+  79              		.loc 1 20 5
+  80 008a 8145     		li	a1,0
+  81 008c 13050440 		addi	a0,s0,1024
+  82 0090 97000000 		call	adc_data_alignment_config
+  82      E7800000 
+  83              	.LVL11:
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 3
+
+
+  21:adc.c         ****     adc_channel_length_config(ADC0, ADC_REGULAR_CHANNEL, 2);
+  84              		.loc 1 21 5
+  85 0098 0946     		li	a2,2
+  86 009a 8545     		li	a1,1
+  87 009c 13050440 		addi	a0,s0,1024
+  88 00a0 97000000 		call	adc_channel_length_config
+  88      E7800000 
+  89              	.LVL12:
+  22:adc.c         **** 
+  23:adc.c         ****     adc_regular_channel_config(ADC0, 0, ADC_CHANNEL_3, ADC_SAMPLETIME_13POINT5);
+  90              		.loc 1 23 5
+  91 00a8 8946     		li	a3,2
+  92 00aa 0D46     		li	a2,3
+  93 00ac 8145     		li	a1,0
+  94 00ae 13050440 		addi	a0,s0,1024
+  95 00b2 97000000 		call	adc_regular_channel_config
+  95      E7800000 
+  96              	.LVL13:
+  24:adc.c         ****     adc_regular_channel_config(ADC0, 1, ADC_CHANNEL_1, ADC_SAMPLETIME_13POINT5);
+  97              		.loc 1 24 5
+  98 00ba 8946     		li	a3,2
+  99 00bc 0546     		li	a2,1
+ 100 00be 8545     		li	a1,1
+ 101 00c0 13050440 		addi	a0,s0,1024
+ 102 00c4 97000000 		call	adc_regular_channel_config
+ 102      E7800000 
+ 103              	.LVL14:
+  25:adc.c         **** 
+  26:adc.c         ****     adc_external_trigger_source_config(ADC0, ADC_REGULAR_CHANNEL, ADC0_1_EXTTRIG_REGULAR_NONE);
+ 104              		.loc 1 26 5
+ 105 00cc 37060E00 		li	a2,917504
+ 106 00d0 8545     		li	a1,1
+ 107 00d2 13050440 		addi	a0,s0,1024
+ 108 00d6 97000000 		call	adc_external_trigger_source_config
+ 108      E7800000 
+ 109              	.LVL15:
+  27:adc.c         ****     adc_external_trigger_config(ADC0, ADC_REGULAR_CHANNEL, ENABLE);
+ 110              		.loc 1 27 5
+ 111 00de 0546     		li	a2,1
+ 112 00e0 8545     		li	a1,1
+ 113 00e2 13050440 		addi	a0,s0,1024
+ 114 00e6 97000000 		call	adc_external_trigger_config
+ 114      E7800000 
+ 115              	.LVL16:
+  28:adc.c         **** 
+  29:adc.c         ****     if (tmp) {
+ 116              		.loc 1 29 5
+ 117              		.loc 1 29 8 is_stmt 0
+ 118 00ee 9DCC     		beq	s1,zero,.L2
+  30:adc.c         ****         adc_special_function_config(ADC0, ADC_INSERTED_CHANNEL_AUTO, ENABLE);
+ 119              		.loc 1 30 9 is_stmt 1
+ 120 00f0 0546     		li	a2,1
+ 121 00f2 93050040 		li	a1,1024
+ 122 00f6 13050440 		addi	a0,s0,1024
+ 123 00fa 97000000 		call	adc_special_function_config
+ 123      E7800000 
+ 124              	.LVL17:
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 4
+
+
+  31:adc.c         ****         adc_channel_length_config(ADC0, ADC_INSERTED_CHANNEL, 1);
+ 125              		.loc 1 31 9
+ 126 0102 0546     		li	a2,1
+ 127 0104 8945     		li	a1,2
+ 128 0106 13050440 		addi	a0,s0,1024
+ 129 010a 97000000 		call	adc_channel_length_config
+ 129      E7800000 
+ 130              	.LVL18:
+  32:adc.c         ****         adc_tempsensor_vrefint_enable();
+ 131              		.loc 1 32 9
+ 132 0112 97000000 		call	adc_tempsensor_vrefint_enable
+ 132      E7800000 
+ 133              	.LVL19:
+  33:adc.c         ****         adc_inserted_channel_config(ADC0, 0, ADC_CHANNEL_16, ADC_SAMPLETIME_239POINT5);
+ 134              		.loc 1 33 9
+ 135 011a 9D46     		li	a3,7
+ 136 011c 4146     		li	a2,16
+ 137 011e 8145     		li	a1,0
+ 138 0120 13050440 		addi	a0,s0,1024
+ 139 0124 97000000 		call	adc_inserted_channel_config
+ 139      E7800000 
+ 140              	.LVL20:
+ 141              	.L2:
+  34:adc.c         ****     }
+  35:adc.c         **** 
+  36:adc.c         ****     dma_parameter_struct dma_data_parameter;
+ 142              		.loc 1 36 5
+  37:adc.c         ****     dma_deinit(DMA0, DMA_CH0);
+ 143              		.loc 1 37 5
+ 144 012c 8145     		li	a1,0
+ 145 012e 37050240 		li	a0,1073872896
+ 146 0132 97000000 		call	dma_deinit
+ 146      E7800000 
+ 147              	.LVL21:
+  38:adc.c         ****     dma_data_parameter.periph_addr  = (uint32_t)(&ADC_RDATA(ADC0));
+ 148              		.loc 1 38 5
+ 149              		.loc 1 38 37 is_stmt 0
+ 150 013a 37240140 		li	s0,1073815552
+ 151 013e 9307C444 		addi	a5,s0,1100
+ 152 0142 3EC2     		sw	a5,4(sp)
+  39:adc.c         ****     dma_data_parameter.periph_inc   = DMA_PERIPH_INCREASE_DISABLE;
+ 153              		.loc 1 39 5 is_stmt 1
+  40:adc.c         ****     dma_data_parameter.memory_addr  = (uint32_t)adc_values;
+ 154              		.loc 1 40 5
+  41:adc.c         ****     dma_data_parameter.memory_inc   = DMA_MEMORY_INCREASE_ENABLE;
+  42:adc.c         ****     dma_data_parameter.periph_width = DMA_PERIPHERAL_WIDTH_16BIT;
+  43:adc.c         ****     dma_data_parameter.memory_width = DMA_MEMORY_WIDTH_16BIT;
+ 155              		.loc 1 43 37 is_stmt 0
+ 156 0144 13070040 		li	a4,1024
+  40:adc.c         ****     dma_data_parameter.memory_addr  = (uint32_t)adc_values;
+ 157              		.loc 1 40 37
+ 158 0148 B7070000 		lui	a5,%hi(adc_values)
+ 159              		.loc 1 43 37
+ 160 014c 3AC8     		sw	a4,16(sp)
+  40:adc.c         ****     dma_data_parameter.memory_addr  = (uint32_t)adc_values;
+ 161              		.loc 1 40 37
+ 162 014e 93870700 		addi	a5,a5,%lo(adc_values)
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 5
+
+
+  44:adc.c         ****     dma_data_parameter.direction    = DMA_PERIPHERAL_TO_MEMORY;
+  45:adc.c         ****     dma_data_parameter.number       = 2;
+ 163              		.loc 1 45 37
+ 164 0152 0947     		li	a4,2
+  46:adc.c         ****     dma_data_parameter.priority     = DMA_PRIORITY_HIGH;
+  47:adc.c         ****     dma_init(DMA0, DMA_CH0, &dma_data_parameter);
+ 165              		.loc 1 47 5
+ 166 0154 5000     		addi	a2,sp,4
+  40:adc.c         ****     dma_data_parameter.memory_inc   = DMA_MEMORY_INCREASE_ENABLE;
+ 167              		.loc 1 40 37
+ 168 0156 3EC6     		sw	a5,12(sp)
+  41:adc.c         ****     dma_data_parameter.periph_width = DMA_PERIPHERAL_WIDTH_16BIT;
+ 169              		.loc 1 41 5 is_stmt 1
+  42:adc.c         ****     dma_data_parameter.memory_width = DMA_MEMORY_WIDTH_16BIT;
+ 170              		.loc 1 42 5
+  45:adc.c         ****     dma_data_parameter.priority     = DMA_PRIORITY_HIGH;
+ 171              		.loc 1 45 37 is_stmt 0
+ 172 0158 3ACA     		sw	a4,20(sp)
+  42:adc.c         ****     dma_data_parameter.memory_width = DMA_MEMORY_WIDTH_16BIT;
+ 173              		.loc 1 42 37
+ 174 015a 93070010 		li	a5,256
+  46:adc.c         ****     dma_init(DMA0, DMA_CH0, &dma_data_parameter);
+ 175              		.loc 1 46 37
+ 176 015e 0967     		li	a4,8192
+ 177              		.loc 1 47 5
+ 178 0160 8145     		li	a1,0
+ 179 0162 37050240 		li	a0,1073872896
+  42:adc.c         ****     dma_data_parameter.memory_width = DMA_MEMORY_WIDTH_16BIT;
+ 180              		.loc 1 42 37
+ 181 0166 3EC4     		sw	a5,8(sp)
+  43:adc.c         ****     dma_data_parameter.direction    = DMA_PERIPHERAL_TO_MEMORY;
+ 182              		.loc 1 43 5 is_stmt 1
+  44:adc.c         ****     dma_data_parameter.number       = 2;
+ 183              		.loc 1 44 5
+  45:adc.c         ****     dma_data_parameter.priority     = DMA_PRIORITY_HIGH;
+ 184              		.loc 1 45 5
+  46:adc.c         ****     dma_init(DMA0, DMA_CH0, &dma_data_parameter);
+ 185              		.loc 1 46 5
+  46:adc.c         ****     dma_init(DMA0, DMA_CH0, &dma_data_parameter);
+ 186              		.loc 1 46 37 is_stmt 0
+ 187 0168 3ACC     		sw	a4,24(sp)
+  39:adc.c         ****     dma_data_parameter.memory_addr  = (uint32_t)adc_values;
+ 188              		.loc 1 39 37
+ 189 016a 231EF100 		sh	a5,28(sp)
+  44:adc.c         ****     dma_data_parameter.number       = 2;
+ 190              		.loc 1 44 37
+ 191 016e 230F0100 		sb	zero,30(sp)
+ 192              		.loc 1 47 5 is_stmt 1
+ 193 0172 97000000 		call	dma_init
+ 193      E7800000 
+ 194              	.LVL22:
+  48:adc.c         ****     dma_circulation_enable(DMA0, DMA_CH0);
+ 195              		.loc 1 48 5
+ 196 017a 8145     		li	a1,0
+ 197 017c 37050240 		li	a0,1073872896
+ 198 0180 97000000 		call	dma_circulation_enable
+ 198      E7800000 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 6
+
+
+ 199              	.LVL23:
+  49:adc.c         ****     dma_channel_enable(DMA0, DMA_CH0);
+ 200              		.loc 1 49 5
+ 201 0188 8145     		li	a1,0
+ 202 018a 37050240 		li	a0,1073872896
+ 203 018e 97000000 		call	dma_channel_enable
+ 203      E7800000 
+ 204              	.LVL24:
+  50:adc.c         ****     adc_dma_mode_enable(ADC0);
+ 205              		.loc 1 50 5
+ 206 0196 13050440 		addi	a0,s0,1024
+ 207 019a 97000000 		call	adc_dma_mode_enable
+ 207      E7800000 
+ 208              	.LVL25:
+  51:adc.c         **** 
+  52:adc.c         ****     adc_enable(ADC0);
+ 209              		.loc 1 52 5
+ 210 01a2 13050440 		addi	a0,s0,1024
+ 211 01a6 97000000 		call	adc_enable
+ 211      E7800000 
+ 212              	.LVL26:
+  53:adc.c         ****     for (int i = 0; i < 0xFFFF; i++);
+ 213              		.loc 1 53 5
+ 214              		.loc 1 53 10
+  54:adc.c         ****     adc_calibration_enable(ADC0);
+ 215              		.loc 1 54 5
+ 216 01ae 13050440 		addi	a0,s0,1024
+ 217 01b2 97000000 		call	adc_calibration_enable
+ 217      E7800000 
+ 218              	.LVL27:
+  55:adc.c         ****     for (int i = 0; i < 0xFFFF; i++);
+ 219              		.loc 1 55 5
+ 220              		.loc 1 55 10
+  56:adc.c         ****     adc_software_trigger_enable(ADC0, ADC_REGULAR_CHANNEL);
+ 221              		.loc 1 56 5
+ 222 01ba 13050440 		addi	a0,s0,1024
+ 223 01be 8545     		li	a1,1
+ 224 01c0 97000000 		call	adc_software_trigger_enable
+ 224      E7800000 
+ 225              	.LVL28:
+  57:adc.c         **** }...
+ 226              		.loc 1 57 1 is_stmt 0
+ 227 01c8 B250     		lw	ra,44(sp)
+ 228              		.cfi_restore 1
+ 229 01ca 2254     		lw	s0,40(sp)
+ 230              		.cfi_restore 8
+ 231 01cc 9254     		lw	s1,36(sp)
+ 232              		.cfi_restore 9
+ 233              	.LVL29:
+ 234 01ce 4561     		addi	sp,sp,48
+ 235              	.LCFI1:
+ 236              		.cfi_def_cfa_offset 0
+ 237 01d0 8280     		jr	ra
+ 238              		.cfi_endproc
+ 239              	.LFE2:
+ 241              		.comm	adc_values,4,4
+ 242              		.text
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 7
+
+
+ 243              	.Letext0:
+ 244              		.file 2 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+ 245              		.file 3 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+ 246              		.file 4 "adc.h"
+ 247              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+ 248              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/gd32vf103.h"
+ 249              		.file 7 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_dma.h"
+ 250              		.file 8 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
+ 251              		.file 9 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h"
+ 252              		.file 10 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_adc.h"
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 adc.c
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:13     .text.ADC3powerUpInit:0000000000000000 ADC3powerUpInit
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:17     .text.ADC3powerUpInit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:19     .text.ADC3powerUpInit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:20     .text.ADC3powerUpInit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:21     .text.ADC3powerUpInit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:23     .text.ADC3powerUpInit:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:25     .text.ADC3powerUpInit:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:28     .text.ADC3powerUpInit:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:31     .text.ADC3powerUpInit:000000000000000a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:33     .text.ADC3powerUpInit:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:34     .text.ADC3powerUpInit:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:36     .text.ADC3powerUpInit:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:39     .text.ADC3powerUpInit:0000000000000016 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:43     .text.ADC3powerUpInit:0000000000000022 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:47     .text.ADC3powerUpInit:000000000000002e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:51     .text.ADC3powerUpInit:0000000000000038 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:59     .text.ADC3powerUpInit:000000000000004e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:64     .text.ADC3powerUpInit:000000000000005e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:68     .text.ADC3powerUpInit:0000000000000068 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:74     .text.ADC3powerUpInit:0000000000000078 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:80     .text.ADC3powerUpInit:000000000000008a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:85     .text.ADC3powerUpInit:0000000000000098 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:91     .text.ADC3powerUpInit:00000000000000a8 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:98     .text.ADC3powerUpInit:00000000000000ba .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:105    .text.ADC3powerUpInit:00000000000000cc .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:111    .text.ADC3powerUpInit:00000000000000de .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:117    .text.ADC3powerUpInit:00000000000000ee .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:118    .text.ADC3powerUpInit:00000000000000ee .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:120    .text.ADC3powerUpInit:00000000000000f0 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:126    .text.ADC3powerUpInit:0000000000000102 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:132    .text.ADC3powerUpInit:0000000000000112 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:135    .text.ADC3powerUpInit:000000000000011a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:143    .text.ADC3powerUpInit:000000000000012c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:144    .text.ADC3powerUpInit:000000000000012c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:149    .text.ADC3powerUpInit:000000000000013a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:150    .text.ADC3powerUpInit:000000000000013a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:154    .text.ADC3powerUpInit:0000000000000144 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:155    .text.ADC3powerUpInit:0000000000000144 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:156    .text.ADC3powerUpInit:0000000000000144 .L0 
+                            *COM*:0000000000000004 adc_values
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:158    .text.ADC3powerUpInit:0000000000000148 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:160    .text.ADC3powerUpInit:000000000000014c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:162    .text.ADC3powerUpInit:000000000000014e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:164    .text.ADC3powerUpInit:0000000000000152 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:166    .text.ADC3powerUpInit:0000000000000154 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:168    .text.ADC3powerUpInit:0000000000000156 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:170    .text.ADC3powerUpInit:0000000000000158 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:171    .text.ADC3powerUpInit:0000000000000158 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:172    .text.ADC3powerUpInit:0000000000000158 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:174    .text.ADC3powerUpInit:000000000000015a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:176    .text.ADC3powerUpInit:000000000000015e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:178    .text.ADC3powerUpInit:0000000000000160 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:181    .text.ADC3powerUpInit:0000000000000166 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:183    .text.ADC3powerUpInit:0000000000000168 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:184    .text.ADC3powerUpInit:0000000000000168 .L0 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 9
+
+
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:185    .text.ADC3powerUpInit:0000000000000168 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:186    .text.ADC3powerUpInit:0000000000000168 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:187    .text.ADC3powerUpInit:0000000000000168 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:189    .text.ADC3powerUpInit:000000000000016a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:191    .text.ADC3powerUpInit:000000000000016e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:193    .text.ADC3powerUpInit:0000000000000172 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:196    .text.ADC3powerUpInit:000000000000017a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:201    .text.ADC3powerUpInit:0000000000000188 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:206    .text.ADC3powerUpInit:0000000000000196 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:210    .text.ADC3powerUpInit:00000000000001a2 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:214    .text.ADC3powerUpInit:00000000000001ae .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:215    .text.ADC3powerUpInit:00000000000001ae .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:216    .text.ADC3powerUpInit:00000000000001ae .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:220    .text.ADC3powerUpInit:00000000000001ba .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:221    .text.ADC3powerUpInit:00000000000001ba .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:222    .text.ADC3powerUpInit:00000000000001ba .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:227    .text.ADC3powerUpInit:00000000000001c8 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:228    .text.ADC3powerUpInit:00000000000001ca .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:230    .text.ADC3powerUpInit:00000000000001cc .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:232    .text.ADC3powerUpInit:00000000000001ce .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:236    .text.ADC3powerUpInit:00000000000001d0 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:238    .text.ADC3powerUpInit:00000000000001d2 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:242    .text.ADC3powerUpInit:00000000000001d2 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:141    .text.ADC3powerUpInit:000000000000012c .L2
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1310   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1726   .debug_str:0000000000000000 .LASF95
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1766   .debug_str:0000000000000186 .LASF96
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1828   .debug_str:00000000000002eb .LASF97
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1718   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1724   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1842   .debug_str:000000000000038f .LASF0
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1920   .debug_str:0000000000000590 .LASF3
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1830   .debug_str:0000000000000337 .LASF1
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1768   .debug_str:000000000000018c .LASF2
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1764   .debug_str:000000000000017b .LASF4
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1854   .debug_str:00000000000003d9 .LASF5
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1794   .debug_str:0000000000000229 .LASF6
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1760   .debug_str:0000000000000168 .LASF7
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1872   .debug_str:0000000000000470 .LASF8
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1758   .debug_str:000000000000015a .LASF9
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1844   .debug_str:000000000000039b .LASF10
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1848   .debug_str:00000000000003bb .LASF11
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1772   .debug_str:00000000000001a1 .LASF12
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1850   .debug_str:00000000000003c8 .LASF13
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1846   .debug_str:00000000000003b2 .LASF14
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1860   .debug_str:00000000000003fe .LASF15
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1728   .debug_str:0000000000000088 .LASF16
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1780   .debug_str:00000000000001cd .LASF17
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1918   .debug_str:0000000000000589 .LASF18
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1774   .debug_str:00000000000001a9 .LASF19
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1906   .debug_str:0000000000000559 .LASF20
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1908   .debug_str:0000000000000561 .LASF21
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1910   .debug_str:0000000000000569 .LASF22
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1912   .debug_str:0000000000000571 .LASF23
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1914   .debug_str:0000000000000579 .LASF24
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1916   .debug_str:0000000000000581 .LASF25
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 10
+
+
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1752   .debug_str:0000000000000128 .LASF26
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1820   .debug_str:00000000000002b0 .LASF27
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1790   .debug_str:0000000000000213 .LASF28
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1822   .debug_str:00000000000002bd .LASF29
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1900   .debug_str:000000000000052a .LASF30
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1734   .debug_str:00000000000000aa .LASF31
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1818   .debug_str:00000000000002a5 .LASF32
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1770   .debug_str:0000000000000196 .LASF33
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1756   .debug_str:0000000000000150 .LASF34
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1824   .debug_str:00000000000002ca .LASF35
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1776   .debug_str:00000000000001b1 .LASF36
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1864   .debug_str:0000000000000425 .LASF37
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1878   .debug_str:0000000000000497 .LASF38
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1738   .debug_str:00000000000000c3 .LASF39
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1892   .debug_str:00000000000004ee .LASF40
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1808   .debug_str:000000000000026e .LASF41
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1810   .debug_str:0000000000000279 .LASF42
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1812   .debug_str:0000000000000284 .LASF43
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1814   .debug_str:000000000000028f .LASF44
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1816   .debug_str:000000000000029a .LASF45
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1802   .debug_str:000000000000024d .LASF46
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1792   .debug_str:000000000000021f .LASF47
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1798   .debug_str:000000000000023b .LASF48
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1800   .debug_str:0000000000000244 .LASF49
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1888   .debug_str:00000000000004d8 .LASF50
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1890   .debug_str:00000000000004e3 .LASF51
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1894   .debug_str:00000000000004f8 .LASF52
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1896   .debug_str:0000000000000502 .LASF53
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1856   .debug_str:00000000000003ec .LASF54
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1858   .debug_str:00000000000003f5 .LASF55
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1782   .debug_str:00000000000001d5 .LASF56
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1784   .debug_str:00000000000001de .LASF57
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1838   .debug_str:000000000000036f .LASF58
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1852   .debug_str:00000000000003d1 .LASF59
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1868   .debug_str:0000000000000445 .LASF60
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1762   .debug_str:0000000000000173 .LASF61
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1730   .debug_str:0000000000000098 .LASF62
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1740   .debug_str:00000000000000cc .LASF63
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1742   .debug_str:00000000000000d6 .LASF64
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1876   .debug_str:000000000000048d .LASF65
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1746   .debug_str:00000000000000fa .LASF66
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1748   .debug_str:0000000000000104 .LASF67
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1834   .debug_str:000000000000035d .LASF68
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1836   .debug_str:0000000000000366 .LASF69
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1806   .debug_str:0000000000000263 .LASF70
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1796   .debug_str:0000000000000232 .LASF71
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1886   .debug_str:00000000000004cd .LASF72
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1826   .debug_str:00000000000002df .LASF73
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1736   .debug_str:00000000000000b3 .LASF98
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:14     .text.ADC3powerUpInit:0000000000000000 .LFB2
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:239    .text.ADC3powerUpInit:00000000000001d2 .LFE2
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1669   .debug_loc:0000000000000000 .LLST0
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1687   .debug_loc:000000000000002c .LLST1
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1778   .debug_str:00000000000001ba .LASF99
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:37     .text.ADC3powerUpInit:0000000000000016 .LVL2
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:41     .text.ADC3powerUpInit:0000000000000022 .LVL3
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:45     .text.ADC3powerUpInit:000000000000002e .LVL4
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 11
+
+
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:49     .text.ADC3powerUpInit:0000000000000038 .LVL5
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:57     .text.ADC3powerUpInit:000000000000004e .LVL6
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:62     .text.ADC3powerUpInit:000000000000005e .LVL7
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:66     .text.ADC3powerUpInit:0000000000000068 .LVL8
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:72     .text.ADC3powerUpInit:0000000000000078 .LVL9
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:78     .text.ADC3powerUpInit:000000000000008a .LVL10
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:83     .text.ADC3powerUpInit:0000000000000098 .LVL11
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:89     .text.ADC3powerUpInit:00000000000000a8 .LVL12
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:96     .text.ADC3powerUpInit:00000000000000ba .LVL13
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:103    .text.ADC3powerUpInit:00000000000000cc .LVL14
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:109    .text.ADC3powerUpInit:00000000000000de .LVL15
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:115    .text.ADC3powerUpInit:00000000000000ee .LVL16
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:124    .text.ADC3powerUpInit:0000000000000102 .LVL17
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:130    .text.ADC3powerUpInit:0000000000000112 .LVL18
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:133    .text.ADC3powerUpInit:000000000000011a .LVL19
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:140    .text.ADC3powerUpInit:000000000000012c .LVL20
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:147    .text.ADC3powerUpInit:000000000000013a .LVL21
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:194    .text.ADC3powerUpInit:000000000000017a .LVL22
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:199    .text.ADC3powerUpInit:0000000000000188 .LVL23
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:204    .text.ADC3powerUpInit:0000000000000196 .LVL24
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:208    .text.ADC3powerUpInit:00000000000001a2 .LVL25
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:212    .text.ADC3powerUpInit:00000000000001ae .LVL26
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:218    .text.ADC3powerUpInit:00000000000001ba .LVL27
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:225    .text.ADC3powerUpInit:00000000000001c8 .LVL28
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1832   .debug_str:0000000000000345 .LASF74
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1904   .debug_str:0000000000000544 .LASF75
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1882   .debug_str:00000000000004ba .LASF76
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1732   .debug_str:000000000000009f .LASF77
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1786   .debug_str:00000000000001e7 .LASF78
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1754   .debug_str:0000000000000134 .LASF79
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1744   .debug_str:00000000000000e0 .LASF80
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1750   .debug_str:000000000000010e .LASF81
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1880   .debug_str:000000000000049f .LASF82
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1870   .debug_str:000000000000044d .LASF83
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1788   .debug_str:00000000000001f7 .LASF84
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1898   .debug_str:000000000000050c .LASF85
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1922   .debug_str:000000000000059a .LASF86
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1804   .debug_str:0000000000000258 .LASF87
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1884   .debug_str:00000000000004c4 .LASF88
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1840   .debug_str:0000000000000378 .LASF89
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1902   .debug_str:0000000000000531 .LASF90
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1924   .debug_str:00000000000005b6 .LASF91
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1874   .debug_str:0000000000000482 .LASF92
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1866   .debug_str:000000000000042e .LASF93
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:1862   .debug_str:0000000000000409 .LASF94
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:22     .text.ADC3powerUpInit:0000000000000002 .LCFI0
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:235    .text.ADC3powerUpInit:00000000000001d0 .LCFI1
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:18     .text.ADC3powerUpInit:0000000000000000 .LVL0
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:29     .text.ADC3powerUpInit:000000000000000a .LVL1
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:233    .text.ADC3powerUpInit:00000000000001ce .LVL29
+C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s:254    .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+rcu_periph_clock_enable
+rcu_adc_clock_config
+gpio_init
+adc_deinit
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccOfckb4.s 			page 12
+
+
+adc_mode_config
+adc_special_function_config
+adc_data_alignment_config
+adc_channel_length_config
+adc_regular_channel_config
+adc_external_trigger_source_config
+adc_external_trigger_config
+adc_tempsensor_vrefint_enable
+adc_inserted_channel_config
+dma_deinit
+dma_init
+dma_circulation_enable
+dma_channel_enable
+adc_dma_mode_enable
+adc_enable
+adc_calibration_enable
+adc_software_trigger_enable
