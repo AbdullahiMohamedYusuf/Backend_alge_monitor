@@ -1,4 +1,4 @@
-build/lioonewire.o: lioonewire.c lioonewire.h delay.h \
+build/lioonewire.o: lioonewire.c lioonewire.h systick.h \
  ../../firmware/GD32VF103_standard_peripheral/gd32vf103.h \
  ../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h \
  ../../firmware/GD32VF103_standard_peripheral/gd32vf103_libopt.h \
@@ -30,7 +30,7 @@ build/lioonewire.o: lioonewire.c lioonewire.h delay.h \
 
 lioonewire.h:
 
-delay.h:
+systick.h:
 
 ../../firmware/GD32VF103_standard_peripheral/gd32vf103.h:
 

@@ -32,7 +32,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
 */
 
-#pragma once
+#ifndef SYS_TICK_H
+#define SYS_TICK_H
 
 #include <stdint.h>
 /** 
@@ -47,3 +48,4 @@ void delay_1ms(uint32_t count);
 */
 void delay_1us(uint32_t count);
 
+#endif /* SYS_TICK_H */

@@ -33,7 +33,7 @@ OF SUCH DAMAGE.
 */
 
 #include "gd32vf103.h"
-#include "delay.h"
+#include "systick.h"
 
 /*!
     \brief      delay a time in milliseconds

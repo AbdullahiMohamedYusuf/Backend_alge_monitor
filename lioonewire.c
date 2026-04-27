@@ -8,6 +8,7 @@
 #include <stdint.h>
 #include "lioonewire.h"
 #include "gd32vf103.h"
+#include "systick.h"
 
 #define SKIP_ROM            0xCC
 #define WRITE_SCRATCH_PAD   0x4E
@@ -135,7 +136,7 @@ int16_t lio_read_temp(){ // Användbar.
     lio_OW_touch_reset();
     lio_OW_write_byte(SKIP_ROM);
     lio_OW_write_byte(START_CONVERSION);
-    for(int i = 1000; i > 0 && lio_OW_read_byte(); i--);
+    delay_1ms(750); 
     lio_OW_touch_reset();
     lio_OW_write_byte(SKIP_ROM);
     lio_OW_write_byte(READ_SCRATCH_PAD);
