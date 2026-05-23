@@ -1,0 +1,1082 @@
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 1
+
+
+   1              		.file	"customI2c.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.ow_init,"ax",@progbits
+  10              		.align	1
+  11              		.globl	ow_init
+  13              	ow_init:
+  14              	.LFB2:
+  15              		.file 1 "customI2c.c"
+   1:customI2c.c   **** #include "customI2c.h"
+   2:customI2c.c   **** #include "systick.h"
+   3:customI2c.c   **** #include "gd32vf103.h"
+   4:customI2c.c   **** 
+   5:customI2c.c   **** #define OW_PORT GPIOB
+   6:customI2c.c   **** #define OW_PIN  GPIO_PIN_5
+   7:customI2c.c   **** 
+   8:customI2c.c   **** void ow_init() {
+  16              		.loc 1 8 16
+  17              		.cfi_startproc
+   9:customI2c.c   ****     rcu_periph_clock_enable(RCU_GPIOB);
+  18              		.loc 1 9 5
+   8:customI2c.c   ****     rcu_periph_clock_enable(RCU_GPIOB);
+  19              		.loc 1 8 16 is_stmt 0
+  20 0000 4111     		addi	sp,sp,-16
+  21              	.LCFI0:
+  22              		.cfi_def_cfa_offset 16
+  23              		.loc 1 9 5
+  24 0002 13053060 		li	a0,1539
+   8:customI2c.c   ****     rcu_periph_clock_enable(RCU_GPIOB);
+  25              		.loc 1 8 16
+  26 0006 06C6     		sw	ra,12(sp)
+  27 0008 22C4     		sw	s0,8(sp)
+  28              		.cfi_offset 1, -4
+  29              		.cfi_offset 8, -8
+  30              		.loc 1 9 5
+  31 000a 97000000 		call	rcu_periph_clock_enable
+  31      E7800000 
+  32              	.LVL0:
+  10:customI2c.c   ****     gpio_init(OW_PORT, GPIO_MODE_OUT_OD, GPIO_OSPEED_50MHZ, OW_PIN);
+  33              		.loc 1 10 5 is_stmt 1
+  34 0012 37140140 		li	s0,1073811456
+  35 0016 130504C0 		addi	a0,s0,-1024
+  36 001a D145     		li	a1,20
+  37 001c 93060002 		li	a3,32
+  38 0020 0D46     		li	a2,3
+  39 0022 97000000 		call	gpio_init
+  39      E7800000 
+  40              	.LVL1:
+  11:customI2c.c   ****     gpio_bit_set(OW_PORT, OW_PIN); 
+  41              		.loc 1 11 5
+  42 002a 130504C0 		addi	a0,s0,-1024
+  12:customI2c.c   **** }
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 2
+
+
+  43              		.loc 1 12 1 is_stmt 0
+  44 002e 2244     		lw	s0,8(sp)
+  45              		.cfi_restore 8
+  46 0030 B240     		lw	ra,12(sp)
+  47              		.cfi_restore 1
+  11:customI2c.c   ****     gpio_bit_set(OW_PORT, OW_PIN); 
+  48              		.loc 1 11 5
+  49 0032 93050002 		li	a1,32
+  50              		.loc 1 12 1
+  51 0036 4101     		addi	sp,sp,16
+  52              	.LCFI1:
+  53              		.cfi_def_cfa_offset 0
+  11:customI2c.c   ****     gpio_bit_set(OW_PORT, OW_PIN); 
+  54              		.loc 1 11 5
+  55 0038 17030000 		tail	gpio_bit_set
+  55      67000300 
+  56              	.LVL2:
+  57              		.cfi_endproc
+  58              	.LFE2:
+  60              		.section	.text.ow_write_bit,"ax",@progbits
+  61              		.align	1
+  62              		.globl	ow_write_bit
+  64              	ow_write_bit:
+  65              	.LFB3:
+  13:customI2c.c   **** 
+  14:customI2c.c   **** // Fixed: Added missing low-level write function
+  15:customI2c.c   **** void ow_write_bit(uint8_t bit) {
+  66              		.loc 1 15 32 is_stmt 1
+  67              		.cfi_startproc
+  68              	.LVL3:
+  16:customI2c.c   ****     __asm__ volatile ("csrci mstatus, 8"); // MIE LOW
+  69              		.loc 1 16 5
+  15:customI2c.c   ****     __asm__ volatile ("csrci mstatus, 8"); // MIE LOW
+  70              		.loc 1 15 32 is_stmt 0
+  71 0000 4111     		addi	sp,sp,-16
+  72              	.LCFI2:
+  73              		.cfi_def_cfa_offset 16
+  74 0002 26C2     		sw	s1,4(sp)
+  75 0004 06C6     		sw	ra,12(sp)
+  76 0006 22C4     		sw	s0,8(sp)
+  77              		.cfi_offset 9, -12
+  78              		.cfi_offset 1, -4
+  79              		.cfi_offset 8, -8
+  15:customI2c.c   ****     __asm__ volatile ("csrci mstatus, 8"); // MIE LOW
+  80              		.loc 1 15 32
+  81 0008 AA84     		mv	s1,a0
+  82              		.loc 1 16 5
+  83              	 #APP
+  84              	# 16 "customI2c.c" 1
+  17              	    gpio_bit_reset(OW_PORT, OW_PIN);
+  85              		csrci mstatus, 8
+  86              	# 0 "" 2
+  87              		.loc 1 17 5 is_stmt 1
+  88              	 #NO_APP
+  89 000e 37140140 		li	s0,1073811456
+  90 0012 93050002 		li	a1,32
+  91 0016 130504C0 		addi	a0,s0,-1024
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 3
+
+
+  92              	.LVL4:
+  93 001a 97000000 		call	gpio_bit_reset
+  93      E7800000 
+  94              	.LVL5:
+  18:customI2c.c   ****     if(bit) {
+  95              		.loc 1 18 5
+  96              		.loc 1 18 7 is_stmt 0
+  97 0022 9DC8     		beq	s1,zero,.L4
+  19:customI2c.c   ****         delay_1us(6);
+  98              		.loc 1 19 9 is_stmt 1
+  99 0024 1945     		li	a0,6
+ 100 0026 97000000 		call	delay_1us
+ 100      E7800000 
+ 101              	.LVL6:
+  20:customI2c.c   ****         gpio_bit_set(OW_PORT, OW_PIN);
+ 102              		.loc 1 20 9
+ 103 002e 130504C0 		addi	a0,s0,-1024
+ 104 0032 93050002 		li	a1,32
+ 105 0036 97000000 		call	gpio_bit_set
+ 105      E7800000 
+ 106              	.LVL7:
+  21:customI2c.c   ****         delay_1us(64);
+ 107              		.loc 1 21 9
+ 108 003e 13050004 		li	a0,64
+ 109              	.L7:
+  22:customI2c.c   ****     } else {
+  23:customI2c.c   ****         delay_1us(60);
+  24:customI2c.c   ****         gpio_bit_set(OW_PORT, OW_PIN);
+  25:customI2c.c   ****         delay_1us(10);
+ 110              		.loc 1 25 9 is_stmt 0
+ 111 0042 97000000 		call	delay_1us
+ 111      E7800000 
+ 112              	.LVL8:
+  26:customI2c.c   ****     }
+  27:customI2c.c   ****     __asm__ volatile ("csrsi mstatus, 8"); // MIE HIGH
+ 113              		.loc 1 27 5 is_stmt 1
+ 114              	 #APP
+ 115              	# 27 "customI2c.c" 1
+  28              	}
+ 116              		csrsi mstatus, 8
+ 117              	# 0 "" 2
+ 118              		.loc 1 28 1 is_stmt 0
+ 119              	 #NO_APP
+ 120 004e B240     		lw	ra,12(sp)
+ 121              		.cfi_remember_state
+ 122              		.cfi_restore 1
+ 123 0050 2244     		lw	s0,8(sp)
+ 124              		.cfi_restore 8
+ 125 0052 9244     		lw	s1,4(sp)
+ 126              		.cfi_restore 9
+ 127 0054 4101     		addi	sp,sp,16
+ 128              	.LCFI3:
+ 129              		.cfi_def_cfa_offset 0
+ 130 0056 8280     		jr	ra
+ 131              	.L4:
+ 132              	.LCFI4:
+ 133              		.cfi_restore_state
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 4
+
+
+  23:customI2c.c   ****         gpio_bit_set(OW_PORT, OW_PIN);
+ 134              		.loc 1 23 9 is_stmt 1
+ 135 0058 1305C003 		li	a0,60
+ 136 005c 97000000 		call	delay_1us
+ 136      E7800000 
+ 137              	.LVL9:
+  24:customI2c.c   ****         delay_1us(10);
+ 138              		.loc 1 24 9
+ 139 0064 130504C0 		addi	a0,s0,-1024
+ 140 0068 93050002 		li	a1,32
+ 141 006c 97000000 		call	gpio_bit_set
+ 141      E7800000 
+ 142              	.LVL10:
+  25:customI2c.c   ****     }
+ 143              		.loc 1 25 9
+ 144 0074 2945     		li	a0,10
+ 145 0076 F1B7     		j	.L7
+ 146              		.cfi_endproc
+ 147              	.LFE3:
+ 149              		.section	.text.ow_read_bit,"ax",@progbits
+ 150              		.align	1
+ 151              		.globl	ow_read_bit
+ 153              	ow_read_bit:
+ 154              	.LFB4:
+  29:customI2c.c   **** 
+  30:customI2c.c   **** // Fixed: Added missing low-level read function
+  31:customI2c.c   **** uint8_t ow_read_bit() {
+ 155              		.loc 1 31 23
+ 156              		.cfi_startproc
+  32:customI2c.c   ****     uint8_t result;
+ 157              		.loc 1 32 5
+  33:customI2c.c   ****     __asm__ volatile ("csrci mstatus, 8"); // MIE LOW
+ 158              		.loc 1 33 5
+  31:customI2c.c   ****     uint8_t result;
+ 159              		.loc 1 31 23 is_stmt 0
+ 160 0000 4111     		addi	sp,sp,-16
+ 161              	.LCFI5:
+ 162              		.cfi_def_cfa_offset 16
+ 163 0002 06C6     		sw	ra,12(sp)
+ 164 0004 22C4     		sw	s0,8(sp)
+ 165              		.cfi_offset 1, -4
+ 166              		.cfi_offset 8, -8
+ 167              		.loc 1 33 5
+ 168              	 #APP
+ 169              	# 33 "customI2c.c" 1
+  34              	    gpio_bit_reset(OW_PORT, OW_PIN);
+ 170              		csrci mstatus, 8
+ 171              	# 0 "" 2
+ 172              		.loc 1 34 5 is_stmt 1
+ 173              	 #NO_APP
+ 174 000a 37140140 		li	s0,1073811456
+ 175 000e 93050002 		li	a1,32
+ 176 0012 130504C0 		addi	a0,s0,-1024
+ 177 0016 97000000 		call	gpio_bit_reset
+ 177      E7800000 
+ 178              	.LVL11:
+  35:customI2c.c   ****     delay_1us(6);
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 5
+
+
+ 179              		.loc 1 35 5
+ 180 001e 1945     		li	a0,6
+ 181 0020 97000000 		call	delay_1us
+ 181      E7800000 
+ 182              	.LVL12:
+  36:customI2c.c   ****     gpio_bit_set(OW_PORT, OW_PIN);
+ 183              		.loc 1 36 5
+ 184 0028 93050002 		li	a1,32
+ 185 002c 130504C0 		addi	a0,s0,-1024
+ 186 0030 97000000 		call	gpio_bit_set
+ 186      E7800000 
+ 187              	.LVL13:
+  37:customI2c.c   ****     delay_1us(9);
+ 188              		.loc 1 37 5
+ 189 0038 2545     		li	a0,9
+ 190 003a 97000000 		call	delay_1us
+ 190      E7800000 
+ 191              	.LVL14:
+  38:customI2c.c   ****     result = gpio_input_bit_get(OW_PORT, OW_PIN);
+ 192              		.loc 1 38 5
+ 193              		.loc 1 38 14 is_stmt 0
+ 194 0042 93050002 		li	a1,32
+ 195 0046 130504C0 		addi	a0,s0,-1024
+ 196 004a 97000000 		call	gpio_input_bit_get
+ 196      E7800000 
+ 197              	.LVL15:
+ 198 0052 2A84     		mv	s0,a0
+ 199              	.LVL16:
+  39:customI2c.c   ****     delay_1us(55);
+ 200              		.loc 1 39 5 is_stmt 1
+ 201 0054 13057003 		li	a0,55
+ 202 0058 97000000 		call	delay_1us
+ 202      E7800000 
+ 203              	.LVL17:
+  40:customI2c.c   ****     __asm__ volatile ("csrsi mstatus, 8"); // MIE HIGH
+ 204              		.loc 1 40 5
+ 205              	 #APP
+ 206              	# 40 "customI2c.c" 1
+  41              	    return result;
+ 207              		csrsi mstatus, 8
+ 208              	# 0 "" 2
+ 209              		.loc 1 41 5
+  42:customI2c.c   **** }
+ 210              		.loc 1 42 1 is_stmt 0
+ 211              	 #NO_APP
+ 212 0064 1375F40F 		andi	a0,s0,0xff
+ 213 0068 B240     		lw	ra,12(sp)
+ 214              		.cfi_restore 1
+ 215 006a 2244     		lw	s0,8(sp)
+ 216              		.cfi_restore 8
+ 217              	.LVL18:
+ 218 006c 4101     		addi	sp,sp,16
+ 219              	.LCFI6:
+ 220              		.cfi_def_cfa_offset 0
+ 221 006e 8280     		jr	ra
+ 222              		.cfi_endproc
+ 223              	.LFE4:
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 6
+
+
+ 225              		.section	.text.ow_write_byte,"ax",@progbits
+ 226              		.align	1
+ 227              		.globl	ow_write_byte
+ 229              	ow_write_byte:
+ 230              	.LFB5:
+  43:customI2c.c   **** 
+  44:customI2c.c   **** void ow_write_byte(uint8_t data) {
+ 231              		.loc 1 44 34 is_stmt 1
+ 232              		.cfi_startproc
+ 233              	.LVL19:
+  45:customI2c.c   ****     for(int i = 0; i < 8; i++) {
+ 234              		.loc 1 45 5
+ 235              	.LBB2:
+ 236              		.loc 1 45 9
+ 237              	.LBE2:
+  44:customI2c.c   ****     for(int i = 0; i < 8; i++) {
+ 238              		.loc 1 44 34 is_stmt 0
+ 239 0000 4111     		addi	sp,sp,-16
+ 240              	.LCFI7:
+ 241              		.cfi_def_cfa_offset 16
+ 242 0002 22C4     		sw	s0,8(sp)
+ 243 0004 26C2     		sw	s1,4(sp)
+ 244 0006 06C6     		sw	ra,12(sp)
+ 245              		.cfi_offset 8, -8
+ 246              		.cfi_offset 9, -12
+ 247              		.cfi_offset 1, -4
+  44:customI2c.c   ****     for(int i = 0; i < 8; i++) {
+ 248              		.loc 1 44 34
+ 249 0008 AA84     		mv	s1,a0
+ 250              	.LVL20:
+ 251 000a 2144     		li	s0,8
+ 252              	.LVL21:
+ 253              	.L11:
+ 254              	.LBB3:
+  46:customI2c.c   ****         ow_write_bit(data & 0x01);
+ 255              		.loc 1 46 9 is_stmt 1 discriminator 3
+ 256 000c 13F51400 		andi	a0,s1,1
+ 257 0010 7D14     		addi	s0,s0,-1
+ 258              	.LVL22:
+ 259 0012 97000000 		call	ow_write_bit
+ 259      E7800000 
+ 260              	.LVL23:
+  47:customI2c.c   ****         data >>= 1;
+ 261              		.loc 1 47 9 discriminator 3
+ 262              		.loc 1 47 14 is_stmt 0 discriminator 3
+ 263 001a 8580     		srli	s1,s1,1
+ 264              	.LVL24:
+  45:customI2c.c   ****         ow_write_bit(data & 0x01);
+ 265              		.loc 1 45 5 discriminator 3
+ 266 001c 65F8     		bne	s0,zero,.L11
+ 267              	.LBE3:
+  48:customI2c.c   ****     }
+  49:customI2c.c   **** }
+ 268              		.loc 1 49 1
+ 269 001e B240     		lw	ra,12(sp)
+ 270              		.cfi_restore 1
+ 271 0020 2244     		lw	s0,8(sp)
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 7
+
+
+ 272              		.cfi_restore 8
+ 273 0022 9244     		lw	s1,4(sp)
+ 274              		.cfi_restore 9
+ 275              	.LVL25:
+ 276 0024 4101     		addi	sp,sp,16
+ 277              	.LCFI8:
+ 278              		.cfi_def_cfa_offset 0
+ 279 0026 8280     		jr	ra
+ 280              		.cfi_endproc
+ 281              	.LFE5:
+ 283              		.section	.text.ow_read_byte,"ax",@progbits
+ 284              		.align	1
+ 285              		.globl	ow_read_byte
+ 287              	ow_read_byte:
+ 288              	.LFB6:
+  50:customI2c.c   **** 
+  51:customI2c.c   **** uint8_t ow_read_byte() {
+ 289              		.loc 1 51 24 is_stmt 1
+ 290              		.cfi_startproc
+  52:customI2c.c   ****     uint8_t result = 0;
+ 291              		.loc 1 52 5
+ 292              	.LVL26:
+  53:customI2c.c   ****     for(int i = 0; i < 8; i++) {
+ 293              		.loc 1 53 5
+ 294              	.LBB4:
+ 295              		.loc 1 53 9
+ 296              	.LBE4:
+  51:customI2c.c   ****     uint8_t result = 0;
+ 297              		.loc 1 51 24 is_stmt 0
+ 298 0000 4111     		addi	sp,sp,-16
+ 299              	.LCFI9:
+ 300              		.cfi_def_cfa_offset 16
+ 301 0002 22C4     		sw	s0,8(sp)
+ 302 0004 26C2     		sw	s1,4(sp)
+ 303 0006 06C6     		sw	ra,12(sp)
+ 304              		.cfi_offset 8, -8
+ 305              		.cfi_offset 9, -12
+ 306              		.cfi_offset 1, -4
+  51:customI2c.c   ****     uint8_t result = 0;
+ 307              		.loc 1 51 24
+ 308 0008 A144     		li	s1,8
+  52:customI2c.c   ****     uint8_t result = 0;
+ 309              		.loc 1 52 13
+ 310 000a 0144     		li	s0,0
+ 311              	.LVL27:
+ 312              	.L16:
+ 313              	.LBB5:
+  54:customI2c.c   ****         result >>= 1;
+ 314              		.loc 1 54 9 is_stmt 1
+ 315              		.loc 1 54 16 is_stmt 0
+ 316 000c 0580     		srli	s0,s0,1
+ 317              	.LVL28:
+  55:customI2c.c   ****         if (ow_read_bit()) result |= 0x80;
+ 318              		.loc 1 55 9 is_stmt 1
+ 319              		.loc 1 55 13 is_stmt 0
+ 320 000e 97000000 		call	ow_read_bit
+ 320      E7800000 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 8
+
+
+ 321              	.LVL29:
+ 322              		.loc 1 55 12
+ 323 0016 09C5     		beq	a0,zero,.L15
+ 324              		.loc 1 55 28 is_stmt 1 discriminator 1
+ 325              		.loc 1 55 35 is_stmt 0 discriminator 1
+ 326 0018 136404F8 		ori	s0,s0,-128
+ 327              	.LVL30:
+ 328 001c 1374F40F 		andi	s0,s0,0xff
+ 329              	.LVL31:
+ 330              	.L15:
+ 331 0020 FD14     		addi	s1,s1,-1
+ 332              	.LVL32:
+  53:customI2c.c   ****         result >>= 1;
+ 333              		.loc 1 53 5 discriminator 2
+ 334 0022 EDF4     		bne	s1,zero,.L16
+ 335              	.LBE5:
+  56:customI2c.c   ****     }
+  57:customI2c.c   ****     return result;
+ 336              		.loc 1 57 5 is_stmt 1
+  58:customI2c.c   **** }
+ 337              		.loc 1 58 1 is_stmt 0
+ 338 0024 2285     		mv	a0,s0
+ 339 0026 B240     		lw	ra,12(sp)
+ 340              		.cfi_restore 1
+ 341 0028 2244     		lw	s0,8(sp)
+ 342              		.cfi_restore 8
+ 343              	.LVL33:
+ 344 002a 9244     		lw	s1,4(sp)
+ 345              		.cfi_restore 9
+ 346              	.LVL34:
+ 347 002c 4101     		addi	sp,sp,16
+ 348              	.LCFI10:
+ 349              		.cfi_def_cfa_offset 0
+ 350 002e 8280     		jr	ra
+ 351              		.cfi_endproc
+ 352              	.LFE6:
+ 354              		.section	.text.read_temp,"ax",@progbits
+ 355              		.align	1
+ 356              		.globl	read_temp
+ 358              	read_temp:
+ 359              	.LFB7:
+  59:customI2c.c   **** 
+  60:customI2c.c   **** int16_t read_temp() {
+ 360              		.loc 1 60 21 is_stmt 1
+ 361              		.cfi_startproc
+  61:customI2c.c   ****     // 1. Reset and Start Conversion
+  62:customI2c.c   ****     gpio_bit_reset(OW_PORT, OW_PIN);
+ 362              		.loc 1 62 5
+  60:customI2c.c   ****     // 1. Reset and Start Conversion
+ 363              		.loc 1 60 21 is_stmt 0
+ 364 0000 4111     		addi	sp,sp,-16
+ 365              	.LCFI11:
+ 366              		.cfi_def_cfa_offset 16
+ 367 0002 22C4     		sw	s0,8(sp)
+ 368              		.cfi_offset 8, -8
+ 369              		.loc 1 62 5
+ 370 0004 37140140 		li	s0,1073811456
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 9
+
+
+ 371 0008 93050002 		li	a1,32
+ 372 000c 130504C0 		addi	a0,s0,-1024
+  60:customI2c.c   ****     // 1. Reset and Start Conversion
+ 373              		.loc 1 60 21
+ 374 0010 06C6     		sw	ra,12(sp)
+ 375              		.cfi_offset 1, -4
+ 376              		.loc 1 62 5
+ 377 0012 97000000 		call	gpio_bit_reset
+ 377      E7800000 
+ 378              	.LVL35:
+  63:customI2c.c   ****     delay_1us(480);
+ 379              		.loc 1 63 5 is_stmt 1
+ 380 001a 1305001E 		li	a0,480
+ 381 001e 97000000 		call	delay_1us
+ 381      E7800000 
+ 382              	.LVL36:
+  64:customI2c.c   ****     gpio_bit_set(OW_PORT, OW_PIN);
+ 383              		.loc 1 64 5
+ 384 0026 93050002 		li	a1,32
+ 385 002a 130504C0 		addi	a0,s0,-1024
+ 386 002e 97000000 		call	gpio_bit_set
+ 386      E7800000 
+ 387              	.LVL37:
+  65:customI2c.c   ****     delay_1us(70);
+ 388              		.loc 1 65 5
+ 389 0036 13056004 		li	a0,70
+ 390 003a 97000000 		call	delay_1us
+ 390      E7800000 
+ 391              	.LVL38:
+  66:customI2c.c   ****     if(gpio_input_bit_get(OW_PORT, OW_PIN)) return -1;
+ 392              		.loc 1 66 5
+ 393              		.loc 1 66 8 is_stmt 0
+ 394 0042 93050002 		li	a1,32
+ 395 0046 130504C0 		addi	a0,s0,-1024
+ 396 004a 97000000 		call	gpio_input_bit_get
+ 396      E7800000 
+ 397              	.LVL39:
+ 398              		.loc 1 66 7
+ 399 0052 11C5     		beq	a0,zero,.L23
+ 400              	.L25:
+ 401              		.loc 1 66 52
+ 402 0054 7D55     		li	a0,-1
+ 403              	.L24:
+  67:customI2c.c   ****     delay_1us(410);
+  68:customI2c.c   **** 
+  69:customI2c.c   ****     ow_write_byte(0xCC); // Skip ROM
+  70:customI2c.c   ****     ow_write_byte(0x44); // Convert T
+  71:customI2c.c   ****     delay_1ms(750);      
+  72:customI2c.c   **** 
+  73:customI2c.c   ****     // 2. Second Reset to Read Scratchpad
+  74:customI2c.c   ****     gpio_bit_reset(OW_PORT, OW_PIN);
+  75:customI2c.c   ****     delay_1us(480);
+  76:customI2c.c   ****     gpio_bit_set(OW_PORT, OW_PIN);
+  77:customI2c.c   ****     delay_1us(70);
+  78:customI2c.c   ****     if(gpio_input_bit_get(OW_PORT, OW_PIN)) return -1;
+  79:customI2c.c   ****     delay_1us(410);
+  80:customI2c.c   **** 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 10
+
+
+  81:customI2c.c   ****     ow_write_byte(0xCC); 
+  82:customI2c.c   ****     ow_write_byte(0xBE); // Read Scratchpad
+  83:customI2c.c   ****     
+  84:customI2c.c   ****     uint8_t low = ow_read_byte();
+  85:customI2c.c   ****     uint8_t high = ow_read_byte();
+  86:customI2c.c   ****     return (int16_t)((high << 8) | low);
+  87:customI2c.c   **** }...
+ 404              		.loc 1 87 1
+ 405 0056 B240     		lw	ra,12(sp)
+ 406              		.cfi_remember_state
+ 407              		.cfi_restore 1
+ 408 0058 2244     		lw	s0,8(sp)
+ 409              		.cfi_restore 8
+ 410 005a 4101     		addi	sp,sp,16
+ 411              	.LCFI12:
+ 412              		.cfi_def_cfa_offset 0
+ 413 005c 8280     		jr	ra
+ 414              	.L23:
+ 415              	.LCFI13:
+ 416              		.cfi_restore_state
+  67:customI2c.c   ****     delay_1us(410);
+ 417              		.loc 1 67 5 is_stmt 1
+ 418 005e 1305A019 		li	a0,410
+ 419 0062 97000000 		call	delay_1us
+ 419      E7800000 
+ 420              	.LVL40:
+  69:customI2c.c   ****     ow_write_byte(0xCC); // Skip ROM
+ 421              		.loc 1 69 5
+ 422 006a 1305C00C 		li	a0,204
+ 423 006e 97000000 		call	ow_write_byte
+ 423      E7800000 
+ 424              	.LVL41:
+  70:customI2c.c   ****     ow_write_byte(0x44); // Convert T
+ 425              		.loc 1 70 5
+ 426 0076 13054004 		li	a0,68
+ 427 007a 97000000 		call	ow_write_byte
+ 427      E7800000 
+ 428              	.LVL42:
+  71:customI2c.c   ****     delay_1ms(750);      
+ 429              		.loc 1 71 5
+ 430 0082 1305E02E 		li	a0,750
+ 431 0086 97000000 		call	delay_1ms
+ 431      E7800000 
+ 432              	.LVL43:
+  74:customI2c.c   ****     gpio_bit_reset(OW_PORT, OW_PIN);
+ 433              		.loc 1 74 5
+ 434 008e 93050002 		li	a1,32
+ 435 0092 130504C0 		addi	a0,s0,-1024
+ 436 0096 97000000 		call	gpio_bit_reset
+ 436      E7800000 
+ 437              	.LVL44:
+  75:customI2c.c   ****     delay_1us(480);
+ 438              		.loc 1 75 5
+ 439 009e 1305001E 		li	a0,480
+ 440 00a2 97000000 		call	delay_1us
+ 440      E7800000 
+ 441              	.LVL45:
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 11
+
+
+  76:customI2c.c   ****     gpio_bit_set(OW_PORT, OW_PIN);
+ 442              		.loc 1 76 5
+ 443 00aa 93050002 		li	a1,32
+ 444 00ae 130504C0 		addi	a0,s0,-1024
+ 445 00b2 97000000 		call	gpio_bit_set
+ 445      E7800000 
+ 446              	.LVL46:
+  77:customI2c.c   ****     delay_1us(70);
+ 447              		.loc 1 77 5
+ 448 00ba 13056004 		li	a0,70
+ 449 00be 97000000 		call	delay_1us
+ 449      E7800000 
+ 450              	.LVL47:
+  78:customI2c.c   ****     if(gpio_input_bit_get(OW_PORT, OW_PIN)) return -1;
+ 451              		.loc 1 78 5
+  78:customI2c.c   ****     if(gpio_input_bit_get(OW_PORT, OW_PIN)) return -1;
+ 452              		.loc 1 78 8 is_stmt 0
+ 453 00c6 93050002 		li	a1,32
+ 454 00ca 130504C0 		addi	a0,s0,-1024
+ 455 00ce 97000000 		call	gpio_input_bit_get
+ 455      E7800000 
+ 456              	.LVL48:
+  78:customI2c.c   ****     if(gpio_input_bit_get(OW_PORT, OW_PIN)) return -1;
+ 457              		.loc 1 78 7
+ 458 00d6 3DFD     		bne	a0,zero,.L25
+  79:customI2c.c   ****     delay_1us(410);
+ 459              		.loc 1 79 5 is_stmt 1
+ 460 00d8 1305A019 		li	a0,410
+ 461 00dc 97000000 		call	delay_1us
+ 461      E7800000 
+ 462              	.LVL49:
+  81:customI2c.c   ****     ow_write_byte(0xCC); 
+ 463              		.loc 1 81 5
+ 464 00e4 1305C00C 		li	a0,204
+ 465 00e8 97000000 		call	ow_write_byte
+ 465      E7800000 
+ 466              	.LVL50:
+  82:customI2c.c   ****     ow_write_byte(0xBE); // Read Scratchpad
+ 467              		.loc 1 82 5
+ 468 00f0 1305E00B 		li	a0,190
+ 469 00f4 97000000 		call	ow_write_byte
+ 469      E7800000 
+ 470              	.LVL51:
+  84:customI2c.c   ****     uint8_t low = ow_read_byte();
+ 471              		.loc 1 84 5
+  84:customI2c.c   ****     uint8_t low = ow_read_byte();
+ 472              		.loc 1 84 19 is_stmt 0
+ 473 00fc 97000000 		call	ow_read_byte
+ 473      E7800000 
+ 474              	.LVL52:
+ 475 0104 2A84     		mv	s0,a0
+ 476              	.LVL53:
+  85:customI2c.c   ****     uint8_t high = ow_read_byte();
+ 477              		.loc 1 85 5 is_stmt 1
+  85:customI2c.c   ****     uint8_t high = ow_read_byte();
+ 478              		.loc 1 85 20 is_stmt 0
+ 479 0106 97000000 		call	ow_read_byte
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 12
+
+
+ 479      E7800000 
+ 480              	.LVL54:
+  86:customI2c.c   ****     return (int16_t)((high << 8) | low);
+ 481              		.loc 1 86 5 is_stmt 1
+  86:customI2c.c   ****     return (int16_t)((high << 8) | low);
+ 482              		.loc 1 86 28 is_stmt 0
+ 483 010e 2205     		slli	a0,a0,8
+ 484              	.LVL55:
+  86:customI2c.c   ****     return (int16_t)((high << 8) | low);
+ 485              		.loc 1 86 12
+ 486 0110 418D     		or	a0,a0,s0
+ 487 0112 4205     		slli	a0,a0,16
+ 488 0114 4185     		srai	a0,a0,16
+ 489 0116 81B7     		j	.L24
+ 490              		.cfi_endproc
+ 491              	.LFE7:
+ 493              		.text
+ 494              	.Letext0:
+ 495              		.file 2 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+ 496              		.file 3 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unknow
+ 497              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h"
+ 498              		.file 5 "systick.h"
+ 499              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
+ 500              		.file 7 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 customI2c.c
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:13     .text.ow_init:0000000000000000 ow_init
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:17     .text.ow_init:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:18     .text.ow_init:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:19     .text.ow_init:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:20     .text.ow_init:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:22     .text.ow_init:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:24     .text.ow_init:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:26     .text.ow_init:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:28     .text.ow_init:000000000000000a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:29     .text.ow_init:000000000000000a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:31     .text.ow_init:000000000000000a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:34     .text.ow_init:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:42     .text.ow_init:000000000000002a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:44     .text.ow_init:000000000000002e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:45     .text.ow_init:0000000000000030 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:47     .text.ow_init:0000000000000032 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:49     .text.ow_init:0000000000000032 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:51     .text.ow_init:0000000000000036 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:53     .text.ow_init:0000000000000038 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:55     .text.ow_init:0000000000000038 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:57     .text.ow_init:0000000000000040 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:64     .text.ow_write_bit:0000000000000000 ow_write_bit
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:67     .text.ow_write_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:69     .text.ow_write_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:70     .text.ow_write_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:71     .text.ow_write_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:73     .text.ow_write_bit:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:77     .text.ow_write_bit:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:78     .text.ow_write_bit:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:79     .text.ow_write_bit:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:81     .text.ow_write_bit:0000000000000008 .L0 
+         customI2c.c:16     .text.ow_write_bit:000000000000000a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:89     .text.ow_write_bit:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:96     .text.ow_write_bit:0000000000000022 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:97     .text.ow_write_bit:0000000000000022 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:99     .text.ow_write_bit:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:103    .text.ow_write_bit:000000000000002e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:108    .text.ow_write_bit:000000000000003e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:111    .text.ow_write_bit:0000000000000042 .L0 
+         customI2c.c:27     .text.ow_write_bit:000000000000004a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:120    .text.ow_write_bit:000000000000004e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:121    .text.ow_write_bit:0000000000000050 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:122    .text.ow_write_bit:0000000000000050 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:124    .text.ow_write_bit:0000000000000052 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:126    .text.ow_write_bit:0000000000000054 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:129    .text.ow_write_bit:0000000000000056 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:133    .text.ow_write_bit:0000000000000058 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:135    .text.ow_write_bit:0000000000000058 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:139    .text.ow_write_bit:0000000000000064 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:144    .text.ow_write_bit:0000000000000074 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:146    .text.ow_write_bit:0000000000000078 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:153    .text.ow_read_bit:0000000000000000 ow_read_bit
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:156    .text.ow_read_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:157    .text.ow_read_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:158    .text.ow_read_bit:0000000000000000 .L0 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 14
+
+
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:159    .text.ow_read_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:160    .text.ow_read_bit:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:162    .text.ow_read_bit:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:165    .text.ow_read_bit:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:166    .text.ow_read_bit:0000000000000006 .L0 
+         customI2c.c:33     .text.ow_read_bit:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:174    .text.ow_read_bit:000000000000000a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:180    .text.ow_read_bit:000000000000001e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:184    .text.ow_read_bit:0000000000000028 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:189    .text.ow_read_bit:0000000000000038 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:193    .text.ow_read_bit:0000000000000042 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:194    .text.ow_read_bit:0000000000000042 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:201    .text.ow_read_bit:0000000000000054 .L0 
+         customI2c.c:40     .text.ow_read_bit:0000000000000060 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:210    .text.ow_read_bit:0000000000000064 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:212    .text.ow_read_bit:0000000000000064 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:214    .text.ow_read_bit:000000000000006a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:216    .text.ow_read_bit:000000000000006c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:220    .text.ow_read_bit:000000000000006e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:222    .text.ow_read_bit:0000000000000070 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:229    .text.ow_write_byte:0000000000000000 ow_write_byte
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:232    .text.ow_write_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:234    .text.ow_write_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:236    .text.ow_write_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:238    .text.ow_write_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:239    .text.ow_write_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:241    .text.ow_write_byte:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:245    .text.ow_write_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:246    .text.ow_write_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:247    .text.ow_write_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:249    .text.ow_write_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:256    .text.ow_write_byte:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:262    .text.ow_write_byte:000000000000001a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:263    .text.ow_write_byte:000000000000001a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:266    .text.ow_write_byte:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:269    .text.ow_write_byte:000000000000001e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:270    .text.ow_write_byte:0000000000000020 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:272    .text.ow_write_byte:0000000000000022 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:274    .text.ow_write_byte:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:278    .text.ow_write_byte:0000000000000026 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:280    .text.ow_write_byte:0000000000000028 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:287    .text.ow_read_byte:0000000000000000 ow_read_byte
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:290    .text.ow_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:291    .text.ow_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:293    .text.ow_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:295    .text.ow_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:297    .text.ow_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:298    .text.ow_read_byte:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:300    .text.ow_read_byte:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:304    .text.ow_read_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:305    .text.ow_read_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:306    .text.ow_read_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:308    .text.ow_read_byte:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:310    .text.ow_read_byte:000000000000000a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:315    .text.ow_read_byte:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:316    .text.ow_read_byte:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:319    .text.ow_read_byte:000000000000000e .L0 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 15
+
+
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:320    .text.ow_read_byte:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:323    .text.ow_read_byte:0000000000000016 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:325    .text.ow_read_byte:0000000000000018 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:326    .text.ow_read_byte:0000000000000018 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:334    .text.ow_read_byte:0000000000000022 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:337    .text.ow_read_byte:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:338    .text.ow_read_byte:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:340    .text.ow_read_byte:0000000000000028 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:342    .text.ow_read_byte:000000000000002a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:345    .text.ow_read_byte:000000000000002c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:349    .text.ow_read_byte:000000000000002e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:351    .text.ow_read_byte:0000000000000030 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:358    .text.read_temp:0000000000000000 read_temp
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:361    .text.read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:362    .text.read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:363    .text.read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:364    .text.read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:366    .text.read_temp:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:368    .text.read_temp:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:370    .text.read_temp:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:374    .text.read_temp:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:375    .text.read_temp:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:377    .text.read_temp:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:380    .text.read_temp:000000000000001a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:384    .text.read_temp:0000000000000026 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:389    .text.read_temp:0000000000000036 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:393    .text.read_temp:0000000000000042 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:394    .text.read_temp:0000000000000042 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:399    .text.read_temp:0000000000000052 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:402    .text.read_temp:0000000000000054 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:405    .text.read_temp:0000000000000056 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:406    .text.read_temp:0000000000000058 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:407    .text.read_temp:0000000000000058 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:409    .text.read_temp:000000000000005a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:412    .text.read_temp:000000000000005c .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:416    .text.read_temp:000000000000005e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:418    .text.read_temp:000000000000005e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:422    .text.read_temp:000000000000006a .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:426    .text.read_temp:0000000000000076 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:430    .text.read_temp:0000000000000082 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:434    .text.read_temp:000000000000008e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:439    .text.read_temp:000000000000009e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:443    .text.read_temp:00000000000000aa .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:448    .text.read_temp:00000000000000ba .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:452    .text.read_temp:00000000000000c6 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:453    .text.read_temp:00000000000000c6 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:458    .text.read_temp:00000000000000d6 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:460    .text.read_temp:00000000000000d8 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:464    .text.read_temp:00000000000000e4 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:468    .text.read_temp:00000000000000f0 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:472    .text.read_temp:00000000000000fc .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:473    .text.read_temp:00000000000000fc .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:478    .text.read_temp:0000000000000106 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:479    .text.read_temp:0000000000000106 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:482    .text.read_temp:000000000000010e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:483    .text.read_temp:000000000000010e .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:486    .text.read_temp:0000000000000110 .L0 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 16
+
+
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:490    .text.read_temp:0000000000000118 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:60     .text.ow_init:0000000000000040 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:149    .text.ow_write_bit:0000000000000078 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:225    .text.ow_read_bit:0000000000000070 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:283    .text.ow_write_byte:0000000000000028 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:354    .text.ow_read_byte:0000000000000030 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:493    .text.read_temp:0000000000000118 .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:131    .text.ow_write_bit:0000000000000058 .L4
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:109    .text.ow_write_bit:0000000000000042 .L7
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:253    .text.ow_write_byte:000000000000000c .L11
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:330    .text.ow_read_byte:0000000000000020 .L15
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:312    .text.ow_read_byte:000000000000000c .L16
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:414    .text.read_temp:000000000000005e .L23
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:400    .text.read_temp:0000000000000054 .L25
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:403    .text.read_temp:0000000000000056 .L24
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1380   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2014   .debug_str:000000000000001a .LASF69
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2050   .debug_str:0000000000000155 .LASF70
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2082   .debug_str:00000000000001f7 .LASF71
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1980   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2008   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2100   .debug_str:00000000000002b0 .LASF0
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2094   .debug_str:0000000000000284 .LASF1
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2154   .debug_str:00000000000003ce .LASF3
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2084   .debug_str:0000000000000243 .LASF2
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2140   .debug_str:0000000000000387 .LASF4
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2038   .debug_str:000000000000011f .LASF5
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2106   .debug_str:00000000000002d2 .LASF6
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2052   .debug_str:0000000000000161 .LASF7
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2032   .debug_str:00000000000000ff .LASF8
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2126   .debug_str:0000000000000334 .LASF9
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2030   .debug_str:00000000000000f1 .LASF10
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2096   .debug_str:0000000000000290 .LASF11
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2042   .debug_str:0000000000000131 .LASF12
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2114   .debug_str:0000000000000306 .LASF13
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2098   .debug_str:00000000000002a7 .LASF14
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2016   .debug_str:00000000000000a2 .LASF72
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2116   .debug_str:000000000000030e .LASF15
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2118   .debug_str:0000000000000317 .LASF16
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2152   .debug_str:00000000000003c6 .LASF17
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2150   .debug_str:00000000000003bd .LASF18
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2060   .debug_str:0000000000000181 .LASF19
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2064   .debug_str:0000000000000196 .LASF20
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2066   .debug_str:00000000000001a1 .LASF21
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2068   .debug_str:00000000000001ac .LASF22
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2070   .debug_str:00000000000001b7 .LASF23
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2072   .debug_str:00000000000001c2 .LASF24
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2074   .debug_str:00000000000001cd .LASF25
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2048   .debug_str:000000000000014b .LASF26
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2056   .debug_str:0000000000000173 .LASF27
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2076   .debug_str:00000000000001d8 .LASF28
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2136   .debug_str:0000000000000371 .LASF29
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2138   .debug_str:000000000000037c .LASF30
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2142   .debug_str:0000000000000391 .LASF31
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2144   .debug_str:000000000000039b .LASF32
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2108   .debug_str:00000000000002e5 .LASF33
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 17
+
+
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2110   .debug_str:00000000000002ee .LASF34
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2044   .debug_str:0000000000000139 .LASF35
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2046   .debug_str:0000000000000142 .LASF36
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2092   .debug_str:000000000000027b .LASF37
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2104   .debug_str:00000000000002ca .LASF38
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2122   .debug_str:0000000000000325 .LASF39
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2036   .debug_str:0000000000000117 .LASF40
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2124   .debug_str:000000000000032d .LASF41
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2020   .debug_str:00000000000000bf .LASF42
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2022   .debug_str:00000000000000c9 .LASF43
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2024   .debug_str:00000000000000d3 .LASF44
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2026   .debug_str:00000000000000dd .LASF45
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2078   .debug_str:00000000000001e1 .LASF46
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2088   .debug_str:0000000000000269 .LASF47
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2090   .debug_str:0000000000000272 .LASF48
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2062   .debug_str:000000000000018b .LASF49
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2054   .debug_str:000000000000016a .LASF50
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2134   .debug_str:0000000000000366 .LASF51
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2080   .debug_str:00000000000001eb .LASF52
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2028   .debug_str:00000000000000e7 .LASF54
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:359    .text.read_temp:0000000000000000 .LFB7
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:491    .text.read_temp:0000000000000118 .LFE7
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1724   .debug_loc:0000000000000000 .LLST11
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2058   .debug_str:000000000000017c .LASF53
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1747   .debug_loc:0000000000000038 .LLST12
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:378    .text.read_temp:000000000000001a .LVL35
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:382    .text.read_temp:0000000000000026 .LVL36
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:387    .text.read_temp:0000000000000036 .LVL37
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:391    .text.read_temp:0000000000000042 .LVL38
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:397    .text.read_temp:0000000000000052 .LVL39
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:420    .text.read_temp:000000000000006a .LVL40
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:424    .text.read_temp:0000000000000076 .LVL41
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:428    .text.read_temp:0000000000000082 .LVL42
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:432    .text.read_temp:000000000000008e .LVL43
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:437    .text.read_temp:000000000000009e .LVL44
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:441    .text.read_temp:00000000000000aa .LVL45
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:446    .text.read_temp:00000000000000ba .LVL46
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:450    .text.read_temp:00000000000000c6 .LVL47
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:456    .text.read_temp:00000000000000d6 .LVL48
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:462    .text.read_temp:00000000000000e4 .LVL49
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:466    .text.read_temp:00000000000000f0 .LVL50
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:470    .text.read_temp:00000000000000fc .LVL51
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:474    .text.read_temp:0000000000000104 .LVL52
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:480    .text.read_temp:000000000000010e .LVL54
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2018   .debug_str:00000000000000b2 .LASF55
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:288    .text.ow_read_byte:0000000000000000 .LFB6
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:352    .text.ow_read_byte:0000000000000030 .LFE6
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1754   .debug_loc:000000000000004b .LLST8
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2012   .debug_str:0000000000000013 .LASF56
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1772   .debug_loc:0000000000000077 .LLST9
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1788   .debug_loc:00000000000000a1 .LLST10
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:321    .text.ow_read_byte:0000000000000016 .LVL29
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2148   .debug_str:00000000000003af .LASF58
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:230    .text.ow_write_byte:0000000000000000 .LFB5
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:281    .text.ow_write_byte:0000000000000028 .LFE5
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1820   .debug_loc:00000000000000e2 .LLST5
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2120   .debug_str:0000000000000320 .LASF60
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 18
+
+
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1838   .debug_loc:000000000000010e .LLST6
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1849   .debug_loc:000000000000012c .LLST7
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:260    .text.ow_write_byte:000000000000001a .LVL23
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2130   .debug_str:0000000000000350 .LASF57
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:154    .text.ow_read_bit:0000000000000000 .LFB4
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:223    .text.ow_read_bit:0000000000000070 .LFE4
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1873   .debug_loc:000000000000015e .LLST3
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1891   .debug_loc:000000000000018a .LLST4
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:178    .text.ow_read_bit:000000000000001e .LVL11
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:182    .text.ow_read_bit:0000000000000028 .LVL12
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:187    .text.ow_read_bit:0000000000000038 .LVL13
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:191    .text.ow_read_bit:0000000000000042 .LVL14
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:197    .text.ow_read_bit:0000000000000052 .LVL15
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:203    .text.ow_read_bit:0000000000000060 .LVL17
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2102   .debug_str:00000000000002bd .LASF59
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:65     .text.ow_write_bit:0000000000000000 .LFB3
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:147    .text.ow_write_bit:0000000000000078 .LFE3
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1902   .debug_loc:00000000000001a8 .LLST1
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1925   .debug_loc:00000000000001e0 .LLST2
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:94     .text.ow_write_bit:0000000000000022 .LVL5
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:101    .text.ow_write_bit:000000000000002e .LVL6
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:106    .text.ow_write_bit:000000000000003e .LVL7
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:112    .text.ow_write_bit:000000000000004a .LVL8
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:137    .text.ow_write_bit:0000000000000064 .LVL9
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:142    .text.ow_write_bit:0000000000000074 .LVL10
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2040   .debug_str:0000000000000129 .LASF61
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:14     .text.ow_init:0000000000000000 .LFB2
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:58     .text.ow_init:0000000000000040 .LFE2
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:1939   .debug_loc:0000000000000201 .LLST0
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:32     .text.ow_init:0000000000000012 .LVL0
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:40     .text.ow_init:000000000000002a .LVL1
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:56     .text.ow_init:0000000000000040 .LVL2
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2112   .debug_str:00000000000002f7 .LASF62
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2146   .debug_str:00000000000003a5 .LASF63
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2034   .debug_str:000000000000010a .LASF64
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2010   .debug_str:0000000000000000 .LASF65
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2128   .debug_str:0000000000000346 .LASF66
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2086   .debug_str:0000000000000251 .LASF67
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:2132   .debug_str:000000000000035c .LASF68
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:365    .text.read_temp:0000000000000002 .LCFI11
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:411    .text.read_temp:000000000000005c .LCFI12
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:415    .text.read_temp:000000000000005e .LCFI13
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:484    .text.read_temp:0000000000000110 .LVL55
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:299    .text.ow_read_byte:0000000000000002 .LCFI9
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:348    .text.ow_read_byte:000000000000002e .LCFI10
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:292    .text.ow_read_byte:0000000000000000 .LVL26
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:311    .text.ow_read_byte:000000000000000c .LVL27
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:327    .text.ow_read_byte:000000000000001c .LVL30
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:329    .text.ow_read_byte:0000000000000020 .LVL31
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:343    .text.ow_read_byte:000000000000002a .LVL33
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:332    .text.ow_read_byte:0000000000000022 .LVL32
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:346    .text.ow_read_byte:000000000000002c .LVL34
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:240    .text.ow_write_byte:0000000000000002 .LCFI7
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:277    .text.ow_write_byte:0000000000000026 .LCFI8
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:233    .text.ow_write_byte:0000000000000000 .LVL19
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:250    .text.ow_write_byte:000000000000000a .LVL20
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:275    .text.ow_write_byte:0000000000000024 .LVL25
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s 			page 19
+
+
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:252    .text.ow_write_byte:000000000000000c .LVL21
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:258    .text.ow_write_byte:0000000000000012 .LVL22
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:264    .text.ow_write_byte:000000000000001c .LVL24
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:161    .text.ow_read_bit:0000000000000002 .LCFI5
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:219    .text.ow_read_bit:000000000000006e .LCFI6
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:199    .text.ow_read_bit:0000000000000054 .LVL16
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:217    .text.ow_read_bit:000000000000006c .LVL18
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:72     .text.ow_write_bit:0000000000000002 .LCFI2
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:128    .text.ow_write_bit:0000000000000056 .LCFI3
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:132    .text.ow_write_bit:0000000000000058 .LCFI4
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:68     .text.ow_write_bit:0000000000000000 .LVL3
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:92     .text.ow_write_bit:000000000000001a .LVL4
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:21     .text.ow_init:0000000000000002 .LCFI0
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:52     .text.ow_init:0000000000000038 .LCFI1
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:502    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:235    .text.ow_write_byte:0000000000000000 .LBB2
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:237    .text.ow_write_byte:0000000000000000 .LBE2
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:254    .text.ow_write_byte:000000000000000c .LBB3
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:267    .text.ow_write_byte:000000000000001e .LBE3
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:294    .text.ow_read_byte:0000000000000000 .LBB4
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:296    .text.ow_read_byte:0000000000000000 .LBE4
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:313    .text.ow_read_byte:000000000000000c .LBB5
+C:\Users\abdul\AppData\Local\Temp\ccFAEEFh.s:335    .text.ow_read_byte:0000000000000024 .LBE5
+
+UNDEFINED SYMBOLS
+rcu_periph_clock_enable
+gpio_init
+gpio_bit_set
+gpio_bit_reset
+delay_1us
+gpio_input_bit_get
+delay_1ms

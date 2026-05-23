@@ -1,4 +1,4 @@
-build/lioonewire.o: lioonewire.c lioonewire.h systick.h \
+build/customI2c.o: customI2c.c customI2c.h \
  ../../firmware/GD32VF103_standard_peripheral/gd32vf103.h \
  ../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h \
  ../../firmware/GD32VF103_standard_peripheral/gd32vf103_libopt.h \
@@ -26,12 +26,9 @@ build/lioonewire.o: lioonewire.c lioonewire.h systick.h \
  ../../firmware/RISCV/drivers/n200_func.h \
  ../../firmware/RISCV/drivers/n200_timer.h \
  ../../firmware/RISCV/drivers/n200_eclic.h \
- ../../firmware/RISCV/drivers/riscv_const.h \
- lib/usbcdc/include/usb_delay.h
+ ../../firmware/RISCV/drivers/riscv_const.h systick.h
 
-lioonewire.h:
-
-systick.h:
+customI2c.h:
 
 ../../firmware/GD32VF103_standard_peripheral/gd32vf103.h:
 
@@ -89,4 +86,4 @@ systick.h:
 
 ../../firmware/RISCV/drivers/riscv_const.h:
 
-lib/usbcdc/include/usb_delay.h:
+systick.h:

@@ -33,7 +33,7 @@ build/main.o: main.c \
  lib/usbcdc/include/usb_conf.h lib/usbcdc/include/usb_ch9_std.h \
  lib/usbcdc/include/drv_usb_dev.h lib/usbcdc/include/usbd_conf.h \
  lib/usbcdc/include/usbd_transc.h lib/usbcdc/include/usb_delay.h adc.h \
- lioonewire.h systick.h systick.h
+ lioonewire.h systick.h
 
 ../../firmware/GD32VF103_standard_peripheral/gd32vf103.h:
 
@@ -118,7 +118,5 @@ lib/usbcdc/include/usb_delay.h:
 adc.h:
 
 lioonewire.h:
-
-systick.h:
 
 systick.h:

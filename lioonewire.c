@@ -1,14 +1,14 @@
+//Egen tick-delay
 /*
  * File:   onewire.c
  * Author: remahl
- *
- * Created on September 19, 2019, 11:40 AM
+ * Modified: tick_delay replaced with inline us delay for GD32VF103 @ 108MHz
  */
 
 #include <stdint.h>
 #include "lioonewire.h"
 #include "gd32vf103.h"
-#include "systick.h"
+#include "usb_delay.h"
 
 #define SKIP_ROM            0xCC
 #define WRITE_SCRATCH_PAD   0x4E
@@ -23,6 +23,7 @@
 #define CONFIG_11BIT        0x5F
 #define CONFIG_12BIT        0x7F
 
+// 1-Wire timing i mikrosekunder (enligt DS18B20 datablad)
 #define T_A 6
 #define T_B 64
 #define T_C 60
@@ -34,96 +35,94 @@
 #define T_I 70
 #define T_J 410
 
-#define DPIN  GPIO_PIN_5   
+#define DPIN  GPIO_PIN_5
 #define DPORT GPIOB
 
+// ── Mikrosekundsdelay kalibrerad för GD32VF103, 108MHz ──────────
+// ~108 iterationer per mikrosekund
+static void delay_us(uint32_t us)
+{
+    for (volatile uint32_t i = 0; i < us * 8; i++) {
+        __asm__("nop");
+    }
+}
 
-
-
-void dpin_drive(){
+void dpin_drive() {
     gpio_bit_reset(DPORT, DPIN);
 }
-void dpin_release(){
+
+void dpin_release() {
     gpio_bit_set(DPORT, DPIN);
 }
 
-uint8_t dpin_sample(){
+uint8_t dpin_sample() {
     return gpio_input_bit_get(DPORT, DPIN);
 }
 
-
 int first_read = 1;
 
-
-void lio_init_OW(){
+void lio_init_OW() {
     rcu_periph_clock_enable(RCU_GPIOB);
     gpio_init(DPORT, GPIO_MODE_OUT_OD, GPIO_OSPEED_50MHZ, DPIN);
 }
 
-
-void lio_OW_write_bit(uint8_t val){
-    if(val){
+void lio_OW_write_bit(uint8_t val) {
+    if (val) {
         dpin_drive();
-        tick_delay(T_A);
+        delay_us(T_A);
         dpin_release();
-        tick_delay(T_B);
-    }
-    else{
+        delay_us(T_B);
+    } else {
         dpin_drive();
-        tick_delay(T_C);
+        delay_us(T_C);
         dpin_release();
-        tick_delay(T_D);
+        delay_us(T_D);
     }
 }
 
-uint8_t lio_OW_read_bit(){
+uint8_t lio_OW_read_bit() {
     uint8_t res = 0;
     dpin_drive();
-    tick_delay(T_A);
+    delay_us(T_A);
     dpin_release();
-    tick_delay(T_E);
+    delay_us(T_E);
     res = dpin_sample();
-    tick_delay(T_F);
+    delay_us(T_F);
     return res;
 }
 
-uint8_t lio_OW_read_byte()
-{
-    uint8_t result=0;
-
-    for (uint8_t i = 0; i < 8; i++){
-            result >>= 1;
-
-            if (lio_OW_read_bit())result |= 0x80;
+uint8_t lio_OW_read_byte() {
+    uint8_t result = 0;
+    for (uint8_t i = 0; i < 8; i++) {
+        result >>= 1;
+        if (lio_OW_read_bit()) result |= 0x80;
     }
     return result;
 }
 
-void lio_OW_write_byte(uint8_t data){
-    for(int i = 0; i < 8; i++){
+void lio_OW_write_byte(uint8_t data) {
+    for (int i = 0; i < 8; i++) {
         lio_OW_write_bit(data & 0x01);
         data >>= 1;
     }
 }
 
-uint8_t lio_OW_touch_reset(void)
-{
+uint8_t lio_OW_touch_reset(void) {
     uint8_t res = 0;
-    tick_delay(T_G);
+    delay_us(T_G);
     dpin_drive();
-    tick_delay(T_H);
+    delay_us(T_H);
     dpin_release();
-    tick_delay(T_I);
+    delay_us(T_I);
     res = dpin_sample();
-    tick_delay(T_J);
+    delay_us(T_J);
     return res;
 }
 
-int16_t lio_read_temp(){ // Användbar.
-    
+int16_t lio_read_temp() {
     uint8_t temp_L, temp_H = 0;
-    
-    if(first_read){
+
+    if (first_read) {
         lio_OW_touch_reset();
         lio_OW_write_byte(SKIP_ROM);
         lio_OW_write_byte(WRITE_SCRATCH_PAD);
@@ -132,15 +131,15 @@ int16_t lio_read_temp(){ // Användbar.
         lio_OW_write_byte(CONFIG_12BIT);
         first_read = 0;
     }
-              
+
     lio_OW_touch_reset();
     lio_OW_write_byte(SKIP_ROM);
     lio_OW_write_byte(START_CONVERSION);
-    delay_1ms(750); 
+    usb_delay_1ms(750); // DS18B20 behöver 750ms för 12-bit konvertering
     lio_OW_touch_reset();
     lio_OW_write_byte(SKIP_ROM);
     lio_OW_write_byte(READ_SCRATCH_PAD);
     temp_L = lio_OW_read_byte();
     temp_H = lio_OW_read_byte();
-    return (int16_t) (((temp_H << 8) & 0xFF00) | temp_L);
+    return (int16_t)(((temp_H << 8) & 0xFF00) | temp_L);
 }
