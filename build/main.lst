@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 1
 
 
    1              		.file	"main.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
   20 0000 0111     		addi	sp,sp,-32
   21              	.LCFI0:
   22              		.cfi_def_cfa_offset 32
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 2
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 2
 
 
   23              		.loc 1 35 5
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
   57      E7800000 
   58              	.LVL1:
   45:main.c        ****     timer_enable(TIMER5);
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 3
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 3
 
 
   59              		.loc 1 45 5
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  104      E7800000 
  105              	.LVL3:
   53:main.c        ****     usb_delay_1ms(10); // let DMA settle
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 4
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 4
 
 
  106              		.loc 1 53 5 is_stmt 1
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  145              		.loc 1 58 8 is_stmt 0
  146 0076 97000000 		call	__ltsf2
  146      E7800000 
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 5
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 5
 
 
  147              	.LVL12:
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  194              	read_NTU:
  195              	.LFB9:
   64:main.c        **** float read_NTU(void)
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 6
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 6
 
 
   65:main.c        **** {
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  235 003a 0C50     		lw	a1,32(s0)
   68:main.c        ****     float ntu;
  236              		.loc 1 68 11
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 7
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 7
 
 
  237 003c 2A89     		mv	s2,a0
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  276              	.LVL27:
  277              		.loc 1 77 5 is_stmt 1
  278              		.loc 1 77 8 is_stmt 0
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 8
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 8
 
 
  279 008a 97000000 		call	__ltsf2
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  325              		.globl	read_temp
  327              	read_temp:
  328              	.LFB10:
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 9
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 9
 
 
   82:main.c        **** // ── Temperature reading ───────────────────────
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  363              	.LBE5:
  364              	.LBE4:
   97:main.c        **** }
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 10
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 10
 
 
  365              		.loc 1 97 1
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  413 001a 66D2     		sw	s9,36(sp)
  414              		.cfi_offset 1, -4
  415              		.cfi_offset 8, -8
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 11
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 11
 
 
  416              		.cfi_offset 9, -12
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  114:main.c        ****     printf("Algae-Halt sensor ready\r\n");
  452              		.loc 1 114 5
  453 005e 37040000 		lui	s0,%hi(.LANCHOR0)
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 12
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 12
 
 
  454 0062 13050400 		addi	a0,s0,%lo(.LANCHOR0)
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  148:main.c        ****         else
  149:main.c        ****         {
  150:main.c        ****             int tmp_i = (int)temp;
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 13
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 13
 
 
  151:main.c        ****             int tmp_d = (int)((temp - tmp_i) * 100.0f);
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  504 00b2 3E85     		mv	a0,a5
  505              	.LVL55:
  506 00b4 3ECC     		sw	a5,24(sp)
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 14
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 14
 
 
  507 00b6 97000000 		call	__floatunsisf
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  543 0106 1357F541 		srai	a4,a0,31
  544 010a 3346A700 		xor	a2,a4,a0
  545 010e 198E     		sub	a2,a2,a4
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 15
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 15
 
 
  131:main.c        ****         int voltage_d = (int)((voltage - voltage_i) * 10.0f);
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  584              		.loc 1 139 9
  140:main.c        ****             ntu_d = -ntu_d;
  585              		.loc 1 140 9
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 16
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 16
 
 
  143:main.c        ****         {
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  624 019c 32CC     		sw	a2,24(sp)
  625              	.LVL84:
  626 019e 97000000 		call	__fixsfsi
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 17
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 17
 
 
  626      E7800000 
@@ -1018,7 +1018,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  665 01ec 97000000 		call	__subsf3
  665      E7800000 
  666              	.LVL96:
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 18
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 18
 
 
  139:main.c        ****         if (ntu_d < 0)
@@ -1078,7 +1078,7 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  716 001c 0000A03A 		.word	983564288
  717              	.LC8:
  718 0020 9A999940 		.word	1083808154
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 19
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 19
 
 
  719              	.LC9:
@@ -1138,873 +1138,873 @@ GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 1
  761              		.file 18 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unkno
  762              		.file 19 "c:\\users\\abdul\\onedrive\\documents\\toolchain-gd32v-v202-win\\compiler\\riscv64-unkno
  763              		.file 20 "lib/usbcdc/include/usb_delay.h"
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 20
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 20
 
 
  764              		.file 21 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
  765              		.file 22 "./lioonewire.h"
  766              		.file 23 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_adc.h"
  767              		.file 24 "<built-in>"
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 21
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:13     .text.init_timer_settings:0000000000000000 init_timer_settings
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:17     .text.init_timer_settings:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:18     .text.init_timer_settings:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:19     .text.init_timer_settings:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:20     .text.init_timer_settings:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:22     .text.init_timer_settings:0000000000000002 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:24     .text.init_timer_settings:0000000000000002 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:26     .text.init_timer_settings:0000000000000006 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:27     .text.init_timer_settings:0000000000000008 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:29     .text.init_timer_settings:0000000000000008 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:32     .text.init_timer_settings:0000000000000010 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:33     .text.init_timer_settings:0000000000000010 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:34     .text.init_timer_settings:0000000000000010 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:35     .text.init_timer_settings:0000000000000010 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:36     .text.init_timer_settings:0000000000000010 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:39     .text.init_timer_settings:0000000000000016 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:42     .text.init_timer_settings:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:44     .text.init_timer_settings:000000000000001e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:46     .text.init_timer_settings:0000000000000020 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:48     .text.init_timer_settings:0000000000000024 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:50     .text.init_timer_settings:0000000000000028 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:52     .text.init_timer_settings:000000000000002c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:53     .text.init_timer_settings:000000000000002c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:54     .text.init_timer_settings:000000000000002c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:56     .text.init_timer_settings:0000000000000030 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:57     .text.init_timer_settings:0000000000000030 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:60     .text.init_timer_settings:0000000000000038 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:64     .text.init_timer_settings:0000000000000044 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:65     .text.init_timer_settings:0000000000000046 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:68     .text.init_timer_settings:0000000000000048 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:70     .text.init_timer_settings:000000000000004a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:83     .text.read_ph:0000000000000000 read_ph
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:86     .text.read_ph:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:87     .text.read_ph:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:88     .text.read_ph:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:90     .text.read_ph:0000000000000004 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:92     .text.read_ph:0000000000000006 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:94     .text.read_ph:0000000000000006 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:97     .text.read_ph:000000000000000c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:100    .text.read_ph:0000000000000012 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:101    .text.read_ph:0000000000000012 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:102    .text.read_ph:0000000000000012 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:104    .text.read_ph:0000000000000012 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:107    .text.read_ph:000000000000001a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:111    .text.read_ph:0000000000000024 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:112    .text.read_ph:0000000000000024 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:113    .text.read_ph:0000000000000024 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:123    .text.read_ph:0000000000000046 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:127    .text.read_ph:0000000000000050 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:131    .text.read_ph:000000000000005a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:135    .text.read_ph:0000000000000064 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:140    .text.read_ph:0000000000000070 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:142    .text.read_ph:0000000000000074 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:145    .text.read_ph:0000000000000076 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:146    .text.read_ph:0000000000000076 .L0 
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 22
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:13     .text.init_timer_settings:0000000000000000 init_timer_settings
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:17     .text.init_timer_settings:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:18     .text.init_timer_settings:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:19     .text.init_timer_settings:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:20     .text.init_timer_settings:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:22     .text.init_timer_settings:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:24     .text.init_timer_settings:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:26     .text.init_timer_settings:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:27     .text.init_timer_settings:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:29     .text.init_timer_settings:0000000000000008 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:32     .text.init_timer_settings:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:33     .text.init_timer_settings:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:34     .text.init_timer_settings:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:35     .text.init_timer_settings:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:36     .text.init_timer_settings:0000000000000010 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:39     .text.init_timer_settings:0000000000000016 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:42     .text.init_timer_settings:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:44     .text.init_timer_settings:000000000000001e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:46     .text.init_timer_settings:0000000000000020 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:48     .text.init_timer_settings:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:50     .text.init_timer_settings:0000000000000028 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:52     .text.init_timer_settings:000000000000002c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:53     .text.init_timer_settings:000000000000002c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:54     .text.init_timer_settings:000000000000002c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:56     .text.init_timer_settings:0000000000000030 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:57     .text.init_timer_settings:0000000000000030 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:60     .text.init_timer_settings:0000000000000038 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:64     .text.init_timer_settings:0000000000000044 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:65     .text.init_timer_settings:0000000000000046 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:68     .text.init_timer_settings:0000000000000048 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:70     .text.init_timer_settings:000000000000004a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:83     .text.read_ph:0000000000000000 read_ph
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:86     .text.read_ph:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:87     .text.read_ph:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:88     .text.read_ph:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:90     .text.read_ph:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:92     .text.read_ph:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:94     .text.read_ph:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:97     .text.read_ph:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:100    .text.read_ph:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:101    .text.read_ph:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:102    .text.read_ph:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:104    .text.read_ph:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:107    .text.read_ph:000000000000001a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:111    .text.read_ph:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:112    .text.read_ph:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:113    .text.read_ph:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:123    .text.read_ph:0000000000000046 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:127    .text.read_ph:0000000000000050 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:131    .text.read_ph:000000000000005a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:135    .text.read_ph:0000000000000064 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:140    .text.read_ph:0000000000000070 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:142    .text.read_ph:0000000000000074 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:145    .text.read_ph:0000000000000076 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:146    .text.read_ph:0000000000000076 .L0 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 22
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:150    .text.read_ph:0000000000000082 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:151    .text.read_ph:0000000000000082 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:158    .text.read_ph:0000000000000094 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:162    .text.read_ph:0000000000000096 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:163    .text.read_ph:0000000000000098 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:164    .text.read_ph:0000000000000098 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:166    .text.read_ph:000000000000009a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:169    .text.read_ph:000000000000009e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:172    .text.read_ph:00000000000000a0 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:177    .text.read_ph:00000000000000a2 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:179    .text.read_ph:00000000000000a2 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:182    .text.read_ph:00000000000000a6 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:183    .text.read_ph:00000000000000a6 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:184    .text.read_ph:00000000000000a8 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:194    .text.read_NTU:0000000000000000 read_NTU
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:197    .text.read_NTU:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:198    .text.read_NTU:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:199    .text.read_NTU:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:200    .text.read_NTU:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:202    .text.read_NTU:0000000000000002 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:204    .text.read_NTU:0000000000000002 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:206    .text.read_NTU:0000000000000004 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:210    .text.read_NTU:000000000000000c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:211    .text.read_NTU:000000000000000c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:212    .text.read_NTU:000000000000000c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:213    .text.read_NTU:000000000000000c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:215    .text.read_NTU:000000000000000c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:218    .text.read_NTU:0000000000000014 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:219    .text.read_NTU:0000000000000014 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:222    .text.read_NTU:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:225    .text.read_NTU:0000000000000024 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:228    .text.read_NTU:000000000000002c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:230    .text.read_NTU:000000000000002e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:232    .text.read_NTU:0000000000000032 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:235    .text.read_NTU:000000000000003a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:237    .text.read_NTU:000000000000003c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:240    .text.read_NTU:000000000000003e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:241    .text.read_NTU:000000000000003e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:242    .text.read_NTU:000000000000003e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:246    .text.read_NTU:000000000000004a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:247    .text.read_NTU:000000000000004a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:252    .text.read_NTU:0000000000000056 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:256    .text.read_NTU:0000000000000060 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:258    .text.read_NTU:0000000000000062 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:260    .text.read_NTU:0000000000000064 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:264    .text.read_NTU:000000000000006e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:269    .text.read_NTU:000000000000007a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:273    .text.read_NTU:0000000000000084 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:275    .text.read_NTU:0000000000000088 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:278    .text.read_NTU:000000000000008a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:279    .text.read_NTU:000000000000008a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:283    .text.read_NTU:0000000000000096 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:284    .text.read_NTU:0000000000000096 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:291    .text.read_NTU:00000000000000a8 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:295    .text.read_NTU:00000000000000aa .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:296    .text.read_NTU:00000000000000ac .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:297    .text.read_NTU:00000000000000ac .L0 
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 23
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:150    .text.read_ph:0000000000000082 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:151    .text.read_ph:0000000000000082 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:158    .text.read_ph:0000000000000094 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:162    .text.read_ph:0000000000000096 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:163    .text.read_ph:0000000000000098 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:164    .text.read_ph:0000000000000098 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:166    .text.read_ph:000000000000009a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:169    .text.read_ph:000000000000009e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:172    .text.read_ph:00000000000000a0 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:177    .text.read_ph:00000000000000a2 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:179    .text.read_ph:00000000000000a2 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:182    .text.read_ph:00000000000000a6 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:183    .text.read_ph:00000000000000a6 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:184    .text.read_ph:00000000000000a8 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:194    .text.read_NTU:0000000000000000 read_NTU
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:197    .text.read_NTU:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:198    .text.read_NTU:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:199    .text.read_NTU:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:200    .text.read_NTU:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:202    .text.read_NTU:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:204    .text.read_NTU:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:206    .text.read_NTU:0000000000000004 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:210    .text.read_NTU:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:211    .text.read_NTU:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:212    .text.read_NTU:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:213    .text.read_NTU:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:215    .text.read_NTU:000000000000000c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:218    .text.read_NTU:0000000000000014 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:219    .text.read_NTU:0000000000000014 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:222    .text.read_NTU:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:225    .text.read_NTU:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:228    .text.read_NTU:000000000000002c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:230    .text.read_NTU:000000000000002e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:232    .text.read_NTU:0000000000000032 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:235    .text.read_NTU:000000000000003a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:237    .text.read_NTU:000000000000003c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:240    .text.read_NTU:000000000000003e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:241    .text.read_NTU:000000000000003e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:242    .text.read_NTU:000000000000003e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:246    .text.read_NTU:000000000000004a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:247    .text.read_NTU:000000000000004a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:252    .text.read_NTU:0000000000000056 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:256    .text.read_NTU:0000000000000060 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:258    .text.read_NTU:0000000000000062 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:260    .text.read_NTU:0000000000000064 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:264    .text.read_NTU:000000000000006e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:269    .text.read_NTU:000000000000007a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:273    .text.read_NTU:0000000000000084 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:275    .text.read_NTU:0000000000000088 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:278    .text.read_NTU:000000000000008a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:279    .text.read_NTU:000000000000008a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:283    .text.read_NTU:0000000000000096 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:284    .text.read_NTU:0000000000000096 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:291    .text.read_NTU:00000000000000a8 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:295    .text.read_NTU:00000000000000aa .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:296    .text.read_NTU:00000000000000ac .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:297    .text.read_NTU:00000000000000ac .L0 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 23
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:299    .text.read_NTU:00000000000000ae .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:302    .text.read_NTU:00000000000000b2 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:305    .text.read_NTU:00000000000000b4 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:308    .text.read_NTU:00000000000000b6 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:313    .text.read_NTU:00000000000000b8 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:315    .text.read_NTU:00000000000000b8 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:318    .text.read_NTU:00000000000000bc .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:319    .text.read_NTU:00000000000000bc .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:320    .text.read_NTU:00000000000000be .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:327    .text.read_temp:0000000000000000 read_temp
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:330    .text.read_temp:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:331    .text.read_temp:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:332    .text.read_temp:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:333    .text.read_temp:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:335    .text.read_temp:0000000000000002 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:338    .text.read_temp:0000000000000006 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:339    .text.read_temp:0000000000000006 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:341    .text.read_temp:0000000000000006 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:344    .text.read_temp:000000000000000e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:346    .text.read_temp:0000000000000012 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:352    .text.read_temp:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:353    .text.read_temp:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:356    .text.read_temp:0000000000000024 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:357    .text.read_temp:0000000000000024 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:366    .text.read_temp:0000000000000036 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:367    .text.read_temp:0000000000000038 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:368    .text.read_temp:0000000000000038 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:370    .text.read_temp:000000000000003a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:373    .text.read_temp:000000000000003c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:378    .text.read_temp:000000000000003e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:380    .text.read_temp:000000000000003e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:383    .text.read_temp:0000000000000042 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:391    .text.startup.main:0000000000000000 main
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:394    .text.startup.main:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:395    .text.startup.main:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:396    .text.startup.main:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:397    .text.startup.main:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:399    .text.startup.main:0000000000000002 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:401    .text.startup.main:0000000000000002 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:403    .text.startup.main:0000000000000006 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:414    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:415    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:416    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:417    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:418    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:419    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:420    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:421    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:422    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:423    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:424    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:426    .text.startup.main:000000000000001c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:429    .text.startup.main:0000000000000024 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:432    .text.startup.main:000000000000002c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:436    .text.startup.main:0000000000000036 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:439    .text.startup.main:000000000000003e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:443    .text.startup.main:0000000000000046 .L0 
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 24
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:299    .text.read_NTU:00000000000000ae .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:302    .text.read_NTU:00000000000000b2 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:305    .text.read_NTU:00000000000000b4 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:308    .text.read_NTU:00000000000000b6 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:313    .text.read_NTU:00000000000000b8 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:315    .text.read_NTU:00000000000000b8 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:318    .text.read_NTU:00000000000000bc .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:319    .text.read_NTU:00000000000000bc .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:320    .text.read_NTU:00000000000000be .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:327    .text.read_temp:0000000000000000 read_temp
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:330    .text.read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:331    .text.read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:332    .text.read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:333    .text.read_temp:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:335    .text.read_temp:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:338    .text.read_temp:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:339    .text.read_temp:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:341    .text.read_temp:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:344    .text.read_temp:000000000000000e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:346    .text.read_temp:0000000000000012 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:352    .text.read_temp:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:353    .text.read_temp:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:356    .text.read_temp:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:357    .text.read_temp:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:366    .text.read_temp:0000000000000036 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:367    .text.read_temp:0000000000000038 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:368    .text.read_temp:0000000000000038 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:370    .text.read_temp:000000000000003a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:373    .text.read_temp:000000000000003c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:378    .text.read_temp:000000000000003e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:380    .text.read_temp:000000000000003e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:383    .text.read_temp:0000000000000042 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:391    .text.startup.main:0000000000000000 main
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:394    .text.startup.main:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:395    .text.startup.main:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:396    .text.startup.main:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:397    .text.startup.main:0000000000000000 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:399    .text.startup.main:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:401    .text.startup.main:0000000000000002 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:403    .text.startup.main:0000000000000006 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:414    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:415    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:416    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:417    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:418    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:419    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:420    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:421    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:422    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:423    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:424    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:426    .text.startup.main:000000000000001c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:429    .text.startup.main:0000000000000024 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:432    .text.startup.main:000000000000002c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:436    .text.startup.main:0000000000000036 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:439    .text.startup.main:000000000000003e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:443    .text.startup.main:0000000000000046 .L0 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 24
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:444    .text.startup.main:0000000000000046 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:447    .text.startup.main:000000000000004e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:449    .text.startup.main:0000000000000052 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:453    .text.startup.main:000000000000005e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:459    .text.startup.main:0000000000000072 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:463    .text.startup.main:0000000000000078 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:466    .text.startup.main:000000000000007c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:470    .text.startup.main:0000000000000084 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:473    .text.startup.main:0000000000000088 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:476    .text.startup.main:000000000000008c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:481    .text.startup.main:0000000000000090 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:482    .text.startup.main:0000000000000090 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:483    .text.startup.main:0000000000000090 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:488    .text.startup.main:000000000000009a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:489    .text.startup.main:000000000000009a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:494    .text.startup.main:00000000000000a4 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:495    .text.startup.main:00000000000000a4 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:498    .text.startup.main:00000000000000ac .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:500    .text.startup.main:00000000000000b0 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:503    .text.startup.main:00000000000000b2 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:504    .text.startup.main:00000000000000b2 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:510    .text.startup.main:00000000000000be .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:514    .text.startup.main:00000000000000c8 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:520    .text.startup.main:00000000000000d4 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:521    .text.startup.main:00000000000000d4 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:522    .text.startup.main:00000000000000d4 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:528    .text.startup.main:00000000000000e0 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:529    .text.startup.main:00000000000000e0 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:536    .text.startup.main:00000000000000f4 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:540    .text.startup.main:00000000000000fe .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:543    .text.startup.main:0000000000000106 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:547    .text.startup.main:0000000000000110 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:553    .text.startup.main:0000000000000116 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:554    .text.startup.main:0000000000000116 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:559    .text.startup.main:0000000000000120 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:560    .text.startup.main:0000000000000120 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:567    .text.startup.main:0000000000000134 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:571    .text.startup.main:000000000000013e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:574    .text.startup.main:0000000000000146 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:575    .text.startup.main:0000000000000146 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:584    .text.startup.main:0000000000000154 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:585    .text.startup.main:0000000000000154 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:586    .text.startup.main:0000000000000154 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:587    .text.startup.main:0000000000000154 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:588    .text.startup.main:0000000000000154 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:593    .text.startup.main:0000000000000162 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:602    .text.startup.main:0000000000000174 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:606    .text.startup.main:000000000000017e .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:611    .text.startup.main:000000000000018a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:615    .text.startup.main:000000000000018c .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:623    .text.startup.main:000000000000019a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:632    .text.startup.main:00000000000001a8 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:633    .text.startup.main:00000000000001a8 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:639    .text.startup.main:00000000000001b4 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:640    .text.startup.main:00000000000001b4 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:647    .text.startup.main:00000000000001c8 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:651    .text.startup.main:00000000000001d4 .L0 
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 25
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:444    .text.startup.main:0000000000000046 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:447    .text.startup.main:000000000000004e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:449    .text.startup.main:0000000000000052 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:453    .text.startup.main:000000000000005e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:459    .text.startup.main:0000000000000072 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:463    .text.startup.main:0000000000000078 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:466    .text.startup.main:000000000000007c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:470    .text.startup.main:0000000000000084 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:473    .text.startup.main:0000000000000088 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:476    .text.startup.main:000000000000008c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:481    .text.startup.main:0000000000000090 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:482    .text.startup.main:0000000000000090 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:483    .text.startup.main:0000000000000090 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:488    .text.startup.main:000000000000009a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:489    .text.startup.main:000000000000009a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:494    .text.startup.main:00000000000000a4 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:495    .text.startup.main:00000000000000a4 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:498    .text.startup.main:00000000000000ac .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:500    .text.startup.main:00000000000000b0 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:503    .text.startup.main:00000000000000b2 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:504    .text.startup.main:00000000000000b2 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:510    .text.startup.main:00000000000000be .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:514    .text.startup.main:00000000000000c8 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:520    .text.startup.main:00000000000000d4 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:521    .text.startup.main:00000000000000d4 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:522    .text.startup.main:00000000000000d4 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:528    .text.startup.main:00000000000000e0 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:529    .text.startup.main:00000000000000e0 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:536    .text.startup.main:00000000000000f4 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:540    .text.startup.main:00000000000000fe .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:543    .text.startup.main:0000000000000106 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:547    .text.startup.main:0000000000000110 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:553    .text.startup.main:0000000000000116 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:554    .text.startup.main:0000000000000116 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:559    .text.startup.main:0000000000000120 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:560    .text.startup.main:0000000000000120 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:567    .text.startup.main:0000000000000134 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:571    .text.startup.main:000000000000013e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:574    .text.startup.main:0000000000000146 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:575    .text.startup.main:0000000000000146 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:584    .text.startup.main:0000000000000154 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:585    .text.startup.main:0000000000000154 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:586    .text.startup.main:0000000000000154 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:587    .text.startup.main:0000000000000154 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:588    .text.startup.main:0000000000000154 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:593    .text.startup.main:0000000000000162 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:602    .text.startup.main:0000000000000174 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:606    .text.startup.main:000000000000017e .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:611    .text.startup.main:000000000000018a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:615    .text.startup.main:000000000000018c .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:623    .text.startup.main:000000000000019a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:632    .text.startup.main:00000000000001a8 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:633    .text.startup.main:00000000000001a8 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:639    .text.startup.main:00000000000001b4 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:640    .text.startup.main:00000000000001b4 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:647    .text.startup.main:00000000000001c8 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:651    .text.startup.main:00000000000001d4 .L0 
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 25
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:656    .text.startup.main:00000000000001de .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:658    .text.startup.main:00000000000001de .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:659    .text.startup.main:00000000000001de .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:668    .text.startup.main:00000000000001f4 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:672    .text.startup.main:00000000000001fe .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:676    .text.startup.main:0000000000000206 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:695    .text.startup.main:0000000000000236 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:700    .rodata:0000000000000000 .LANCHOR0
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:79     .text.init_timer_settings:000000000000004a .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:190    .text.read_ph:00000000000000a8 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:323    .text.read_NTU:00000000000000be .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:387    .text.read_temp:0000000000000042 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:698    .text.startup.main:0000000000000236 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:656    .text.startup.main:00000000000001de .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:658    .text.startup.main:00000000000001de .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:659    .text.startup.main:00000000000001de .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:668    .text.startup.main:00000000000001f4 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:672    .text.startup.main:00000000000001fe .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:676    .text.startup.main:0000000000000206 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:695    .text.startup.main:0000000000000236 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:700    .rodata:0000000000000000 .LANCHOR0
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:79     .text.init_timer_settings:000000000000004a .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:190    .text.read_ph:00000000000000a8 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:323    .text.read_NTU:00000000000000be .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:387    .text.read_temp:0000000000000042 .L0 
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:698    .text.startup.main:0000000000000236 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:175    .text.read_ph:00000000000000a2 .L6
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:160    .text.read_ph:0000000000000096 .L3
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:293    .text.read_NTU:00000000000000aa .L9
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:311    .text.read_NTU:00000000000000b8 .L13
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:376    .text.read_temp:000000000000003e .L18
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:362    .text.read_temp:0000000000000036 .L16
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:613    .text.startup.main:000000000000018c .L22
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:620    .text.startup.main:000000000000019a .L28
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:477    .text.startup.main:0000000000000090 .L26
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:442    .text.startup.main:0000000000000046 .L21
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:600    .text.startup.main:0000000000000174 .L25
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:5437   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6883   .debug_str:000000000000026d .LASF420
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7233   .debug_str:0000000000000ae6 .LASF421
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6995   .debug_str:0000000000000592 .LASF422
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6745   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6777   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7259   .debug_str:0000000000000b78 .LASF0
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7267   .debug_str:0000000000000baf .LASF1
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6981   .debug_str:000000000000052a .LASF2
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6907   .debug_str:0000000000000387 .LASF4
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6997   .debug_str:00000000000005de .LASF3
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7431   .debug_str:0000000000000f2a .LASF5
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7497   .debug_str:000000000000105e .LASF6
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7055   .debug_str:0000000000000712 .LASF7
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7591   .debug_str:000000000000124d .LASF8
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6931   .debug_str:0000000000000406 .LASF9
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7197   .debug_str:0000000000000a32 .LASF10
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7135   .debug_str:00000000000008d2 .LASF11
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7205   .debug_str:0000000000000a5a .LASF12
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7373   .debug_str:0000000000000e05 .LASF13
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6983   .debug_str:0000000000000536 .LASF14
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7503   .debug_str:000000000000107b .LASF15
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7381   .debug_str:0000000000000e39 .LASF16
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7561   .debug_str:00000000000011b5 .LASF17
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7151   .debug_str:000000000000093b .LASF134
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7445   .debug_str:0000000000000f73 .LASF18
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7447   .debug_str:0000000000000f7c .LASF19
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7269   .debug_str:0000000000000bbc .LASF20
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7547   .debug_str:000000000000114c .LASF21
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7183   .debug_str:00000000000009ec .LASF22
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6847   .debug_str:000000000000019b .LASF23
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6849   .debug_str:00000000000001a6 .LASF24
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 26
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:175    .text.read_ph:00000000000000a2 .L6
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:160    .text.read_ph:0000000000000096 .L3
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:293    .text.read_NTU:00000000000000aa .L9
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:311    .text.read_NTU:00000000000000b8 .L13
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:376    .text.read_temp:000000000000003e .L18
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:362    .text.read_temp:0000000000000036 .L16
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:613    .text.startup.main:000000000000018c .L22
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:620    .text.startup.main:000000000000019a .L28
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:477    .text.startup.main:0000000000000090 .L26
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:442    .text.startup.main:0000000000000046 .L21
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:600    .text.startup.main:0000000000000174 .L25
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:5437   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6883   .debug_str:000000000000026d .LASF420
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7233   .debug_str:0000000000000ae6 .LASF421
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6995   .debug_str:0000000000000592 .LASF422
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6745   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6777   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7259   .debug_str:0000000000000b78 .LASF0
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7267   .debug_str:0000000000000baf .LASF1
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6981   .debug_str:000000000000052a .LASF2
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6907   .debug_str:0000000000000387 .LASF4
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6997   .debug_str:00000000000005de .LASF3
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7431   .debug_str:0000000000000f2a .LASF5
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7497   .debug_str:000000000000105e .LASF6
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7055   .debug_str:0000000000000712 .LASF7
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7591   .debug_str:000000000000124d .LASF8
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6931   .debug_str:0000000000000406 .LASF9
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7197   .debug_str:0000000000000a32 .LASF10
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7135   .debug_str:00000000000008d2 .LASF11
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7205   .debug_str:0000000000000a5a .LASF12
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7373   .debug_str:0000000000000e05 .LASF13
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6983   .debug_str:0000000000000536 .LASF14
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7503   .debug_str:000000000000107b .LASF15
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7381   .debug_str:0000000000000e39 .LASF16
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7561   .debug_str:00000000000011b5 .LASF17
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7151   .debug_str:000000000000093b .LASF134
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7445   .debug_str:0000000000000f73 .LASF18
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7447   .debug_str:0000000000000f7c .LASF19
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7269   .debug_str:0000000000000bbc .LASF20
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7547   .debug_str:000000000000114c .LASF21
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7183   .debug_str:00000000000009ec .LASF22
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6847   .debug_str:000000000000019b .LASF23
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6849   .debug_str:00000000000001a6 .LASF24
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 26
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6851   .debug_str:00000000000001b1 .LASF25
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6853   .debug_str:00000000000001bc .LASF26
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6855   .debug_str:00000000000001c7 .LASF27
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6857   .debug_str:00000000000001d2 .LASF28
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7317   .debug_str:0000000000000cc1 .LASF29
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6973   .debug_str:0000000000000504 .LASF30
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6975   .debug_str:000000000000050d .LASF31
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6867   .debug_str:000000000000022b .LASF32
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6869   .debug_str:0000000000000236 .LASF33
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6827   .debug_str:0000000000000130 .LASF34
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6829   .debug_str:000000000000013a .LASF35
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7565   .debug_str:00000000000011d0 .LASF36
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7567   .debug_str:00000000000011d9 .LASF37
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7031   .debug_str:0000000000000688 .LASF38
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7033   .debug_str:0000000000000691 .LASF39
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7517   .debug_str:00000000000010bf .LASF40
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6811   .debug_str:00000000000000d7 .LASF41
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6985   .debug_str:000000000000053e .LASF42
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7343   .debug_str:0000000000000d72 .LASF43
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7157   .debug_str:0000000000000961 .LASF44
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7209   .debug_str:0000000000000a71 .LASF45
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7211   .debug_str:0000000000000a7b .LASF46
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7213   .debug_str:0000000000000a85 .LASF47
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7215   .debug_str:0000000000000a8f .LASF48
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7217   .debug_str:0000000000000a99 .LASF49
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7201   .debug_str:0000000000000a48 .LASF50
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7203   .debug_str:0000000000000a51 .LASF51
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6845   .debug_str:0000000000000190 .LASF52
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6971   .debug_str:00000000000004fb .LASF53
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6865   .debug_str:0000000000000220 .LASF54
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7131   .debug_str:00000000000008c3 .LASF55
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7191   .debug_str:0000000000000a11 .LASF56
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7177   .debug_str:00000000000009c9 .LASF57
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7425   .debug_str:0000000000000f13 .LASF58
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7573   .debug_str:00000000000011f4 .LASF59
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6893   .debug_str:000000000000031c .LASF60
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7265   .debug_str:0000000000000b98 .LASF61
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7335   .debug_str:0000000000000d44 .LASF62
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7005   .debug_str:000000000000060d .LASF63
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7207   .debug_str:0000000000000a68 .LASF64
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7077   .debug_str:00000000000007a2 .LASF65
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7479   .debug_str:0000000000000fff .LASF66
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7091   .debug_str:00000000000007e9 .LASF67
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7603   .debug_str:000000000000129d .LASF68
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7499   .debug_str:0000000000001068 .LASF69
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7615   .debug_str:00000000000012e4 .LASF70
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7613   .debug_str:00000000000012dc .LASF71
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7467   .debug_str:0000000000000fc7 .LASF72
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7609   .debug_str:00000000000012c3 .LASF73
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7579   .debug_str:0000000000001217 .LASF74
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7081   .debug_str:00000000000007b2 .LASF75
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7017   .debug_str:000000000000063e .LASF76
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7105   .debug_str:000000000000082a .LASF77
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7607   .debug_str:00000000000012bb .LASF78
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6895   .debug_str:000000000000032e .LASF79
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7599   .debug_str:0000000000001285 .LASF80
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7405   .debug_str:0000000000000ead .LASF81
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 27
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6851   .debug_str:00000000000001b1 .LASF25
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6853   .debug_str:00000000000001bc .LASF26
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6855   .debug_str:00000000000001c7 .LASF27
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6857   .debug_str:00000000000001d2 .LASF28
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7317   .debug_str:0000000000000cc1 .LASF29
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6973   .debug_str:0000000000000504 .LASF30
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6975   .debug_str:000000000000050d .LASF31
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6867   .debug_str:000000000000022b .LASF32
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6869   .debug_str:0000000000000236 .LASF33
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6827   .debug_str:0000000000000130 .LASF34
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6829   .debug_str:000000000000013a .LASF35
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7565   .debug_str:00000000000011d0 .LASF36
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7567   .debug_str:00000000000011d9 .LASF37
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7031   .debug_str:0000000000000688 .LASF38
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7033   .debug_str:0000000000000691 .LASF39
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7517   .debug_str:00000000000010bf .LASF40
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6811   .debug_str:00000000000000d7 .LASF41
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6985   .debug_str:000000000000053e .LASF42
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7343   .debug_str:0000000000000d72 .LASF43
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7157   .debug_str:0000000000000961 .LASF44
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7209   .debug_str:0000000000000a71 .LASF45
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7211   .debug_str:0000000000000a7b .LASF46
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7213   .debug_str:0000000000000a85 .LASF47
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7215   .debug_str:0000000000000a8f .LASF48
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7217   .debug_str:0000000000000a99 .LASF49
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7201   .debug_str:0000000000000a48 .LASF50
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7203   .debug_str:0000000000000a51 .LASF51
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6845   .debug_str:0000000000000190 .LASF52
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6971   .debug_str:00000000000004fb .LASF53
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6865   .debug_str:0000000000000220 .LASF54
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7131   .debug_str:00000000000008c3 .LASF55
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7191   .debug_str:0000000000000a11 .LASF56
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7177   .debug_str:00000000000009c9 .LASF57
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7425   .debug_str:0000000000000f13 .LASF58
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7573   .debug_str:00000000000011f4 .LASF59
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6893   .debug_str:000000000000031c .LASF60
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7265   .debug_str:0000000000000b98 .LASF61
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7335   .debug_str:0000000000000d44 .LASF62
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7005   .debug_str:000000000000060d .LASF63
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7207   .debug_str:0000000000000a68 .LASF64
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7077   .debug_str:00000000000007a2 .LASF65
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7479   .debug_str:0000000000000fff .LASF66
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7091   .debug_str:00000000000007e9 .LASF67
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7603   .debug_str:000000000000129d .LASF68
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7499   .debug_str:0000000000001068 .LASF69
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7615   .debug_str:00000000000012e4 .LASF70
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7613   .debug_str:00000000000012dc .LASF71
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7467   .debug_str:0000000000000fc7 .LASF72
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7609   .debug_str:00000000000012c3 .LASF73
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7579   .debug_str:0000000000001217 .LASF74
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7081   .debug_str:00000000000007b2 .LASF75
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7017   .debug_str:000000000000063e .LASF76
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7105   .debug_str:000000000000082a .LASF77
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7607   .debug_str:00000000000012bb .LASF78
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6895   .debug_str:000000000000032e .LASF79
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7599   .debug_str:0000000000001285 .LASF80
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7405   .debug_str:0000000000000ead .LASF81
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 27
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6977   .debug_str:0000000000000516 .LASF82
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7347   .debug_str:0000000000000d83 .LASF83
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7569   .debug_str:00000000000011e2 .LASF84
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7459   .debug_str:0000000000000fa1 .LASF85
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7597   .debug_str:000000000000127b .LASF86
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7623   .debug_str:0000000000001317 .LASF87
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7123   .debug_str:0000000000000895 .LASF88
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7073   .debug_str:000000000000078b .LASF89
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7587   .debug_str:000000000000123b .LASF90
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7473   .debug_str:0000000000000fe4 .LASF91
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7403   .debug_str:0000000000000ea6 .LASF92
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6953   .debug_str:000000000000048b .LASF93
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7283   .debug_str:0000000000000c1a .LASF94
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7007   .debug_str:0000000000000614 .LASF95
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7011   .debug_str:0000000000000622 .LASF96
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7385   .debug_str:0000000000000e4e .LASF97
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6859   .debug_str:00000000000001dd .LASF98
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7029   .debug_str:000000000000067d .LASF99
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7179   .debug_str:00000000000009da .LASF100
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7053   .debug_str:0000000000000708 .LASF101
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7627   .debug_str:0000000000001325 .LASF102
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6833   .debug_str:000000000000015e .LASF103
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7067   .debug_str:000000000000076e .LASF104
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7069   .debug_str:0000000000000779 .LASF105
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7519   .debug_str:00000000000010c8 .LASF106
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7015   .debug_str:0000000000000636 .LASF107
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6925   .debug_str:00000000000003e6 .LASF108
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6801   .debug_str:0000000000000090 .LASF109
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7401   .debug_str:0000000000000e9e .LASF110
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6927   .debug_str:00000000000003ee .LASF111
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7351   .debug_str:0000000000000d95 .LASF112
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7109   .debug_str:000000000000083d .LASF113
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7633   .debug_str:0000000000001343 .LASF114
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7513   .debug_str:00000000000010ae .LASF115
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7521   .debug_str:00000000000010d0 .LASF116
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7025   .debug_str:000000000000066b .LASF117
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6825   .debug_str:0000000000000127 .LASF118
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6957   .debug_str:000000000000049b .LASF119
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7001   .debug_str:00000000000005fa .LASF120
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7327   .debug_str:0000000000000d16 .LASF121
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7171   .debug_str:00000000000009ad .LASF122
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6965   .debug_str:00000000000004d2 .LASF123
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7079   .debug_str:00000000000007a9 .LASF124
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7241   .debug_str:0000000000000b18 .LASF125
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7501   .debug_str:000000000000106f .LASF126
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6943   .debug_str:000000000000043b .LASF127
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7085   .debug_str:00000000000007c4 .LASF136
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6935   .debug_str:000000000000041b .LASF128
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7481   .debug_str:0000000000001006 .LASF129
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7475   .debug_str:0000000000000fed .LASF130
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7161   .debug_str:000000000000097a .LASF131
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6897   .debug_str:0000000000000338 .LASF132
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7355   .debug_str:0000000000000da6 .LASF133
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7471   .debug_str:0000000000000fda .LASF135
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7095   .debug_str:00000000000007f6 .LASF137
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6999   .debug_str:00000000000005ec .LASF138
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7305   .debug_str:0000000000000c8e .LASF139
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 28
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6977   .debug_str:0000000000000516 .LASF82
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7347   .debug_str:0000000000000d83 .LASF83
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7569   .debug_str:00000000000011e2 .LASF84
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7459   .debug_str:0000000000000fa1 .LASF85
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7597   .debug_str:000000000000127b .LASF86
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7623   .debug_str:0000000000001317 .LASF87
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7123   .debug_str:0000000000000895 .LASF88
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7073   .debug_str:000000000000078b .LASF89
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7587   .debug_str:000000000000123b .LASF90
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7473   .debug_str:0000000000000fe4 .LASF91
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7403   .debug_str:0000000000000ea6 .LASF92
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6953   .debug_str:000000000000048b .LASF93
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7283   .debug_str:0000000000000c1a .LASF94
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7007   .debug_str:0000000000000614 .LASF95
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7011   .debug_str:0000000000000622 .LASF96
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7385   .debug_str:0000000000000e4e .LASF97
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6859   .debug_str:00000000000001dd .LASF98
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7029   .debug_str:000000000000067d .LASF99
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7179   .debug_str:00000000000009da .LASF100
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7053   .debug_str:0000000000000708 .LASF101
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7627   .debug_str:0000000000001325 .LASF102
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6833   .debug_str:000000000000015e .LASF103
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7067   .debug_str:000000000000076e .LASF104
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7069   .debug_str:0000000000000779 .LASF105
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7519   .debug_str:00000000000010c8 .LASF106
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7015   .debug_str:0000000000000636 .LASF107
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6925   .debug_str:00000000000003e6 .LASF108
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6801   .debug_str:0000000000000090 .LASF109
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7401   .debug_str:0000000000000e9e .LASF110
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6927   .debug_str:00000000000003ee .LASF111
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7351   .debug_str:0000000000000d95 .LASF112
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7109   .debug_str:000000000000083d .LASF113
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7633   .debug_str:0000000000001343 .LASF114
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7513   .debug_str:00000000000010ae .LASF115
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7521   .debug_str:00000000000010d0 .LASF116
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7025   .debug_str:000000000000066b .LASF117
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6825   .debug_str:0000000000000127 .LASF118
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6957   .debug_str:000000000000049b .LASF119
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7001   .debug_str:00000000000005fa .LASF120
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7327   .debug_str:0000000000000d16 .LASF121
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7171   .debug_str:00000000000009ad .LASF122
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6965   .debug_str:00000000000004d2 .LASF123
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7079   .debug_str:00000000000007a9 .LASF124
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7241   .debug_str:0000000000000b18 .LASF125
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7501   .debug_str:000000000000106f .LASF126
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6943   .debug_str:000000000000043b .LASF127
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7085   .debug_str:00000000000007c4 .LASF136
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6935   .debug_str:000000000000041b .LASF128
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7481   .debug_str:0000000000001006 .LASF129
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7475   .debug_str:0000000000000fed .LASF130
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7161   .debug_str:000000000000097a .LASF131
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6897   .debug_str:0000000000000338 .LASF132
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7355   .debug_str:0000000000000da6 .LASF133
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7471   .debug_str:0000000000000fda .LASF135
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7095   .debug_str:00000000000007f6 .LASF137
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6999   .debug_str:00000000000005ec .LASF138
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7305   .debug_str:0000000000000c8e .LASF139
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 28
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7009   .debug_str:000000000000061b .LASF140
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7377   .debug_str:0000000000000e2a .LASF141
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7097   .debug_str:00000000000007ff .LASF142
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7185   .debug_str:00000000000009f6 .LASF143
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6909   .debug_str:0000000000000391 .LASF144
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7371   .debug_str:0000000000000dfd .LASF145
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7117   .debug_str:000000000000086b .LASF146
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7063   .debug_str:0000000000000749 .LASF147
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7407   .debug_str:0000000000000eb2 .LASF148
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7027   .debug_str:0000000000000676 .LASF149
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6891   .debug_str:0000000000000315 .LASF150
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7477   .debug_str:0000000000000ff2 .LASF151
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6819   .debug_str:0000000000000102 .LASF152
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6921   .debug_str:00000000000003cd .LASF153
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7139   .debug_str:00000000000008fa .LASF154
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7417   .debug_str:0000000000000ef0 .LASF155
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7409   .debug_str:0000000000000ec0 .LASF156
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6993   .debug_str:0000000000000588 .LASF157
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7249   .debug_str:0000000000000b3c .LASF158
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6779   .debug_str:0000000000000000 .LASF159
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7141   .debug_str:000000000000090a .LASF160
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7137   .debug_str:00000000000008e4 .LASF161
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7227   .debug_str:0000000000000ac9 .LASF162
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7043   .debug_str:00000000000006d8 .LASF163
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7341   .debug_str:0000000000000d65 .LASF164
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7273   .debug_str:0000000000000bcf .LASF165
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7279   .debug_str:0000000000000bf7 .LASF166
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7301   .debug_str:0000000000000c74 .LASF167
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7193   .debug_str:0000000000000a1d .LASF168
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7575   .debug_str:0000000000001202 .LASF169
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7167   .debug_str:0000000000000991 .LASF170
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6991   .debug_str:000000000000057a .LASF171
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7491   .debug_str:0000000000001037 .LASF172
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6783   .debug_str:0000000000000015 .LASF173
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7155   .debug_str:0000000000000953 .LASF174
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7277   .debug_str:0000000000000be7 .LASF175
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7463   .debug_str:0000000000000faf .LASF176
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6967   .debug_str:00000000000004da .LASF177
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7437   .debug_str:0000000000000f4e .LASF178
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6787   .debug_str:0000000000000035 .LASF179
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7581   .debug_str:0000000000001222 .LASF180
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6793   .debug_str:0000000000000064 .LASF181
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7237   .debug_str:0000000000000afa .LASF182
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6941   .debug_str:0000000000000431 .LASF183
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7125   .debug_str:000000000000089c .LASF184
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7589   .debug_str:0000000000001243 .LASF185
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7173   .debug_str:00000000000009b6 .LASF186
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7495   .debug_str:0000000000001055 .LASF187
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6951   .debug_str:0000000000000484 .LASF188
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6785   .debug_str:0000000000000027 .LASF189
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7285   .debug_str:0000000000000c23 .LASF190
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7505   .debug_str:0000000000001083 .LASF191
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7523   .debug_str:00000000000010d8 .LASF192
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7329   .debug_str:0000000000000d21 .LASF193
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7365   .debug_str:0000000000000ddc .LASF194
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7429   .debug_str:0000000000000f21 .LASF195
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6839   .debug_str:0000000000000175 .LASF196
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 29
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7009   .debug_str:000000000000061b .LASF140
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7377   .debug_str:0000000000000e2a .LASF141
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7097   .debug_str:00000000000007ff .LASF142
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7185   .debug_str:00000000000009f6 .LASF143
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6909   .debug_str:0000000000000391 .LASF144
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7371   .debug_str:0000000000000dfd .LASF145
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7117   .debug_str:000000000000086b .LASF146
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7063   .debug_str:0000000000000749 .LASF147
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7407   .debug_str:0000000000000eb2 .LASF148
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7027   .debug_str:0000000000000676 .LASF149
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6891   .debug_str:0000000000000315 .LASF150
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7477   .debug_str:0000000000000ff2 .LASF151
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6819   .debug_str:0000000000000102 .LASF152
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6921   .debug_str:00000000000003cd .LASF153
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7139   .debug_str:00000000000008fa .LASF154
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7417   .debug_str:0000000000000ef0 .LASF155
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7409   .debug_str:0000000000000ec0 .LASF156
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6993   .debug_str:0000000000000588 .LASF157
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7249   .debug_str:0000000000000b3c .LASF158
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6779   .debug_str:0000000000000000 .LASF159
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7141   .debug_str:000000000000090a .LASF160
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7137   .debug_str:00000000000008e4 .LASF161
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7227   .debug_str:0000000000000ac9 .LASF162
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7043   .debug_str:00000000000006d8 .LASF163
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7341   .debug_str:0000000000000d65 .LASF164
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7273   .debug_str:0000000000000bcf .LASF165
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7279   .debug_str:0000000000000bf7 .LASF166
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7301   .debug_str:0000000000000c74 .LASF167
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7193   .debug_str:0000000000000a1d .LASF168
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7575   .debug_str:0000000000001202 .LASF169
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7167   .debug_str:0000000000000991 .LASF170
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6991   .debug_str:000000000000057a .LASF171
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7491   .debug_str:0000000000001037 .LASF172
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6783   .debug_str:0000000000000015 .LASF173
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7155   .debug_str:0000000000000953 .LASF174
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7277   .debug_str:0000000000000be7 .LASF175
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7463   .debug_str:0000000000000faf .LASF176
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6967   .debug_str:00000000000004da .LASF177
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7437   .debug_str:0000000000000f4e .LASF178
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6787   .debug_str:0000000000000035 .LASF179
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7581   .debug_str:0000000000001222 .LASF180
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6793   .debug_str:0000000000000064 .LASF181
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7237   .debug_str:0000000000000afa .LASF182
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6941   .debug_str:0000000000000431 .LASF183
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7125   .debug_str:000000000000089c .LASF184
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7589   .debug_str:0000000000001243 .LASF185
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7173   .debug_str:00000000000009b6 .LASF186
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7495   .debug_str:0000000000001055 .LASF187
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6951   .debug_str:0000000000000484 .LASF188
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6785   .debug_str:0000000000000027 .LASF189
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7285   .debug_str:0000000000000c23 .LASF190
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7505   .debug_str:0000000000001083 .LASF191
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7523   .debug_str:00000000000010d8 .LASF192
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7329   .debug_str:0000000000000d21 .LASF193
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7365   .debug_str:0000000000000ddc .LASF194
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7429   .debug_str:0000000000000f21 .LASF195
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6839   .debug_str:0000000000000175 .LASF196
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 29
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7487   .debug_str:0000000000001024 .LASF197
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6919   .debug_str:00000000000003c5 .LASF198
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7345   .debug_str:0000000000000d7a .LASF199
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6799   .debug_str:0000000000000088 .LASF200
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7221   .debug_str:0000000000000aaa .LASF201
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7489   .debug_str:000000000000102d .LASF202
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7563   .debug_str:00000000000011be .LASF203
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6905   .debug_str:0000000000000376 .LASF204
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7003   .debug_str:0000000000000606 .LASF205
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7235   .debug_str:0000000000000aed .LASF206
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7313   .debug_str:0000000000000caf .LASF207
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7195   .debug_str:0000000000000a2a .LASF208
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6781   .debug_str:0000000000000009 .LASF209
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7483   .debug_str:000000000000100d .LASF210
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6805   .debug_str:00000000000000a1 .LASF211
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7369   .debug_str:0000000000000df4 .LASF212
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7037   .debug_str:00000000000006b6 .LASF213
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7153   .debug_str:000000000000094b .LASF214
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6879   .debug_str:000000000000025f .LASF215
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7275   .debug_str:0000000000000bde .LASF216
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7577   .debug_str:000000000000120c .LASF217
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7023   .debug_str:0000000000000660 .LASF218
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6871   .debug_str:0000000000000241 .LASF219
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7099   .debug_str:0000000000000807 .LASF220
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7635   .debug_str:000000000000134e .LASF221
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7595   .debug_str:000000000000126a .LASF222
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7449   .debug_str:0000000000000f85 .LASF223
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7441   .debug_str:0000000000000f5e .LASF224
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7379   .debug_str:0000000000000e31 .LASF225
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6963   .debug_str:00000000000004c8 .LASF226
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7465   .debug_str:0000000000000fc2 .LASF227
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7071   .debug_str:0000000000000784 .LASF228
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6911   .debug_str:00000000000003a2 .LASF229
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6901   .debug_str:000000000000035e .LASF230
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7021   .debug_str:0000000000000657 .LASF231
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7041   .debug_str:00000000000006c5 .LASF232
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7287   .debug_str:0000000000000c2b .LASF233
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7433   .debug_str:0000000000000f34 .LASF234
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7103   .debug_str:000000000000081c .LASF235
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6873   .debug_str:000000000000024a .LASF236
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7261   .debug_str:0000000000000b7e .LASF237
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7271   .debug_str:0000000000000bc4 .LASF238
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7375   .debug_str:0000000000000e1c .LASF239
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7413   .debug_str:0000000000000ed7 .LASF240
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7423   .debug_str:0000000000000f08 .LASF241
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7439   .debug_str:0000000000000f59 .LASF242
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7255   .debug_str:0000000000000b56 .LASF243
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7289   .debug_str:0000000000000c3f .LASF244
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7509   .debug_str:0000000000001097 .LASF245
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6903   .debug_str:0000000000000366 .LASF246
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7451   .debug_str:0000000000000f8a .LASF247
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7583   .debug_str:000000000000122f .LASF248
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7359   .debug_str:0000000000000dc3 .LASF249
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6791   .debug_str:000000000000005b .LASF250
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6917   .debug_str:00000000000003bf .LASF251
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7361   .debug_str:0000000000000dcb .LASF252
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7319   .debug_str:0000000000000ccb .LASF253
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 30
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7487   .debug_str:0000000000001024 .LASF197
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6919   .debug_str:00000000000003c5 .LASF198
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7345   .debug_str:0000000000000d7a .LASF199
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6799   .debug_str:0000000000000088 .LASF200
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7221   .debug_str:0000000000000aaa .LASF201
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7489   .debug_str:000000000000102d .LASF202
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7563   .debug_str:00000000000011be .LASF203
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6905   .debug_str:0000000000000376 .LASF204
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7003   .debug_str:0000000000000606 .LASF205
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7235   .debug_str:0000000000000aed .LASF206
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7313   .debug_str:0000000000000caf .LASF207
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7195   .debug_str:0000000000000a2a .LASF208
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6781   .debug_str:0000000000000009 .LASF209
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7483   .debug_str:000000000000100d .LASF210
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6805   .debug_str:00000000000000a1 .LASF211
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7369   .debug_str:0000000000000df4 .LASF212
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7037   .debug_str:00000000000006b6 .LASF213
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7153   .debug_str:000000000000094b .LASF214
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6879   .debug_str:000000000000025f .LASF215
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7275   .debug_str:0000000000000bde .LASF216
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7577   .debug_str:000000000000120c .LASF217
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7023   .debug_str:0000000000000660 .LASF218
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6871   .debug_str:0000000000000241 .LASF219
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7099   .debug_str:0000000000000807 .LASF220
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7635   .debug_str:000000000000134e .LASF221
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7595   .debug_str:000000000000126a .LASF222
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7449   .debug_str:0000000000000f85 .LASF223
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7441   .debug_str:0000000000000f5e .LASF224
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7379   .debug_str:0000000000000e31 .LASF225
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6963   .debug_str:00000000000004c8 .LASF226
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7465   .debug_str:0000000000000fc2 .LASF227
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7071   .debug_str:0000000000000784 .LASF228
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6911   .debug_str:00000000000003a2 .LASF229
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6901   .debug_str:000000000000035e .LASF230
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7021   .debug_str:0000000000000657 .LASF231
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7041   .debug_str:00000000000006c5 .LASF232
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7287   .debug_str:0000000000000c2b .LASF233
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7433   .debug_str:0000000000000f34 .LASF234
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7103   .debug_str:000000000000081c .LASF235
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6873   .debug_str:000000000000024a .LASF236
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7261   .debug_str:0000000000000b7e .LASF237
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7271   .debug_str:0000000000000bc4 .LASF238
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7375   .debug_str:0000000000000e1c .LASF239
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7413   .debug_str:0000000000000ed7 .LASF240
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7423   .debug_str:0000000000000f08 .LASF241
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7439   .debug_str:0000000000000f59 .LASF242
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7255   .debug_str:0000000000000b56 .LASF243
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7289   .debug_str:0000000000000c3f .LASF244
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7509   .debug_str:0000000000001097 .LASF245
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6903   .debug_str:0000000000000366 .LASF246
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7451   .debug_str:0000000000000f8a .LASF247
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7583   .debug_str:000000000000122f .LASF248
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7359   .debug_str:0000000000000dc3 .LASF249
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6791   .debug_str:000000000000005b .LASF250
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6917   .debug_str:00000000000003bf .LASF251
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7361   .debug_str:0000000000000dcb .LASF252
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7319   .debug_str:0000000000000ccb .LASF253
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 30
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6797   .debug_str:0000000000000080 .LASF254
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7435   .debug_str:0000000000000f43 .LASF255
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7559   .debug_str:00000000000011ad .LASF256
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7159   .debug_str:0000000000000968 .LASF257
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7421   .debug_str:0000000000000eff .LASF258
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7175   .debug_str:00000000000009c1 .LASF259
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7457   .debug_str:0000000000000f9b .LASF260
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7181   .debug_str:00000000000009e4 .LASF261
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7253   .debug_str:0000000000000b50 .LASF262
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7093   .debug_str:00000000000007f1 .LASF263
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6837   .debug_str:0000000000000170 .LASF264
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6843   .debug_str:0000000000000187 .LASF265
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7629   .debug_str:000000000000132d .LASF266
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7593   .debug_str:0000000000001260 .LASF267
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7113   .debug_str:0000000000000850 .LASF268
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6959   .debug_str:00000000000004a3 .LASF269
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7515   .debug_str:00000000000010b5 .LASF270
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7333   .debug_str:0000000000000d3a .LASF271
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7337   .debug_str:0000000000000d50 .LASF272
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7617   .debug_str:00000000000012ec .LASF273
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6915   .debug_str:00000000000003b1 .LASF274
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6875   .debug_str:0000000000000251 .LASF275
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7383   .debug_str:0000000000000e42 .LASF276
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7507   .debug_str:000000000000108e .LASF277
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7543   .debug_str:0000000000001137 .LASF278
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7311   .debug_str:0000000000000ca7 .LASF279
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7535   .debug_str:0000000000001117 .LASF280
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7045   .debug_str:00000000000006e9 .LASF281
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7541   .debug_str:0000000000001130 .LASF282
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7419   .debug_str:0000000000000ef9 .LASF283
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6939   .debug_str:000000000000042b .LASF284
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7143   .debug_str:0000000000000918 .LASF285
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7307   .debug_str:0000000000000c97 .LASF286
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6913   .debug_str:00000000000003ab .LASF287
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7529   .debug_str:0000000000001103 .LASF288
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7089   .debug_str:00000000000007e1 .LASF289
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6807   .debug_str:00000000000000a9 .LASF290
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6813   .debug_str:00000000000000df .LASF291
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7353   .debug_str:0000000000000da0 .LASF292
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7049   .debug_str:00000000000006f8 .LASF293
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7293   .debug_str:0000000000000c4f .LASF294
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6841   .debug_str:0000000000000181 .LASF295
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7399   .debug_str:0000000000000e95 .LASF296
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7107   .debug_str:0000000000000835 .LASF297
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7461   .debug_str:0000000000000fa9 .LASF298
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6877   .debug_str:0000000000000259 .LASF299
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7299   .debug_str:0000000000000c6b .LASF300
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7147   .debug_str:000000000000092b .LASF301
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6887   .debug_str:00000000000002fb .LASF302
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7165   .debug_str:000000000000098a .LASF303
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7061   .debug_str:0000000000000742 .LASF304
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7389   .debug_str:0000000000000e5b .LASF305
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7295   .debug_str:0000000000000c55 .LASF306
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7533   .debug_str:0000000000001112 .LASF307
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7199   .debug_str:0000000000000a3d .LASF308
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7619   .debug_str:00000000000012f7 .LASF309
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7557   .debug_str:00000000000011a5 .LASF310
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 31
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6797   .debug_str:0000000000000080 .LASF254
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7435   .debug_str:0000000000000f43 .LASF255
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7559   .debug_str:00000000000011ad .LASF256
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7159   .debug_str:0000000000000968 .LASF257
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7421   .debug_str:0000000000000eff .LASF258
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7175   .debug_str:00000000000009c1 .LASF259
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7457   .debug_str:0000000000000f9b .LASF260
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7181   .debug_str:00000000000009e4 .LASF261
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7253   .debug_str:0000000000000b50 .LASF262
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7093   .debug_str:00000000000007f1 .LASF263
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6837   .debug_str:0000000000000170 .LASF264
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6843   .debug_str:0000000000000187 .LASF265
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7629   .debug_str:000000000000132d .LASF266
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7593   .debug_str:0000000000001260 .LASF267
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7113   .debug_str:0000000000000850 .LASF268
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6959   .debug_str:00000000000004a3 .LASF269
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7515   .debug_str:00000000000010b5 .LASF270
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7333   .debug_str:0000000000000d3a .LASF271
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7337   .debug_str:0000000000000d50 .LASF272
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7617   .debug_str:00000000000012ec .LASF273
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6915   .debug_str:00000000000003b1 .LASF274
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6875   .debug_str:0000000000000251 .LASF275
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7383   .debug_str:0000000000000e42 .LASF276
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7507   .debug_str:000000000000108e .LASF277
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7543   .debug_str:0000000000001137 .LASF278
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7311   .debug_str:0000000000000ca7 .LASF279
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7535   .debug_str:0000000000001117 .LASF280
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7045   .debug_str:00000000000006e9 .LASF281
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7541   .debug_str:0000000000001130 .LASF282
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7419   .debug_str:0000000000000ef9 .LASF283
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6939   .debug_str:000000000000042b .LASF284
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7143   .debug_str:0000000000000918 .LASF285
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7307   .debug_str:0000000000000c97 .LASF286
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6913   .debug_str:00000000000003ab .LASF287
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7529   .debug_str:0000000000001103 .LASF288
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7089   .debug_str:00000000000007e1 .LASF289
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6807   .debug_str:00000000000000a9 .LASF290
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6813   .debug_str:00000000000000df .LASF291
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7353   .debug_str:0000000000000da0 .LASF292
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7049   .debug_str:00000000000006f8 .LASF293
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7293   .debug_str:0000000000000c4f .LASF294
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6841   .debug_str:0000000000000181 .LASF295
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7399   .debug_str:0000000000000e95 .LASF296
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7107   .debug_str:0000000000000835 .LASF297
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7461   .debug_str:0000000000000fa9 .LASF298
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6877   .debug_str:0000000000000259 .LASF299
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7299   .debug_str:0000000000000c6b .LASF300
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7147   .debug_str:000000000000092b .LASF301
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6887   .debug_str:00000000000002fb .LASF302
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7165   .debug_str:000000000000098a .LASF303
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7061   .debug_str:0000000000000742 .LASF304
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7389   .debug_str:0000000000000e5b .LASF305
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7295   .debug_str:0000000000000c55 .LASF306
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7533   .debug_str:0000000000001112 .LASF307
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7199   .debug_str:0000000000000a3d .LASF308
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7619   .debug_str:00000000000012f7 .LASF309
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7557   .debug_str:00000000000011a5 .LASF310
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 31
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7145   .debug_str:0000000000000920 .LASF311
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7187   .debug_str:00000000000009fe .LASF312
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7571   .debug_str:00000000000011ec .LASF313
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6937   .debug_str:0000000000000421 .LASF314
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7133   .debug_str:00000000000008cd .LASF315
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7245   .debug_str:0000000000000b2c .LASF316
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6823   .debug_str:000000000000011f .LASF317
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7111   .debug_str:0000000000000848 .LASF318
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7291   .debug_str:0000000000000c4a .LASF319
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7189   .debug_str:0000000000000a08 .LASF320
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7101   .debug_str:0000000000000812 .LASF321
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7225   .debug_str:0000000000000ac1 .LASF322
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6803   .debug_str:000000000000009c .LASF323
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7039   .debug_str:00000000000006c0 .LASF324
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7427   .debug_str:0000000000000f1a .LASF325
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7251   .debug_str:0000000000000b4a .LASF326
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7219   .debug_str:0000000000000aa3 .LASF327
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7247   .debug_str:0000000000000b36 .LASF328
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7387   .debug_str:0000000000000e53 .LASF329
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7349   .debug_str:0000000000000d8f .LASF330
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6885   .debug_str:00000000000002f5 .LASF331
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7585   .debug_str:0000000000001236 .LASF332
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6979   .debug_str:000000000000051d .LASF333
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7411   .debug_str:0000000000000eca .LASF334
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6821   .debug_str:0000000000000112 .LASF335
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6949   .debug_str:0000000000000475 .LASF336
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7239   .debug_str:0000000000000b09 .LASF337
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7303   .debug_str:0000000000000c83 .LASF338
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7443   .debug_str:0000000000000f6e .LASF339
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7493   .debug_str:0000000000001048 .LASF340
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7367   .debug_str:0000000000000de6 .LASF341
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7297   .debug_str:0000000000000c5d .LASF342
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7363   .debug_str:0000000000000dd2 .LASF343
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7169   .debug_str:00000000000009a1 .LASF344
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7631   .debug_str:0000000000001336 .LASF345
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6929   .debug_str:00000000000003f8 .LASF346
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7415   .debug_str:0000000000000ee1 .LASF347
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7601   .debug_str:000000000000128c .LASF348
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7281   .debug_str:0000000000000c0b .LASF349
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7263   .debug_str:0000000000000b87 .LASF350
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7051   .debug_str:00000000000006ff .LASF351
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7549   .debug_str:0000000000001155 .LASF352
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7229   .debug_str:0000000000000ad6 .LASF353
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6835   .debug_str:0000000000000168 .LASF354
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6795   .debug_str:0000000000000075 .LASF423
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6933   .debug_str:000000000000040f .LASF355
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7325   .debug_str:0000000000000d03 .LASF356
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7019   .debug_str:0000000000000644 .LASF357
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7621   .debug_str:0000000000001310 .LASF358
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7551   .debug_str:000000000000115c .LASF359
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6989   .debug_str:000000000000056b .LASF360
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7013   .debug_str:0000000000000627 .LASF361
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6861   .debug_str:00000000000001e3 .LASF362
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7323   .debug_str:0000000000000ce0 .LASF363
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7555   .debug_str:0000000000001194 .LASF364
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7057   .debug_str:000000000000071d .LASF365
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6987   .debug_str:0000000000000546 .LASF366
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 32
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7145   .debug_str:0000000000000920 .LASF311
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7187   .debug_str:00000000000009fe .LASF312
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7571   .debug_str:00000000000011ec .LASF313
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6937   .debug_str:0000000000000421 .LASF314
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7133   .debug_str:00000000000008cd .LASF315
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7245   .debug_str:0000000000000b2c .LASF316
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6823   .debug_str:000000000000011f .LASF317
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7111   .debug_str:0000000000000848 .LASF318
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7291   .debug_str:0000000000000c4a .LASF319
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7189   .debug_str:0000000000000a08 .LASF320
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7101   .debug_str:0000000000000812 .LASF321
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7225   .debug_str:0000000000000ac1 .LASF322
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6803   .debug_str:000000000000009c .LASF323
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7039   .debug_str:00000000000006c0 .LASF324
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7427   .debug_str:0000000000000f1a .LASF325
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7251   .debug_str:0000000000000b4a .LASF326
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7219   .debug_str:0000000000000aa3 .LASF327
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7247   .debug_str:0000000000000b36 .LASF328
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7387   .debug_str:0000000000000e53 .LASF329
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7349   .debug_str:0000000000000d8f .LASF330
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6885   .debug_str:00000000000002f5 .LASF331
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7585   .debug_str:0000000000001236 .LASF332
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6979   .debug_str:000000000000051d .LASF333
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7411   .debug_str:0000000000000eca .LASF334
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6821   .debug_str:0000000000000112 .LASF335
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6949   .debug_str:0000000000000475 .LASF336
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7239   .debug_str:0000000000000b09 .LASF337
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7303   .debug_str:0000000000000c83 .LASF338
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7443   .debug_str:0000000000000f6e .LASF339
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7493   .debug_str:0000000000001048 .LASF340
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7367   .debug_str:0000000000000de6 .LASF341
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7297   .debug_str:0000000000000c5d .LASF342
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7363   .debug_str:0000000000000dd2 .LASF343
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7169   .debug_str:00000000000009a1 .LASF344
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7631   .debug_str:0000000000001336 .LASF345
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6929   .debug_str:00000000000003f8 .LASF346
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7415   .debug_str:0000000000000ee1 .LASF347
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7601   .debug_str:000000000000128c .LASF348
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7281   .debug_str:0000000000000c0b .LASF349
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7263   .debug_str:0000000000000b87 .LASF350
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7051   .debug_str:00000000000006ff .LASF351
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7549   .debug_str:0000000000001155 .LASF352
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7229   .debug_str:0000000000000ad6 .LASF353
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6835   .debug_str:0000000000000168 .LASF354
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6795   .debug_str:0000000000000075 .LASF423
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6933   .debug_str:000000000000040f .LASF355
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7325   .debug_str:0000000000000d03 .LASF356
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7019   .debug_str:0000000000000644 .LASF357
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7621   .debug_str:0000000000001310 .LASF358
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7551   .debug_str:000000000000115c .LASF359
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6989   .debug_str:000000000000056b .LASF360
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7013   .debug_str:0000000000000627 .LASF361
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6861   .debug_str:00000000000001e3 .LASF362
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7323   .debug_str:0000000000000ce0 .LASF363
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7555   .debug_str:0000000000001194 .LASF364
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7057   .debug_str:000000000000071d .LASF365
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6987   .debug_str:0000000000000546 .LASF366
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 32
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6947   .debug_str:000000000000045e .LASF367
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7527   .debug_str:00000000000010ef .LASF368
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6961   .debug_str:00000000000004ac .LASF369
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7115   .debug_str:000000000000085a .LASF370
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6889   .debug_str:0000000000000302 .LASF371
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6831   .debug_str:0000000000000144 .LASF372
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7035   .debug_str:000000000000069a .LASF373
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7257   .debug_str:0000000000000b5e .LASF374
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6789   .debug_str:0000000000000042 .LASF375
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6809   .debug_str:00000000000000af .LASF376
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7545   .debug_str:000000000000113f .LASF377
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7553   .debug_str:0000000000001182 .LASF378
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6945   .debug_str:0000000000000445 .LASF379
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6815   .debug_str:00000000000000e6 .LASF380
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7163   .debug_str:0000000000000980 .LASF381
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7243   .debug_str:0000000000000b20 .LASF382
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6863   .debug_str:0000000000000211 .LASF383
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7119   .debug_str:000000000000087b .LASF384
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7223   .debug_str:0000000000000ab5 .LASF385
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7339   .debug_str:0000000000000d5a .LASF386
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7231   .debug_str:0000000000000adf .LASF387
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7395   .debug_str:0000000000000e7e .LASF424
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7539   .debug_str:0000000000001122 .LASF388
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7485   .debug_str:0000000000001015 .LASF389
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7127   .debug_str:00000000000008a8 .LASF390
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6955   .debug_str:0000000000000496 .LASF403
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:392    .text.startup.main:0000000000000000 .LFB11
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:696    .text.startup.main:0000000000000236 .LFE11
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6285   .debug_loc:0000000000000000 .LLST9
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6298   .debug_loc:0000000000000021 .LLST10
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7611   .debug_str:00000000000012d7 .LASF391
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6313   .debug_loc:000000000000004a .LLST11
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6328   .debug_loc:0000000000000073 .LLST12
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7149   .debug_str:0000000000000933 .LASF392
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6343   .debug_loc:000000000000009c .LLST13
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7129   .debug_str:00000000000008b8 .LASF393
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6350   .debug_loc:00000000000000af .LLST14
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7455   .debug_str:0000000000000f96 .LASF394
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6375   .debug_loc:00000000000000dd .LLST15
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7453   .debug_str:0000000000000f91 .LASF395
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6390   .debug_loc:0000000000000106 .LLST16
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7331   .debug_str:0000000000000d30 .LASF396
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6425   .debug_loc:000000000000015f .LLST17
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7511   .debug_str:00000000000010a4 .LASF397
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6440   .debug_loc:0000000000000188 .LLST18
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7537   .debug_str:000000000000111c .LASF398
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6455   .debug_loc:00000000000001b1 .LLST19
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7531   .debug_str:000000000000110c .LASF399
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6480   .debug_loc:00000000000001dd .LLST20
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7397   .debug_str:0000000000000e8f .LASF400
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6541   .debug_loc:0000000000000233 .LLST21
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7393   .debug_str:0000000000000e78 .LASF401
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6553   .debug_loc:0000000000000252 .LLST22
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:691    .text.startup.main:0000000000000234 .LVL100
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:484    .text.startup.main:0000000000000098 .LVL49
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:490    .text.startup.main:00000000000000a2 .LVL51
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:496    .text.startup.main:00000000000000ac .LVL53
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 33
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6947   .debug_str:000000000000045e .LASF367
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7527   .debug_str:00000000000010ef .LASF368
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6961   .debug_str:00000000000004ac .LASF369
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7115   .debug_str:000000000000085a .LASF370
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6889   .debug_str:0000000000000302 .LASF371
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6831   .debug_str:0000000000000144 .LASF372
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7035   .debug_str:000000000000069a .LASF373
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7257   .debug_str:0000000000000b5e .LASF374
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6789   .debug_str:0000000000000042 .LASF375
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6809   .debug_str:00000000000000af .LASF376
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7545   .debug_str:000000000000113f .LASF377
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7553   .debug_str:0000000000001182 .LASF378
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6945   .debug_str:0000000000000445 .LASF379
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6815   .debug_str:00000000000000e6 .LASF380
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7163   .debug_str:0000000000000980 .LASF381
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7243   .debug_str:0000000000000b20 .LASF382
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6863   .debug_str:0000000000000211 .LASF383
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7119   .debug_str:000000000000087b .LASF384
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7223   .debug_str:0000000000000ab5 .LASF385
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7339   .debug_str:0000000000000d5a .LASF386
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7231   .debug_str:0000000000000adf .LASF387
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7395   .debug_str:0000000000000e7e .LASF424
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7539   .debug_str:0000000000001122 .LASF388
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7485   .debug_str:0000000000001015 .LASF389
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7127   .debug_str:00000000000008a8 .LASF390
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6955   .debug_str:0000000000000496 .LASF403
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:392    .text.startup.main:0000000000000000 .LFB11
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:696    .text.startup.main:0000000000000236 .LFE11
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6285   .debug_loc:0000000000000000 .LLST9
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6298   .debug_loc:0000000000000021 .LLST10
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7611   .debug_str:00000000000012d7 .LASF391
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6313   .debug_loc:000000000000004a .LLST11
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6328   .debug_loc:0000000000000073 .LLST12
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7149   .debug_str:0000000000000933 .LASF392
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6343   .debug_loc:000000000000009c .LLST13
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7129   .debug_str:00000000000008b8 .LASF393
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6350   .debug_loc:00000000000000af .LLST14
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7455   .debug_str:0000000000000f96 .LASF394
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6375   .debug_loc:00000000000000dd .LLST15
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7453   .debug_str:0000000000000f91 .LASF395
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6390   .debug_loc:0000000000000106 .LLST16
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7331   .debug_str:0000000000000d30 .LASF396
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6425   .debug_loc:000000000000015f .LLST17
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7511   .debug_str:00000000000010a4 .LASF397
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6440   .debug_loc:0000000000000188 .LLST18
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7537   .debug_str:000000000000111c .LASF398
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6455   .debug_loc:00000000000001b1 .LLST19
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7531   .debug_str:000000000000110c .LASF399
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6480   .debug_loc:00000000000001dd .LLST20
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7397   .debug_str:0000000000000e8f .LASF400
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6541   .debug_loc:0000000000000233 .LLST21
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7393   .debug_str:0000000000000e78 .LASF401
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6553   .debug_loc:0000000000000252 .LLST22
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:691    .text.startup.main:0000000000000234 .LVL100
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:484    .text.startup.main:0000000000000098 .LVL49
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:490    .text.startup.main:00000000000000a2 .LVL51
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:496    .text.startup.main:00000000000000ac .LVL53
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 33
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:599    .text.startup.main:0000000000000174 .LVL78
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:604    .text.startup.main:000000000000017e .LVL79
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:608    .text.startup.main:000000000000018a .LVL80
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:427    .text.startup.main:0000000000000024 .LVL40
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:430    .text.startup.main:000000000000002c .LVL41
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:434    .text.startup.main:0000000000000036 .LVL42
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:437    .text.startup.main:000000000000003e .LVL43
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:440    .text.startup.main:0000000000000046 .LVL44
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:445    .text.startup.main:000000000000004e .LVL45
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:451    .text.startup.main:000000000000005e .LVL46
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:457    .text.startup.main:0000000000000072 .LVL47
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:467    .text.startup.main:0000000000000084 .LVL48
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:617    .text.startup.main:0000000000000198 .LVL82
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7047   .debug_str:00000000000006ee .LASF425
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7309   .debug_str:0000000000000c9e .LASF402
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6923   .debug_str:00000000000003dd .LASF404
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:195    .text.read_NTU:0000000000000000 .LFB9
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:321    .text.read_NTU:00000000000000be .LFE9
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6570   .debug_loc:0000000000000276 .LLST3
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6593   .debug_loc:00000000000002ae .LLST4
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6608   .debug_loc:00000000000002d7 .LLST5
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:216    .text.read_NTU:0000000000000014 .LVL17
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7315   .debug_str:0000000000000cb9 .LASF405
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:84     .text.read_ph:0000000000000000 .LFB8
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:185    .text.read_ph:00000000000000a8 .LFE8
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6625   .debug_loc:0000000000000305 .LLST1
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6648   .debug_loc:000000000000033d .LLST2
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:105    .text.read_ph:000000000000001a .LVL3
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:109    .text.read_ph:0000000000000024 .LVL4
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7059   .debug_str:000000000000072e .LASF426
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:14     .text.init_timer_settings:0000000000000000 .LFB7
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:71     .text.init_timer_settings:000000000000004a .LFE7
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6665   .debug_loc:000000000000036b .LLST0
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:30     .text.init_timer_settings:0000000000000010 .LVL0
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:58     .text.init_timer_settings:0000000000000038 .LVL1
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:62     .text.init_timer_settings:0000000000000044 .LVL2
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:328    .text.read_temp:0000000000000000 .LFB10
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:384    .text.read_temp:0000000000000042 .LFE10
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6683   .debug_loc:0000000000000397 .LLST6
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6706   .debug_loc:00000000000003cf .LLST7
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:349    .text.read_temp:000000000000001c .LBB4
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:364    .text.read_temp:0000000000000036 .LBE4
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:350    .text.read_temp:000000000000001c .LBB5
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:363    .text.read_temp:0000000000000036 .LBE5
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6717   .debug_loc:00000000000003ed .LLST8
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:354    .text.read_temp:0000000000000024 .LVL35
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:342    .text.read_temp:000000000000000e .LVL34
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7083   .debug_str:00000000000007bd .LASF406
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7625   .debug_str:000000000000131e .LASF407
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6969   .debug_str:00000000000004ed .LASF408
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7605   .debug_str:00000000000012a3 .LASF409
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6817   .debug_str:00000000000000f2 .LASF410
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7469   .debug_str:0000000000000fce .LASF411
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7065   .debug_str:0000000000000759 .LASF412
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7391   .debug_str:0000000000000e63 .LASF413
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6881   .debug_str:0000000000000268 .LASF427
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7357   .debug_str:0000000000000db4 .LASF428
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 34
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:599    .text.startup.main:0000000000000174 .LVL78
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:604    .text.startup.main:000000000000017e .LVL79
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:608    .text.startup.main:000000000000018a .LVL80
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:427    .text.startup.main:0000000000000024 .LVL40
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:430    .text.startup.main:000000000000002c .LVL41
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:434    .text.startup.main:0000000000000036 .LVL42
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:437    .text.startup.main:000000000000003e .LVL43
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:440    .text.startup.main:0000000000000046 .LVL44
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:445    .text.startup.main:000000000000004e .LVL45
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:451    .text.startup.main:000000000000005e .LVL46
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:457    .text.startup.main:0000000000000072 .LVL47
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:467    .text.startup.main:0000000000000084 .LVL48
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:617    .text.startup.main:0000000000000198 .LVL82
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7047   .debug_str:00000000000006ee .LASF425
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7309   .debug_str:0000000000000c9e .LASF402
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6923   .debug_str:00000000000003dd .LASF404
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:195    .text.read_NTU:0000000000000000 .LFB9
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:321    .text.read_NTU:00000000000000be .LFE9
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6570   .debug_loc:0000000000000276 .LLST3
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6593   .debug_loc:00000000000002ae .LLST4
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6608   .debug_loc:00000000000002d7 .LLST5
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:216    .text.read_NTU:0000000000000014 .LVL17
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7315   .debug_str:0000000000000cb9 .LASF405
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:84     .text.read_ph:0000000000000000 .LFB8
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:185    .text.read_ph:00000000000000a8 .LFE8
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6625   .debug_loc:0000000000000305 .LLST1
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6648   .debug_loc:000000000000033d .LLST2
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:105    .text.read_ph:000000000000001a .LVL3
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:109    .text.read_ph:0000000000000024 .LVL4
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7059   .debug_str:000000000000072e .LASF426
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:14     .text.init_timer_settings:0000000000000000 .LFB7
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:71     .text.init_timer_settings:000000000000004a .LFE7
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6665   .debug_loc:000000000000036b .LLST0
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:30     .text.init_timer_settings:0000000000000010 .LVL0
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:58     .text.init_timer_settings:0000000000000038 .LVL1
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:62     .text.init_timer_settings:0000000000000044 .LVL2
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:328    .text.read_temp:0000000000000000 .LFB10
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:384    .text.read_temp:0000000000000042 .LFE10
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6683   .debug_loc:0000000000000397 .LLST6
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6706   .debug_loc:00000000000003cf .LLST7
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:349    .text.read_temp:000000000000001c .LBB4
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:364    .text.read_temp:0000000000000036 .LBE4
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:350    .text.read_temp:000000000000001c .LBB5
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:363    .text.read_temp:0000000000000036 .LBE5
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6717   .debug_loc:00000000000003ed .LLST8
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:354    .text.read_temp:0000000000000024 .LVL35
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:342    .text.read_temp:000000000000000e .LVL34
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7083   .debug_str:00000000000007bd .LASF406
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7625   .debug_str:000000000000131e .LASF407
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6969   .debug_str:00000000000004ed .LASF408
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7605   .debug_str:00000000000012a3 .LASF409
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6817   .debug_str:00000000000000f2 .LASF410
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7469   .debug_str:0000000000000fce .LASF411
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7065   .debug_str:0000000000000759 .LASF412
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7391   .debug_str:0000000000000e63 .LASF413
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6881   .debug_str:0000000000000268 .LASF427
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7357   .debug_str:0000000000000db4 .LASF428
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 34
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:6899   .debug_str:0000000000000342 .LASF414
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7321   .debug_str:0000000000000cd3 .LASF415
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7121   .debug_str:000000000000088a .LASF416
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7525   .debug_str:00000000000010e2 .LASF417
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7075   .debug_str:0000000000000794 .LASF418
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:7087   .debug_str:00000000000007ce .LASF419
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:398    .text.startup.main:0000000000000002 .LCFI11
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:486    .text.startup.main:000000000000009a .LVL50
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:619    .text.startup.main:000000000000019a .LVL83
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:629    .text.startup.main:00000000000001a8 .LVL86
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:492    .text.startup.main:00000000000000a4 .LVL52
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:654    .text.startup.main:00000000000001de .LVL93
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:501    .text.startup.main:00000000000000b2 .LVL54
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:505    .text.startup.main:00000000000000b4 .LVL55
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:612    .text.startup.main:000000000000018c .LVL81
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:518    .text.startup.main:00000000000000d4 .LVL59
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:578    .text.startup.main:0000000000000150 .LVL74
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:625    .text.startup.main:000000000000019e .LVL84
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:526    .text.startup.main:00000000000000e0 .LVL61
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:530    .text.startup.main:00000000000000e8 .LVL62
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:541    .text.startup.main:0000000000000106 .LVL65
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:548    .text.startup.main:0000000000000112 .LVL66
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:551    .text.startup.main:0000000000000116 .LVL67
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:555    .text.startup.main:000000000000011e .LVL68
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:627    .text.startup.main:00000000000001a6 .LVL85
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:637    .text.startup.main:00000000000001b4 .LVL88
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:557    .text.startup.main:0000000000000120 .LVL69
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:561    .text.startup.main:0000000000000128 .LVL70
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:572    .text.startup.main:0000000000000146 .LVL73
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:580    .text.startup.main:0000000000000152 .LVL75
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:582    .text.startup.main:0000000000000154 .LVL76
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:641    .text.startup.main:00000000000001bc .LVL89
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:660    .text.startup.main:00000000000001e0 .LVL94
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:682    .text.startup.main:000000000000021a .LVL99
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:201    .text.read_NTU:0000000000000002 .LCFI5
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:307    .text.read_NTU:00000000000000b6 .LCFI6
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:312    .text.read_NTU:00000000000000b8 .LCFI7
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:238    .text.read_NTU:000000000000003e .LVL20
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:243    .text.read_NTU:0000000000000046 .LVL21
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:303    .text.read_NTU:00000000000000b2 .LVL31
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:310    .text.read_NTU:00000000000000b8 .LVL32
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:276    .text.read_NTU:000000000000008a .LVL27
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:292    .text.read_NTU:00000000000000aa .LVL30
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:316    .text.read_NTU:00000000000000bc .LVL33
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:91     .text.read_ph:0000000000000006 .LCFI2
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:171    .text.read_ph:00000000000000a0 .LCFI3
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:176    .text.read_ph:00000000000000a2 .LCFI4
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:143    .text.read_ph:0000000000000076 .LVL11
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:159    .text.read_ph:0000000000000096 .LVL14
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:174    .text.read_ph:00000000000000a2 .LVL15
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:180    .text.read_ph:00000000000000a6 .LVL16
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:21     .text.init_timer_settings:0000000000000002 .LCFI0
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:67     .text.init_timer_settings:0000000000000048 .LCFI1
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:334    .text.read_temp:0000000000000002 .LCFI8
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:372    .text.read_temp:000000000000003c .LCFI9
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:377    .text.read_temp:000000000000003e .LCFI10
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:375    .text.read_temp:000000000000003e .LVL38
-GAS LISTING C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s 			page 35
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:6899   .debug_str:0000000000000342 .LASF414
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7321   .debug_str:0000000000000cd3 .LASF415
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7121   .debug_str:000000000000088a .LASF416
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7525   .debug_str:00000000000010e2 .LASF417
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7075   .debug_str:0000000000000794 .LASF418
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:7087   .debug_str:00000000000007ce .LASF419
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:398    .text.startup.main:0000000000000002 .LCFI11
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:486    .text.startup.main:000000000000009a .LVL50
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:619    .text.startup.main:000000000000019a .LVL83
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:629    .text.startup.main:00000000000001a8 .LVL86
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:492    .text.startup.main:00000000000000a4 .LVL52
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:654    .text.startup.main:00000000000001de .LVL93
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:501    .text.startup.main:00000000000000b2 .LVL54
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:505    .text.startup.main:00000000000000b4 .LVL55
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:612    .text.startup.main:000000000000018c .LVL81
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:518    .text.startup.main:00000000000000d4 .LVL59
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:578    .text.startup.main:0000000000000150 .LVL74
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:625    .text.startup.main:000000000000019e .LVL84
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:526    .text.startup.main:00000000000000e0 .LVL61
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:530    .text.startup.main:00000000000000e8 .LVL62
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:541    .text.startup.main:0000000000000106 .LVL65
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:548    .text.startup.main:0000000000000112 .LVL66
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:551    .text.startup.main:0000000000000116 .LVL67
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:555    .text.startup.main:000000000000011e .LVL68
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:627    .text.startup.main:00000000000001a6 .LVL85
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:637    .text.startup.main:00000000000001b4 .LVL88
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:557    .text.startup.main:0000000000000120 .LVL69
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:561    .text.startup.main:0000000000000128 .LVL70
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:572    .text.startup.main:0000000000000146 .LVL73
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:580    .text.startup.main:0000000000000152 .LVL75
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:582    .text.startup.main:0000000000000154 .LVL76
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:641    .text.startup.main:00000000000001bc .LVL89
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:660    .text.startup.main:00000000000001e0 .LVL94
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:682    .text.startup.main:000000000000021a .LVL99
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:201    .text.read_NTU:0000000000000002 .LCFI5
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:307    .text.read_NTU:00000000000000b6 .LCFI6
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:312    .text.read_NTU:00000000000000b8 .LCFI7
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:238    .text.read_NTU:000000000000003e .LVL20
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:243    .text.read_NTU:0000000000000046 .LVL21
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:303    .text.read_NTU:00000000000000b2 .LVL31
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:310    .text.read_NTU:00000000000000b8 .LVL32
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:276    .text.read_NTU:000000000000008a .LVL27
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:292    .text.read_NTU:00000000000000aa .LVL30
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:316    .text.read_NTU:00000000000000bc .LVL33
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:91     .text.read_ph:0000000000000006 .LCFI2
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:171    .text.read_ph:00000000000000a0 .LCFI3
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:176    .text.read_ph:00000000000000a2 .LCFI4
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:143    .text.read_ph:0000000000000076 .LVL11
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:159    .text.read_ph:0000000000000096 .LVL14
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:174    .text.read_ph:00000000000000a2 .LVL15
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:180    .text.read_ph:00000000000000a6 .LVL16
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:21     .text.init_timer_settings:0000000000000002 .LCFI0
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:67     .text.init_timer_settings:0000000000000048 .LCFI1
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:334    .text.read_temp:0000000000000002 .LCFI8
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:372    .text.read_temp:000000000000003c .LCFI9
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:377    .text.read_temp:000000000000003e .LCFI10
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:375    .text.read_temp:000000000000003e .LVL38
+GAS LISTING C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s 			page 35
 
 
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:381    .text.read_temp:0000000000000040 .LVL39
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:358    .text.read_temp:000000000000002c .LVL36
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:769    .debug_info:0000000000000000 .Ldebug_info0
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:461    .text.startup.main:0000000000000078 .LBB6
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:464    .text.startup.main:000000000000007c .LBE6
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:468    .text.startup.main:0000000000000084 .LBB10
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:478    .text.startup.main:0000000000000090 .LBE10
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:480    .text.startup.main:0000000000000090 .LBB11
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:609    .text.startup.main:000000000000018a .LBE11
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:621    .text.startup.main:000000000000019a .LBB12
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:694    .text.startup.main:0000000000000236 .LBE12
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:471    .text.startup.main:0000000000000088 .LBB7
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:474    .text.startup.main:000000000000008c .LBE7
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:630    .text.startup.main:00000000000001a8 .LBB8
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:657    .text.startup.main:00000000000001de .LBE8
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:674    .text.startup.main:0000000000000206 .LBB9
-C:\Users\abdul\AppData\Local\Temp\ccV7hTtG.s:693    .text.startup.main:0000000000000236 .LBE9
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:381    .text.read_temp:0000000000000040 .LVL39
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:358    .text.read_temp:000000000000002c .LVL36
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:769    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:461    .text.startup.main:0000000000000078 .LBB6
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:464    .text.startup.main:000000000000007c .LBE6
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:468    .text.startup.main:0000000000000084 .LBB10
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:478    .text.startup.main:0000000000000090 .LBE10
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:480    .text.startup.main:0000000000000090 .LBB11
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:609    .text.startup.main:000000000000018a .LBE11
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:621    .text.startup.main:000000000000019a .LBB12
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:694    .text.startup.main:0000000000000236 .LBE12
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:471    .text.startup.main:0000000000000088 .LBB7
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:474    .text.startup.main:000000000000008c .LBE7
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:630    .text.startup.main:00000000000001a8 .LBB8
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:657    .text.startup.main:00000000000001de .LBE8
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:674    .text.startup.main:0000000000000206 .LBB9
+C:\Users\abdul\AppData\Local\Temp\cccX4uqj.s:693    .text.startup.main:0000000000000236 .LBE9
 
 UNDEFINED SYMBOLS
 timer_deinit
