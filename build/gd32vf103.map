@@ -1837,7 +1837,7 @@ END GROUP
 .ialign         0x0000000008000254        0x0
                 [!provide]                        PROVIDE (_ilm = .)
 
-.text           0x0000000008000280     0x5e48
+.text           0x0000000008000280     0x5f08
  *(.rodata .rodata.*)
  .rodata        0x0000000008000280       0x10 build/gd32vf103_rcu.o
  .rodata._exit.str1.4
@@ -1872,728 +1872,728 @@ END GROUP
                 0x000000000800036c                ep_type
  .rodata._std_dev_req
                 0x000000000800037c       0x34 build/usbd_enum.o
- .rodata        0x00000000080003b0       0xd3 build/main.o
- *fill*         0x0000000008000483        0x1 
- .rodata        0x0000000008000484       0x3c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
- .rodata        0x00000000080004c0       0x3c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
- .rodata        0x00000000080004fc      0x100 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clz.o)
-                0x00000000080004fc                __clz_tab
+ .rodata        0x00000000080003b0      0x109 build/main.o
+ *fill*         0x00000000080004b9        0x3 
+ .rodata        0x00000000080004bc       0x3c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
+ .rodata        0x00000000080004f8       0x3c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
+ .rodata        0x0000000008000534      0x100 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clz.o)
+                0x0000000008000534                __clz_tab
  .rodata.__sf_fake_stderr
-                0x00000000080005fc       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
-                0x00000000080005fc                __sf_fake_stderr
+                0x0000000008000634       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
+                0x0000000008000634                __sf_fake_stderr
  .rodata.__sf_fake_stdin
-                0x000000000800061c       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
-                0x000000000800061c                __sf_fake_stdin
+                0x0000000008000654       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
+                0x0000000008000654                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x000000000800063c       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
-                0x000000000800063c                __sf_fake_stdout
+                0x0000000008000674       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
+                0x0000000008000674                __sf_fake_stdout
  .rodata._vfprintf_r.str1.4
-                0x000000000800065c       0x13 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf.o)
- *fill*         0x000000000800066f        0x1 
+                0x0000000008000694       0x13 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf.o)
+ *fill*         0x00000000080006a7        0x1 
  .rodata._printf_i.str1.4
-                0x0000000008000670       0x28 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000080006a8       0x28 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf_i.o)
                                          0x25 (size before relaxing)
  *(.text.unlikely .text.unlikely.*)
  *(.text.startup .text.startup.*)
  .text.startup.main
-                0x0000000008000698      0x236 build/main.o
-                0x0000000008000698                main
+                0x00000000080006d0      0x252 build/main.o
+                0x00000000080006d0                main
  *(.text .text.*)
  .text.adc_deinit
-                0x00000000080008ce       0x50 build/gd32vf103_adc.o
-                0x00000000080008ce                adc_deinit
+                0x0000000008000922       0x50 build/gd32vf103_adc.o
+                0x0000000008000922                adc_deinit
  .text.adc_mode_config
-                0x000000000800091e       0x20 build/gd32vf103_adc.o
-                0x000000000800091e                adc_mode_config
+                0x0000000008000972       0x20 build/gd32vf103_adc.o
+                0x0000000008000972                adc_mode_config
  .text.adc_special_function_config
-                0x000000000800093e       0x48 build/gd32vf103_adc.o
-                0x000000000800093e                adc_special_function_config
+                0x0000000008000992       0x48 build/gd32vf103_adc.o
+                0x0000000008000992                adc_special_function_config
  .text.adc_data_alignment_config
-                0x0000000008000986       0x1a build/gd32vf103_adc.o
-                0x0000000008000986                adc_data_alignment_config
+                0x00000000080009da       0x1a build/gd32vf103_adc.o
+                0x00000000080009da                adc_data_alignment_config
  .text.adc_enable
-                0x00000000080009a0       0x10 build/gd32vf103_adc.o
-                0x00000000080009a0                adc_enable
+                0x00000000080009f4       0x10 build/gd32vf103_adc.o
+                0x00000000080009f4                adc_enable
  .text.adc_calibration_enable
-                0x00000000080009b0       0x22 build/gd32vf103_adc.o
-                0x00000000080009b0                adc_calibration_enable
+                0x0000000008000a04       0x22 build/gd32vf103_adc.o
+                0x0000000008000a04                adc_calibration_enable
  .text.adc_tempsensor_vrefint_enable
-                0x00000000080009d2       0x14 build/gd32vf103_adc.o
-                0x00000000080009d2                adc_tempsensor_vrefint_enable
+                0x0000000008000a26       0x14 build/gd32vf103_adc.o
+                0x0000000008000a26                adc_tempsensor_vrefint_enable
  .text.adc_dma_mode_enable
-                0x00000000080009e6        0xa build/gd32vf103_adc.o
-                0x00000000080009e6                adc_dma_mode_enable
+                0x0000000008000a3a        0xa build/gd32vf103_adc.o
+                0x0000000008000a3a                adc_dma_mode_enable
  .text.adc_channel_length_config
-                0x00000000080009f0       0x4a build/gd32vf103_adc.o
-                0x00000000080009f0                adc_channel_length_config
+                0x0000000008000a44       0x4a build/gd32vf103_adc.o
+                0x0000000008000a44                adc_channel_length_config
  .text.adc_regular_channel_config
-                0x0000000008000a3a       0xbe build/gd32vf103_adc.o
-                0x0000000008000a3a                adc_regular_channel_config
+                0x0000000008000a8e       0xbe build/gd32vf103_adc.o
+                0x0000000008000a8e                adc_regular_channel_config
  .text.adc_inserted_channel_config
-                0x0000000008000af8       0x76 build/gd32vf103_adc.o
-                0x0000000008000af8                adc_inserted_channel_config
+                0x0000000008000b4c       0x76 build/gd32vf103_adc.o
+                0x0000000008000b4c                adc_inserted_channel_config
  .text.adc_external_trigger_source_config
-                0x0000000008000b6e       0x34 build/gd32vf103_adc.o
-                0x0000000008000b6e                adc_external_trigger_source_config
+                0x0000000008000bc2       0x34 build/gd32vf103_adc.o
+                0x0000000008000bc2                adc_external_trigger_source_config
  .text.adc_external_trigger_config
-                0x0000000008000ba2       0x3a build/gd32vf103_adc.o
-                0x0000000008000ba2                adc_external_trigger_config
+                0x0000000008000bf6       0x3a build/gd32vf103_adc.o
+                0x0000000008000bf6                adc_external_trigger_config
  .text.adc_software_trigger_enable
-                0x0000000008000bdc       0x20 build/gd32vf103_adc.o
-                0x0000000008000bdc                adc_software_trigger_enable
+                0x0000000008000c30       0x20 build/gd32vf103_adc.o
+                0x0000000008000c30                adc_software_trigger_enable
  .text.dma_deinit
-                0x0000000008000bfc       0x44 build/gd32vf103_dma.o
-                0x0000000008000bfc                dma_deinit
+                0x0000000008000c50       0x44 build/gd32vf103_dma.o
+                0x0000000008000c50                dma_deinit
  .text.dma_init
-                0x0000000008000c40       0x8c build/gd32vf103_dma.o
-                0x0000000008000c40                dma_init
+                0x0000000008000c94       0x8c build/gd32vf103_dma.o
+                0x0000000008000c94                dma_init
  .text.dma_circulation_enable
-                0x0000000008000ccc       0x26 build/gd32vf103_dma.o
-                0x0000000008000ccc                dma_circulation_enable
+                0x0000000008000d20       0x26 build/gd32vf103_dma.o
+                0x0000000008000d20                dma_circulation_enable
  .text.dma_channel_enable
-                0x0000000008000cf2       0x26 build/gd32vf103_dma.o
-                0x0000000008000cf2                dma_channel_enable
+                0x0000000008000d46       0x26 build/gd32vf103_dma.o
+                0x0000000008000d46                dma_channel_enable
  .text.eclic_global_interrupt_enable
-                0x0000000008000d18        0x6 build/gd32vf103_eclic.o
-                0x0000000008000d18                eclic_global_interrupt_enable
+                0x0000000008000d6c        0x6 build/gd32vf103_eclic.o
+                0x0000000008000d6c                eclic_global_interrupt_enable
  .text.eclic_priority_group_set
-                0x0000000008000d1e        0x8 build/gd32vf103_eclic.o
-                0x0000000008000d1e                eclic_priority_group_set
+                0x0000000008000d72        0x8 build/gd32vf103_eclic.o
+                0x0000000008000d72                eclic_priority_group_set
  .text.eclic_irq_enable
-                0x0000000008000d26       0x34 build/gd32vf103_eclic.o
-                0x0000000008000d26                eclic_irq_enable
+                0x0000000008000d7a       0x34 build/gd32vf103_eclic.o
+                0x0000000008000d7a                eclic_irq_enable
  .text.exti_init
-                0x0000000008000d5a       0xa0 build/gd32vf103_exti.o
-                0x0000000008000d5a                exti_init
+                0x0000000008000dae       0xa0 build/gd32vf103_exti.o
+                0x0000000008000dae                exti_init
  .text.exti_interrupt_enable
-                0x0000000008000dfa       0x10 build/gd32vf103_exti.o
-                0x0000000008000dfa                exti_interrupt_enable
+                0x0000000008000e4e       0x10 build/gd32vf103_exti.o
+                0x0000000008000e4e                exti_interrupt_enable
  .text.exti_interrupt_flag_clear
-                0x0000000008000e0a        0xa build/gd32vf103_exti.o
-                0x0000000008000e0a                exti_interrupt_flag_clear
+                0x0000000008000e5e        0xa build/gd32vf103_exti.o
+                0x0000000008000e5e                exti_interrupt_flag_clear
  .text.gpio_init
-                0x0000000008000e14       0xa4 build/gd32vf103_gpio.o
-                0x0000000008000e14                gpio_init
+                0x0000000008000e68       0xa4 build/gd32vf103_gpio.o
+                0x0000000008000e68                gpio_init
  .text.gpio_bit_set
-                0x0000000008000eb8        0x4 build/gd32vf103_gpio.o
-                0x0000000008000eb8                gpio_bit_set
+                0x0000000008000f0c        0x4 build/gd32vf103_gpio.o
+                0x0000000008000f0c                gpio_bit_set
  .text.gpio_bit_reset
-                0x0000000008000ebc        0x4 build/gd32vf103_gpio.o
-                0x0000000008000ebc                gpio_bit_reset
+                0x0000000008000f10        0x4 build/gd32vf103_gpio.o
+                0x0000000008000f10                gpio_bit_reset
  .text.gpio_input_bit_get
-                0x0000000008000ec0        0xa build/gd32vf103_gpio.o
-                0x0000000008000ec0                gpio_input_bit_get
+                0x0000000008000f14        0xa build/gd32vf103_gpio.o
+                0x0000000008000f14                gpio_input_bit_get
  .text.rcu_periph_clock_enable
-                0x0000000008000eca       0x18 build/gd32vf103_rcu.o
-                0x0000000008000eca                rcu_periph_clock_enable
+                0x0000000008000f1e       0x18 build/gd32vf103_rcu.o
+                0x0000000008000f1e                rcu_periph_clock_enable
  .text.rcu_periph_reset_enable
-                0x0000000008000ee2       0x18 build/gd32vf103_rcu.o
-                0x0000000008000ee2                rcu_periph_reset_enable
+                0x0000000008000f36       0x18 build/gd32vf103_rcu.o
+                0x0000000008000f36                rcu_periph_reset_enable
  .text.rcu_periph_reset_disable
-                0x0000000008000efa       0x1c build/gd32vf103_rcu.o
-                0x0000000008000efa                rcu_periph_reset_disable
+                0x0000000008000f4e       0x1c build/gd32vf103_rcu.o
+                0x0000000008000f4e                rcu_periph_reset_disable
  .text.rcu_adc_clock_config
-                0x0000000008000f16       0x40 build/gd32vf103_rcu.o
-                0x0000000008000f16                rcu_adc_clock_config
+                0x0000000008000f6a       0x40 build/gd32vf103_rcu.o
+                0x0000000008000f6a                rcu_adc_clock_config
  .text.rcu_usb_clock_config
-                0x0000000008000f56       0x14 build/gd32vf103_rcu.o
-                0x0000000008000f56                rcu_usb_clock_config
+                0x0000000008000faa       0x14 build/gd32vf103_rcu.o
+                0x0000000008000faa                rcu_usb_clock_config
  .text.rcu_clock_freq_get
-                0x0000000008000f6a      0x13a build/gd32vf103_rcu.o
-                0x0000000008000f6a                rcu_clock_freq_get
+                0x0000000008000fbe      0x13a build/gd32vf103_rcu.o
+                0x0000000008000fbe                rcu_clock_freq_get
  .text.timer_deinit
-                0x00000000080010a4       0xd2 build/gd32vf103_timer.o
-                0x00000000080010a4                timer_deinit
+                0x00000000080010f8       0xd2 build/gd32vf103_timer.o
+                0x00000000080010f8                timer_deinit
  .text.timer_init
-                0x0000000008001176       0x8e build/gd32vf103_timer.o
-                0x0000000008001176                timer_init
+                0x00000000080011ca       0x8e build/gd32vf103_timer.o
+                0x00000000080011ca                timer_init
  .text.timer_enable
-                0x0000000008001204        0xa build/gd32vf103_timer.o
-                0x0000000008001204                timer_enable
+                0x0000000008001258        0xa build/gd32vf103_timer.o
+                0x0000000008001258                timer_enable
  .text.SystemInit
-                0x000000000800120e      0x11c build/system_gd32vf103.o
-                0x000000000800120e                SystemInit
+                0x0000000008001262      0x11c build/system_gd32vf103.o
+                0x0000000008001262                SystemInit
  .text.SystemCoreClockUpdate
-                0x000000000800132a       0xca build/system_gd32vf103.o
-                0x000000000800132a                SystemCoreClockUpdate
- .text._exit    0x00000000080013f4       0x4c build/_exit.o
-                0x00000000080013f4                _exit
- .text._close   0x0000000008001440        0x4 build/close.o
-                0x0000000008001440                _close
- .text._fstat   0x0000000008001444       0x22 build/fstat.o
-                0x0000000008001444                _fstat
- .text._isatty  0x0000000008001466        0x8 build/isatty.o
-                0x0000000008001466                _isatty
- .text._lseek   0x000000000800146e       0x1a build/lseek.o
-                0x000000000800146e                _lseek
- .text._read    0x0000000008001488        0x4 build/read.o
-                0x0000000008001488                _read
- .text._sbrk    0x000000000800148c       0x2e build/sbrk.o
-                0x000000000800148c                _sbrk
+                0x000000000800137e       0xca build/system_gd32vf103.o
+                0x000000000800137e                SystemCoreClockUpdate
+ .text._exit    0x0000000008001448       0x4c build/_exit.o
+                0x0000000008001448                _exit
+ .text._close   0x0000000008001494        0x4 build/close.o
+                0x0000000008001494                _close
+ .text._fstat   0x0000000008001498       0x22 build/fstat.o
+                0x0000000008001498                _fstat
+ .text._isatty  0x00000000080014ba        0x8 build/isatty.o
+                0x00000000080014ba                _isatty
+ .text._lseek   0x00000000080014c2       0x1a build/lseek.o
+                0x00000000080014c2                _lseek
+ .text._read    0x00000000080014dc        0x4 build/read.o
+                0x00000000080014dc                _read
+ .text._sbrk    0x00000000080014e0       0x2e build/sbrk.o
+                0x00000000080014e0                _sbrk
  .text.write_hex
-                0x00000000080014ba       0x7c build/write_hex.o
-                0x00000000080014ba                write_hex
+                0x000000000800150e       0x7c build/write_hex.o
+                0x000000000800150e                write_hex
  .text.get_timer_value
-                0x0000000008001536       0x10 build/n200_func.o
-                0x0000000008001536                get_timer_value
+                0x000000000800158a       0x10 build/n200_func.o
+                0x000000000800158a                get_timer_value
  .text.eclic_init
-                0x0000000008001546       0x22 build/n200_func.o
-                0x0000000008001546                eclic_init
+                0x000000000800159a       0x22 build/n200_func.o
+                0x000000000800159a                eclic_init
  .text.eclic_enable_interrupt
-                0x0000000008001568       0x12 build/n200_func.o
-                0x0000000008001568                eclic_enable_interrupt
+                0x00000000080015bc       0x12 build/n200_func.o
+                0x00000000080015bc                eclic_enable_interrupt
  .text.eclic_set_nlbits
-                0x000000000800157a       0x18 build/n200_func.o
-                0x000000000800157a                eclic_set_nlbits
+                0x00000000080015ce       0x18 build/n200_func.o
+                0x00000000080015ce                eclic_set_nlbits
  .text.eclic_get_nlbits
-                0x0000000008001592        0xe build/n200_func.o
-                0x0000000008001592                eclic_get_nlbits
+                0x00000000080015e6        0xe build/n200_func.o
+                0x00000000080015e6                eclic_get_nlbits
  .text.eclic_set_irq_lvl_abs
-                0x00000000080015a0       0x58 build/n200_func.o
-                0x00000000080015a0                eclic_set_irq_lvl_abs
+                0x00000000080015f4       0x58 build/n200_func.o
+                0x00000000080015f4                eclic_set_irq_lvl_abs
  .text.eclic_set_irq_priority
-                0x00000000080015f8       0x52 build/n200_func.o
-                0x00000000080015f8                eclic_set_irq_priority
+                0x000000000800164c       0x52 build/n200_func.o
+                0x000000000800164c                eclic_set_irq_priority
  .text.eclic_mode_enable
-                0x000000000800164a       0x12 build/n200_func.o
-                0x000000000800164a                eclic_mode_enable
+                0x000000000800169e       0x12 build/n200_func.o
+                0x000000000800169e                eclic_mode_enable
  .text.handle_nmi
-                0x000000000800165c       0x22 build/handlers.o
-                0x000000000800165c                handle_nmi
+                0x00000000080016b0       0x22 build/handlers.o
+                0x00000000080016b0                handle_nmi
  .text.handle_trap
-                0x000000000800167e       0x38 build/handlers.o
-                0x000000000800167e                handle_trap
- .text._init    0x00000000080016b6       0x2c build/init.o
-                0x00000000080016b6                _init
- .text._fini    0x00000000080016e2        0x2 build/init.o
-                0x00000000080016e2                _fini
+                0x00000000080016d2       0x38 build/handlers.o
+                0x00000000080016d2                handle_trap
+ .text._init    0x000000000800170a       0x2c build/init.o
+                0x000000000800170a                _init
+ .text._fini    0x0000000008001736        0x2 build/init.o
+                0x0000000008001736                _fini
  .text.cdc_acm_init
-                0x00000000080016e4       0x46 build/cdc_acm_core.o
-                0x00000000080016e4                cdc_acm_init
+                0x0000000008001738       0x46 build/cdc_acm_core.o
+                0x0000000008001738                cdc_acm_init
  .text.cdc_acm_deinit
-                0x000000000800172a       0x38 build/cdc_acm_core.o
-                0x000000000800172a                cdc_acm_deinit
+                0x000000000800177e       0x38 build/cdc_acm_core.o
+                0x000000000800177e                cdc_acm_deinit
  .text.cdc_acm_data_out_handler
-                0x0000000008001762       0x4c build/cdc_acm_core.o
-                0x0000000008001762                cdc_acm_data_out_handler
+                0x00000000080017b6       0x4c build/cdc_acm_core.o
+                0x00000000080017b6                cdc_acm_data_out_handler
  .text.cdc_acm_data_in_handler
-                0x00000000080017ae       0x40 build/cdc_acm_core.o
-                0x00000000080017ae                cdc_acm_data_in_handler
+                0x0000000008001802       0x40 build/cdc_acm_core.o
+                0x0000000008001802                cdc_acm_data_in_handler
  .text.cdc_acm_req_handler
-                0x00000000080017ee       0xa4 build/cdc_acm_core.o
-                0x00000000080017ee                cdc_acm_req_handler
+                0x0000000008001842       0xa4 build/cdc_acm_core.o
+                0x0000000008001842                cdc_acm_req_handler
  .text.cdc_acm_EP0_RxReady
-                0x0000000008001892       0x5e build/cdc_acm_core.o
-                0x0000000008001892                cdc_acm_EP0_RxReady
+                0x00000000080018e6       0x5e build/cdc_acm_core.o
+                0x00000000080018e6                cdc_acm_EP0_RxReady
  .text.usb_basic_init
-                0x00000000080018f0       0xe8 build/drv_usb_core.o
-                0x00000000080018f0                usb_basic_init
+                0x0000000008001944       0xe8 build/drv_usb_core.o
+                0x0000000008001944                usb_basic_init
  .text.usb_core_init
-                0x00000000080019d8       0xca build/drv_usb_core.o
-                0x00000000080019d8                usb_core_init
+                0x0000000008001a2c       0xca build/drv_usb_core.o
+                0x0000000008001a2c                usb_core_init
  .text.usb_txfifo_write
-                0x0000000008001aa2       0x3a build/drv_usb_core.o
-                0x0000000008001aa2                usb_txfifo_write
+                0x0000000008001af6       0x3a build/drv_usb_core.o
+                0x0000000008001af6                usb_txfifo_write
  .text.usb_rxfifo_read
-                0x0000000008001adc       0x32 build/drv_usb_core.o
-                0x0000000008001adc                usb_rxfifo_read
+                0x0000000008001b30       0x32 build/drv_usb_core.o
+                0x0000000008001b30                usb_rxfifo_read
  .text.usb_txfifo_flush
-                0x0000000008001b0e       0x28 build/drv_usb_core.o
-                0x0000000008001b0e                usb_txfifo_flush
+                0x0000000008001b62       0x28 build/drv_usb_core.o
+                0x0000000008001b62                usb_txfifo_flush
  .text.usb_rxfifo_flush
-                0x0000000008001b36       0x22 build/drv_usb_core.o
-                0x0000000008001b36                usb_rxfifo_flush
+                0x0000000008001b8a       0x22 build/drv_usb_core.o
+                0x0000000008001b8a                usb_rxfifo_flush
  .text.usb_devint_enable
-                0x0000000008001b58       0x3e build/drv_usb_dev.o
-                0x0000000008001b58                usb_devint_enable
+                0x0000000008001bac       0x3e build/drv_usb_dev.o
+                0x0000000008001bac                usb_devint_enable
  .text.usb_devcore_init
-                0x0000000008001b96      0x10e build/drv_usb_dev.o
-                0x0000000008001b96                usb_devcore_init
+                0x0000000008001bea      0x10e build/drv_usb_dev.o
+                0x0000000008001bea                usb_devcore_init
  .text.usb_dev_disconnect
-                0x0000000008001ca4        0xc build/drv_usb_dev.o
-                0x0000000008001ca4                usb_dev_disconnect
+                0x0000000008001cf8        0xc build/drv_usb_dev.o
+                0x0000000008001cf8                usb_dev_disconnect
  .text.usb_dev_connect
-                0x0000000008001cb0        0xa build/drv_usb_dev.o
-                0x0000000008001cb0                usb_dev_connect
+                0x0000000008001d04        0xa build/drv_usb_dev.o
+                0x0000000008001d04                usb_dev_connect
  .text.usb_devaddr_set
-                0x0000000008001cba       0x14 build/drv_usb_dev.o
-                0x0000000008001cba                usb_devaddr_set
+                0x0000000008001d0e       0x14 build/drv_usb_dev.o
+                0x0000000008001d0e                usb_devaddr_set
  .text.usb_transc_active
-                0x0000000008001cce       0x9e build/drv_usb_dev.o
-                0x0000000008001cce                usb_transc_active
+                0x0000000008001d22       0x9e build/drv_usb_dev.o
+                0x0000000008001d22                usb_transc_active
  .text.usb_transc_deactivate
-                0x0000000008001d6c       0x46 build/drv_usb_dev.o
-                0x0000000008001d6c                usb_transc_deactivate
+                0x0000000008001dc0       0x46 build/drv_usb_dev.o
+                0x0000000008001dc0                usb_transc_deactivate
  .text.usb_transc_inxfer
-                0x0000000008001db2       0xea build/drv_usb_dev.o
-                0x0000000008001db2                usb_transc_inxfer
+                0x0000000008001e06       0xea build/drv_usb_dev.o
+                0x0000000008001e06                usb_transc_inxfer
  .text.usb_transc_outxfer
-                0x0000000008001e9c       0x8c build/drv_usb_dev.o
-                0x0000000008001e9c                usb_transc_outxfer
+                0x0000000008001ef0       0x8c build/drv_usb_dev.o
+                0x0000000008001ef0                usb_transc_outxfer
  .text.usb_transc_stall
-                0x0000000008001f28       0x3a build/drv_usb_dev.o
-                0x0000000008001f28                usb_transc_stall
+                0x0000000008001f7c       0x3a build/drv_usb_dev.o
+                0x0000000008001f7c                usb_transc_stall
  .text.usb_transc_clrstall
-                0x0000000008001f62       0x46 build/drv_usb_dev.o
-                0x0000000008001f62                usb_transc_clrstall
+                0x0000000008001fb6       0x46 build/drv_usb_dev.o
+                0x0000000008001fb6                usb_transc_clrstall
  .text.usb_oepintnum_read
-                0x0000000008001fa8       0x10 build/drv_usb_dev.o
-                0x0000000008001fa8                usb_oepintnum_read
+                0x0000000008001ffc       0x10 build/drv_usb_dev.o
+                0x0000000008001ffc                usb_oepintnum_read
  .text.usb_oepintr_read
-                0x0000000008001fb8       0x12 build/drv_usb_dev.o
-                0x0000000008001fb8                usb_oepintr_read
+                0x000000000800200c       0x12 build/drv_usb_dev.o
+                0x000000000800200c                usb_oepintr_read
  .text.usb_iepintnum_read
-                0x0000000008001fca        0xe build/drv_usb_dev.o
-                0x0000000008001fca                usb_iepintnum_read
+                0x000000000800201e        0xe build/drv_usb_dev.o
+                0x000000000800201e                usb_iepintnum_read
  .text.usb_iepintr_read
-                0x0000000008001fd8       0x20 build/drv_usb_dev.o
-                0x0000000008001fd8                usb_iepintr_read
+                0x000000000800202c       0x20 build/drv_usb_dev.o
+                0x000000000800202c                usb_iepintr_read
  .text.usb_ctlep_startout
-                0x0000000008001ff8       0x26 build/drv_usb_dev.o
-                0x0000000008001ff8                usb_ctlep_startout
+                0x000000000800204c       0x26 build/drv_usb_dev.o
+                0x000000000800204c                usb_ctlep_startout
  .text.usb_clock_active
-                0x000000000800201e       0x1a build/drv_usb_dev.o
-                0x000000000800201e                usb_clock_active
+                0x0000000008002072       0x1a build/drv_usb_dev.o
+                0x0000000008002072                usb_clock_active
  .text.usbd_isr
-                0x0000000008002038      0x140 build/drv_usbd_int.o
-                0x0000000008002038                usbd_isr
+                0x000000000800208c      0x140 build/drv_usbd_int.o
+                0x000000000800208c                usbd_isr
  .text.usbd_int_epout
-                0x0000000008002178       0xfe build/drv_usbd_int.o
+                0x00000000080021cc       0xfe build/drv_usbd_int.o
  .text.usbd_int_epin
-                0x0000000008002276       0xbc build/drv_usbd_int.o
+                0x00000000080022ca       0xbc build/drv_usbd_int.o
  .text.usbd_int_rxfifo
-                0x0000000008002332       0xc6 build/drv_usbd_int.o
+                0x0000000008002386       0xc6 build/drv_usbd_int.o
  .text.usbd_int_reset
-                0x00000000080023f8       0xd2 build/drv_usbd_int.o
+                0x000000000800244c       0xd2 build/drv_usbd_int.o
  .text.usbd_int_enumfinish
-                0x00000000080024ca       0x68 build/drv_usbd_int.o
+                0x000000000800251e       0x68 build/drv_usbd_int.o
  .text.usbd_emptytxfifo_write
-                0x0000000008002532       0xe6 build/drv_usbd_int.o
+                0x0000000008002586       0xe6 build/drv_usbd_int.o
  .text.usb_rcu_config
-                0x0000000008002618       0x7e build/gd32vf103_hw.o
-                0x0000000008002618                usb_rcu_config
+                0x000000000800266c       0x7e build/gd32vf103_hw.o
+                0x000000000800266c                usb_rcu_config
  .text.usb_intr_config
-                0x0000000008002696       0x5c build/gd32vf103_hw.o
-                0x0000000008002696                usb_intr_config
+                0x00000000080026ea       0x5c build/gd32vf103_hw.o
+                0x00000000080026ea                usb_intr_config
  .text.usb_timer_init
-                0x00000000080026f2        0x2 build/gd32vf103_hw.o
-                0x00000000080026f2                usb_timer_init
+                0x0000000008002746        0x2 build/gd32vf103_hw.o
+                0x0000000008002746                usb_timer_init
  .text.usb_udelay
-                0x00000000080026f4        0x8 build/gd32vf103_hw.o
-                0x00000000080026f4                usb_udelay
+                0x0000000008002748        0x8 build/gd32vf103_hw.o
+                0x0000000008002748                usb_udelay
  .text.usb_mdelay
-                0x00000000080026fc        0x8 build/gd32vf103_hw.o
-                0x00000000080026fc                usb_mdelay
+                0x0000000008002750        0x8 build/gd32vf103_hw.o
+                0x0000000008002750                usb_mdelay
  .text.USBFS_IRQHandler
-                0x0000000008002704       0x10 build/gd32vf103_usb_it.o
-                0x0000000008002704                USBFS_IRQHandler
+                0x0000000008002758       0x10 build/gd32vf103_usb_it.o
+                0x0000000008002758                USBFS_IRQHandler
  .text.USBFS_WKUP_IRQHandler
-                0x0000000008002714       0x56 build/gd32vf103_usb_it.o
-                0x0000000008002714                USBFS_WKUP_IRQHandler
+                0x0000000008002768       0x56 build/gd32vf103_usb_it.o
+                0x0000000008002768                USBFS_WKUP_IRQHandler
  .text.usb_delay_1ms
-                0x000000000800276a       0x72 build/usb_delay.o
-                0x000000000800276a                usb_delay_1ms
+                0x00000000080027be       0x72 build/usb_delay.o
+                0x00000000080027be                usb_delay_1ms
  .text.usb_delay_1us
-                0x00000000080027dc       0x74 build/usb_delay.o
-                0x00000000080027dc                usb_delay_1us
+                0x0000000008002830       0x74 build/usb_delay.o
+                0x0000000008002830                usb_delay_1us
  .text.configure_usb_serial
-                0x0000000008002850       0x58 build/usb_serial_if.o
-                0x0000000008002850                configure_usb_serial
+                0x00000000080028a4       0x58 build/usb_serial_if.o
+                0x00000000080028a4                configure_usb_serial
  .text.usb_serial_available
-                0x00000000080028a8       0x14 build/usb_serial_if.o
-                0x00000000080028a8                usb_serial_available
- .text._write   0x00000000080028bc       0xb0 build/usb_serial_if.o
-                0x00000000080028bc                _write
+                0x00000000080028fc       0x14 build/usb_serial_if.o
+                0x00000000080028fc                usb_serial_available
+ .text._write   0x0000000008002910       0xb0 build/usb_serial_if.o
+                0x0000000008002910                _write
  .text.set_usb_clock_96m_hxtal
-                0x000000000800296c       0xee build/usb_serial_if.o
-                0x000000000800296c                set_usb_clock_96m_hxtal
+                0x00000000080029c0       0xee build/usb_serial_if.o
+                0x00000000080029c0                set_usb_clock_96m_hxtal
  .text.usbd_ep_setup
-                0x0000000008002a5a       0x9a build/usbd_core.o
-                0x0000000008002a5a                usbd_ep_setup
+                0x0000000008002aae       0x9a build/usbd_core.o
+                0x0000000008002aae                usbd_ep_setup
  .text.usbd_ep_clear
-                0x0000000008002af4       0x3a build/usbd_core.o
-                0x0000000008002af4                usbd_ep_clear
+                0x0000000008002b48       0x3a build/usbd_core.o
+                0x0000000008002b48                usbd_ep_clear
  .text.usbd_ep_recev
-                0x0000000008002b2e       0x40 build/usbd_core.o
-                0x0000000008002b2e                usbd_ep_recev
+                0x0000000008002b82       0x40 build/usbd_core.o
+                0x0000000008002b82                usbd_ep_recev
  .text.usbd_ep_send
-                0x0000000008002b6e       0x40 build/usbd_core.o
-                0x0000000008002b6e                usbd_ep_send
+                0x0000000008002bc2       0x40 build/usbd_core.o
+                0x0000000008002bc2                usbd_ep_send
  .text.usbd_ep_stall
-                0x0000000008002bae       0x40 build/usbd_core.o
-                0x0000000008002bae                usbd_ep_stall
+                0x0000000008002c02       0x40 build/usbd_core.o
+                0x0000000008002c02                usbd_ep_stall
  .text.usbd_ep_stall_clear
-                0x0000000008002bee       0x3e build/usbd_core.o
-                0x0000000008002bee                usbd_ep_stall_clear
+                0x0000000008002c42       0x3e build/usbd_core.o
+                0x0000000008002c42                usbd_ep_stall_clear
  .text.usbd_addr_set
-                0x0000000008002c2c        0x8 build/usbd_core.o
-                0x0000000008002c2c                usbd_addr_set
+                0x0000000008002c80        0x8 build/usbd_core.o
+                0x0000000008002c80                usbd_addr_set
  .text.usbd_rxcount_get
-                0x0000000008002c34        0xe build/usbd_core.o
-                0x0000000008002c34                usbd_rxcount_get
+                0x0000000008002c88        0xe build/usbd_core.o
+                0x0000000008002c88                usbd_rxcount_get
  .text.usbd_connect
-                0x0000000008002c42       0x1a build/usbd_core.o
-                0x0000000008002c42                usbd_connect
+                0x0000000008002c96       0x1a build/usbd_core.o
+                0x0000000008002c96                usbd_connect
  .text.usbd_disconnect
-                0x0000000008002c5c       0x1a build/usbd_core.o
-                0x0000000008002c5c                usbd_disconnect
+                0x0000000008002cb0       0x1a build/usbd_core.o
+                0x0000000008002cb0                usbd_disconnect
  .text.usbd_init
-                0x0000000008002c76       0x5a build/usbd_core.o
-                0x0000000008002c76                usbd_init
+                0x0000000008002cca       0x5a build/usbd_core.o
+                0x0000000008002cca                usbd_init
  .text._usb_std_reserved
-                0x0000000008002cd0        0x4 build/usbd_enum.o
+                0x0000000008002d24        0x4 build/usbd_enum.o
  .text._usb_dev_desc_get
-                0x0000000008002cd4        0xe build/usbd_enum.o
+                0x0000000008002d28        0xe build/usbd_enum.o
  .text._usb_config_desc_get
-                0x0000000008002ce2        0xe build/usbd_enum.o
+                0x0000000008002d36        0xe build/usbd_enum.o
  .text._usb_str_desc_get
-                0x0000000008002cf0       0x14 build/usbd_enum.o
+                0x0000000008002d44       0x14 build/usbd_enum.o
  .text._usb_std_getdescriptor
-                0x0000000008002d04       0xfa build/usbd_enum.o
+                0x0000000008002d58       0xfa build/usbd_enum.o
  .text._usb_std_setconfiguration
-                0x0000000008002dfe       0xa8 build/usbd_enum.o
+                0x0000000008002e52       0xa8 build/usbd_enum.o
  .text._usb_std_getstatus
-                0x0000000008002ea6       0xba build/usbd_enum.o
+                0x0000000008002efa       0xba build/usbd_enum.o
  .text._usb_std_getconfiguration
-                0x0000000008002f60       0x3c build/usbd_enum.o
+                0x0000000008002fb4       0x3c build/usbd_enum.o
  .text._usb_std_getinterface
-                0x0000000008002f9c       0x2c build/usbd_enum.o
+                0x0000000008002ff0       0x2c build/usbd_enum.o
  .text._usb_std_setinterface
-                0x0000000008002fc8       0x2a build/usbd_enum.o
+                0x000000000800301c       0x2a build/usbd_enum.o
  .text._usb_std_setaddress
-                0x0000000008002ff2       0x64 build/usbd_enum.o
+                0x0000000008003046       0x64 build/usbd_enum.o
  .text._usb_std_setfeature
-                0x0000000008003056       0x80 build/usbd_enum.o
+                0x00000000080030aa       0x80 build/usbd_enum.o
  .text._usb_std_clearfeature
-                0x00000000080030d6       0x98 build/usbd_enum.o
+                0x000000000800312a       0x98 build/usbd_enum.o
  .text._usb_std_setdescriptor
-                0x000000000800316e        0x4 build/usbd_enum.o
+                0x00000000080031c2        0x4 build/usbd_enum.o
  .text._usb_std_synchframe
-                0x0000000008003172        0x4 build/usbd_enum.o
+                0x00000000080031c6        0x4 build/usbd_enum.o
  .text.usbd_standard_request
-                0x0000000008003176       0x18 build/usbd_enum.o
-                0x0000000008003176                usbd_standard_request
+                0x00000000080031ca       0x18 build/usbd_enum.o
+                0x00000000080031ca                usbd_standard_request
  .text.usbd_class_request
-                0x000000000800318e       0x2c build/usbd_enum.o
-                0x000000000800318e                usbd_class_request
+                0x00000000080031e2       0x2c build/usbd_enum.o
+                0x00000000080031e2                usbd_class_request
  .text.usbd_vendor_request
-                0x00000000080031ba        0x4 build/usbd_enum.o
-                0x00000000080031ba                usbd_vendor_request
+                0x000000000800320e        0x4 build/usbd_enum.o
+                0x000000000800320e                usbd_vendor_request
  .text.usbd_enum_error
-                0x00000000080031be       0x30 build/usbd_enum.o
-                0x00000000080031be                usbd_enum_error
+                0x0000000008003212       0x30 build/usbd_enum.o
+                0x0000000008003212                usbd_enum_error
  .text.usbd_ctl_send
-                0x00000000080031ee       0x38 build/usbd_transc.o
-                0x00000000080031ee                usbd_ctl_send
+                0x0000000008003242       0x38 build/usbd_transc.o
+                0x0000000008003242                usbd_ctl_send
  .text.usbd_ctl_recev
-                0x0000000008003226       0x38 build/usbd_transc.o
-                0x0000000008003226                usbd_ctl_recev
+                0x000000000800327a       0x38 build/usbd_transc.o
+                0x000000000800327a                usbd_ctl_recev
  .text.usbd_ctl_status_send
-                0x000000000800325e       0x30 build/usbd_transc.o
-                0x000000000800325e                usbd_ctl_status_send
+                0x00000000080032b2       0x30 build/usbd_transc.o
+                0x00000000080032b2                usbd_ctl_status_send
  .text.usbd_ctl_status_recev
-                0x000000000800328e       0x30 build/usbd_transc.o
-                0x000000000800328e                usbd_ctl_status_recev
+                0x00000000080032e2       0x30 build/usbd_transc.o
+                0x00000000080032e2                usbd_ctl_status_recev
  .text.usbd_setup_transc
-                0x00000000080032be       0x94 build/usbd_transc.o
-                0x00000000080032be                usbd_setup_transc
+                0x0000000008003312       0x94 build/usbd_transc.o
+                0x0000000008003312                usbd_setup_transc
  .text.usbd_out_transc
-                0x0000000008003352       0xe6 build/usbd_transc.o
-                0x0000000008003352                usbd_out_transc
+                0x00000000080033a6       0xe6 build/usbd_transc.o
+                0x00000000080033a6                usbd_out_transc
  .text.usbd_in_transc
-                0x0000000008003438      0x10c build/usbd_transc.o
-                0x0000000008003438                usbd_in_transc
+                0x000000000800348c      0x10c build/usbd_transc.o
+                0x000000000800348c                usbd_in_transc
  .text.ADC3powerUpInit
-                0x0000000008003544      0x1d2 build/adc.o
-                0x0000000008003544                ADC3powerUpInit
+                0x0000000008003598      0x1d2 build/adc.o
+                0x0000000008003598                ADC3powerUpInit
  .text.delay_us
-                0x0000000008003716       0x1a build/lioonewire.o
+                0x000000000800376a       0x1a build/lioonewire.o
  .text.dpin_drive
-                0x0000000008003730       0x14 build/lioonewire.o
-                0x0000000008003730                dpin_drive
+                0x0000000008003784       0x14 build/lioonewire.o
+                0x0000000008003784                dpin_drive
  .text.dpin_release
-                0x0000000008003744       0x14 build/lioonewire.o
-                0x0000000008003744                dpin_release
+                0x0000000008003798       0x14 build/lioonewire.o
+                0x0000000008003798                dpin_release
  .text.dpin_sample
-                0x0000000008003758       0x22 build/lioonewire.o
-                0x0000000008003758                dpin_sample
+                0x00000000080037ac       0x22 build/lioonewire.o
+                0x00000000080037ac                dpin_sample
  .text.lio_init_OW
-                0x000000000800377a       0x2c build/lioonewire.o
-                0x000000000800377a                lio_init_OW
+                0x00000000080037ce       0x2c build/lioonewire.o
+                0x00000000080037ce                lio_init_OW
  .text.lio_OW_write_bit
-                0x00000000080037a6       0x50 build/lioonewire.o
-                0x00000000080037a6                lio_OW_write_bit
+                0x00000000080037fa       0x50 build/lioonewire.o
+                0x00000000080037fa                lio_OW_write_bit
  .text.lio_OW_read_bit
-                0x00000000080037f6       0x4a build/lioonewire.o
-                0x00000000080037f6                lio_OW_read_bit
+                0x000000000800384a       0x4a build/lioonewire.o
+                0x000000000800384a                lio_OW_read_bit
  .text.lio_OW_read_byte
-                0x0000000008003840       0x34 build/lioonewire.o
-                0x0000000008003840                lio_OW_read_byte
+                0x0000000008003894       0x34 build/lioonewire.o
+                0x0000000008003894                lio_OW_read_byte
  .text.lio_OW_write_byte
-                0x0000000008003874       0x28 build/lioonewire.o
-                0x0000000008003874                lio_OW_write_byte
+                0x00000000080038c8       0x28 build/lioonewire.o
+                0x00000000080038c8                lio_OW_write_byte
  .text.lio_OW_touch_reset
-                0x000000000800389c       0x58 build/lioonewire.o
-                0x000000000800389c                lio_OW_touch_reset
+                0x00000000080038f0       0x58 build/lioonewire.o
+                0x00000000080038f0                lio_OW_touch_reset
  .text.lio_read_temp
-                0x00000000080038f4       0xc8 build/lioonewire.o
-                0x00000000080038f4                lio_read_temp
+                0x0000000008003948       0xc8 build/lioonewire.o
+                0x0000000008003948                lio_read_temp
  .text.init_timer_settings
-                0x00000000080039bc       0x4a build/main.o
-                0x00000000080039bc                init_timer_settings
- .text.read_ph  0x0000000008003a06       0xa8 build/main.o
-                0x0000000008003a06                read_ph
+                0x0000000008003a10       0x4a build/main.o
+                0x0000000008003a10                init_timer_settings
+ .text.read_ph  0x0000000008003a5a       0xa8 build/main.o
+                0x0000000008003a5a                read_ph
  .text.read_NTU
-                0x0000000008003aae       0xbe build/main.o
-                0x0000000008003aae                read_NTU
+                0x0000000008003b02      0x118 build/main.o
+                0x0000000008003b02                read_NTU
  .text.read_temp
-                0x0000000008003b6c       0x42 build/main.o
-                0x0000000008003b6c                read_temp
- *fill*         0x0000000008003bae       0x12 
- .text.trap     0x0000000008003bc0       0x82 build/entry.o
-                0x0000000008003bc0                trap_entry
- *fill*         0x0000000008003c42        0x2 
- .text.irq      0x0000000008003c44       0x72 build/entry.o
-                0x0000000008003c44                irq_entry
- .text          0x0000000008003cb6      0x312 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
-                0x0000000008003cb6                __addsf3
- .text          0x0000000008003fc8      0x256 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
-                0x0000000008003fc8                __divsf3
- .text          0x000000000800421e       0x78 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
-                0x000000000800421e                __gesf2
-                0x000000000800421e                __gtsf2
- .text          0x0000000008004296       0x78 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
-                0x0000000008004296                __ltsf2
-                0x0000000008004296                __lesf2
- .text          0x000000000800430e      0x228 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
-                0x000000000800430e                __mulsf3
- .text          0x0000000008004536      0x322 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
-                0x0000000008004536                __subsf3
- .text          0x0000000008004858       0x60 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
-                0x0000000008004858                __fixsfsi
- .text          0x00000000080048b8       0xc0 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
-                0x00000000080048b8                __floatsisf
- .text          0x0000000008004978       0xa2 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
-                0x0000000008004978                __floatunsisf
- .text          0x0000000008004a1a       0x3c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
-                0x0000000008004a1a                __clzsi2
- .text.atexit   0x0000000008004a56       0x10 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-atexit.o)
-                0x0000000008004a56                atexit
- .text.exit     0x0000000008004a66       0x36 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-exit.o)
-                0x0000000008004a66                exit
+                0x0000000008003c1a       0x42 build/main.o
+                0x0000000008003c1a                read_temp
+ *fill*         0x0000000008003c5c       0x24 
+ .text.trap     0x0000000008003c80       0x82 build/entry.o
+                0x0000000008003c80                trap_entry
+ *fill*         0x0000000008003d02        0x2 
+ .text.irq      0x0000000008003d04       0x72 build/entry.o
+                0x0000000008003d04                irq_entry
+ .text          0x0000000008003d76      0x312 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
+                0x0000000008003d76                __addsf3
+ .text          0x0000000008004088      0x256 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
+                0x0000000008004088                __divsf3
+ .text          0x00000000080042de       0x78 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
+                0x00000000080042de                __gesf2
+                0x00000000080042de                __gtsf2
+ .text          0x0000000008004356       0x78 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
+                0x0000000008004356                __ltsf2
+                0x0000000008004356                __lesf2
+ .text          0x00000000080043ce      0x228 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
+                0x00000000080043ce                __mulsf3
+ .text          0x00000000080045f6      0x322 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
+                0x00000000080045f6                __subsf3
+ .text          0x0000000008004918       0x60 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
+                0x0000000008004918                __fixsfsi
+ .text          0x0000000008004978       0xc0 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
+                0x0000000008004978                __floatsisf
+ .text          0x0000000008004a38       0xa2 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
+                0x0000000008004a38                __floatunsisf
+ .text          0x0000000008004ada       0x3c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
+                0x0000000008004ada                __clzsi2
+ .text.atexit   0x0000000008004b16       0x10 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-atexit.o)
+                0x0000000008004b16                atexit
+ .text.exit     0x0000000008004b26       0x36 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-exit.o)
+                0x0000000008004b26                exit
  .text.__sflush_r
-                0x0000000008004a9c      0x150 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fflush.o)
-                0x0000000008004a9c                __sflush_r
+                0x0000000008004b5c      0x150 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fflush.o)
+                0x0000000008004b5c                __sflush_r
  .text._fflush_r
-                0x0000000008004bec       0x70 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fflush.o)
-                0x0000000008004bec                _fflush_r
- .text.fflush   0x0000000008004c5c       0x30 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fflush.o)
-                0x0000000008004c5c                fflush
- .text.std      0x0000000008004c8c       0x6e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
+                0x0000000008004cac       0x70 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fflush.o)
+                0x0000000008004cac                _fflush_r
+ .text.fflush   0x0000000008004d1c       0x30 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fflush.o)
+                0x0000000008004d1c                fflush
+ .text.std      0x0000000008004d4c       0x6e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
  .text._cleanup_r
-                0x0000000008004cfa       0x10 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
-                0x0000000008004cfa                _cleanup_r
+                0x0000000008004dba       0x10 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
+                0x0000000008004dba                _cleanup_r
  .text.__sfmoreglue
-                0x0000000008004d0a       0x50 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
-                0x0000000008004d0a                __sfmoreglue
- .text.__sinit  0x0000000008004d5a       0x8e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
-                0x0000000008004d5a                __sinit
- .text.__sfp    0x0000000008004de8       0xb0 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
-                0x0000000008004de8                __sfp
+                0x0000000008004dca       0x50 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
+                0x0000000008004dca                __sfmoreglue
+ .text.__sinit  0x0000000008004e1a       0x8e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
+                0x0000000008004e1a                __sinit
+ .text.__sfp    0x0000000008004ea8       0xb0 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-findfp.o)
+                0x0000000008004ea8                __sfp
  .text.__libc_fini_array
-                0x0000000008004e98       0x38 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fini.o)
-                0x0000000008004e98                __libc_fini_array
+                0x0000000008004f58       0x38 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fini.o)
+                0x0000000008004f58                __libc_fini_array
  .text._fwalk_reent
-                0x0000000008004ed0       0x6c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fwalk.o)
-                0x0000000008004ed0                _fwalk_reent
+                0x0000000008004f90       0x6c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fwalk.o)
+                0x0000000008004f90                _fwalk_reent
  .text.__libc_init_array
-                0x0000000008004f3c       0x6a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-init.o)
-                0x0000000008004f3c                __libc_init_array
- .text          0x0000000008004fa6       0x16 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-memcpy-asm.o)
-                0x0000000008004fa6                memcpy
- .text          0x0000000008004fbc       0x10 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-memset.o)
-                0x0000000008004fbc                memset
- .text._free_r  0x0000000008004fcc       0xb8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-freer.o)
-                0x0000000008004fcc                _free_r
+                0x0000000008004ffc       0x6a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-init.o)
+                0x0000000008004ffc                __libc_init_array
+ .text          0x0000000008005066       0x16 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-memcpy-asm.o)
+                0x0000000008005066                memcpy
+ .text          0x000000000800507c       0x10 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-memset.o)
+                0x000000000800507c                memset
+ .text._free_r  0x000000000800508c       0xb8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-freer.o)
+                0x000000000800508c                _free_r
  .text._malloc_r
-                0x0000000008005084      0x102 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000008005084                _malloc_r
- .text.printf   0x0000000008005186       0x4e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-printf.o)
-                0x0000000008005186                iprintf
-                0x0000000008005186                printf
- .text._puts_r  0x00000000080051d4       0xf8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-puts.o)
-                0x00000000080051d4                _puts_r
- .text.puts     0x00000000080052cc       0x14 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-puts.o)
-                0x00000000080052cc                puts
- .text._sbrk_r  0x00000000080052e0       0x36 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-sbrkr.o)
-                0x00000000080052e0                _sbrk_r
- .text.__sread  0x0000000008005316       0x36 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-stdio.o)
-                0x0000000008005316                __sread
+                0x0000000008005144      0x102 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000008005144                _malloc_r
+ .text.printf   0x0000000008005246       0x4e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-printf.o)
+                0x0000000008005246                iprintf
+                0x0000000008005246                printf
+ .text._puts_r  0x0000000008005294       0xf8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-puts.o)
+                0x0000000008005294                _puts_r
+ .text.puts     0x000000000800538c       0x14 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-puts.o)
+                0x000000000800538c                puts
+ .text._sbrk_r  0x00000000080053a0       0x36 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-sbrkr.o)
+                0x00000000080053a0                _sbrk_r
+ .text.__sread  0x00000000080053d6       0x36 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-stdio.o)
+                0x00000000080053d6                __sread
  .text.__swrite
-                0x000000000800534c       0x5a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-stdio.o)
-                0x000000000800534c                __swrite
- .text.__sseek  0x00000000080053a6       0x3c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-stdio.o)
-                0x00000000080053a6                __sseek
+                0x000000000800540c       0x5a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-stdio.o)
+                0x000000000800540c                __swrite
+ .text.__sseek  0x0000000008005466       0x3c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-stdio.o)
+                0x0000000008005466                __sseek
  .text.__sclose
-                0x00000000080053e2        0xc c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-stdio.o)
-                0x00000000080053e2                __sclose
- .text.isatty   0x00000000080053ee        0x8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-sysisatty.o)
-                0x00000000080053ee                isatty
- .text.write    0x00000000080053f6       0x18 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-syswrite.o)
-                0x00000000080053f6                write
+                0x00000000080054a2        0xc c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-stdio.o)
+                0x00000000080054a2                __sclose
+ .text.isatty   0x00000000080054ae        0x8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-sysisatty.o)
+                0x00000000080054ae                isatty
+ .text.write    0x00000000080054b6       0x18 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-syswrite.o)
+                0x00000000080054b6                write
  .text.__swbuf_r
-                0x000000000800540e       0xd8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-wbuf.o)
-                0x000000000800540e                __swbuf_r
+                0x00000000080054ce       0xd8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-wbuf.o)
+                0x00000000080054ce                __swbuf_r
  .text._write_r
-                0x00000000080054e6       0x3a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-writer.o)
-                0x00000000080054e6                _write_r
+                0x00000000080055a6       0x3a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-writer.o)
+                0x00000000080055a6                _write_r
  .text.__swsetup_r
-                0x0000000008005520      0x122 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-wsetup.o)
-                0x0000000008005520                __swsetup_r
+                0x00000000080055e0      0x122 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-wsetup.o)
+                0x00000000080055e0                __swsetup_r
  .text.__register_exitproc
-                0x0000000008005642       0x8c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-__atexit.o)
-                0x0000000008005642                __register_exitproc
+                0x0000000008005702       0x8c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-__atexit.o)
+                0x0000000008005702                __register_exitproc
  .text.__call_exitprocs
-                0x00000000080056ce       0xc8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
-                0x00000000080056ce                __call_exitprocs
+                0x000000000800578e       0xc8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-__call_atexit.o)
+                0x000000000800578e                __call_exitprocs
  .text._close_r
-                0x0000000008005796       0x36 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-closer.o)
-                0x0000000008005796                _close_r
+                0x0000000008005856       0x36 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-closer.o)
+                0x0000000008005856                _close_r
  .text._lseek_r
-                0x00000000080057cc       0x3a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-lseekr.o)
-                0x00000000080057cc                _lseek_r
+                0x000000000800588c       0x3a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-lseekr.o)
+                0x000000000800588c                _lseek_r
  .text.__swhatbuf_r
-                0x0000000008005806       0x5e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-makebuf.o)
-                0x0000000008005806                __swhatbuf_r
+                0x00000000080058c6       0x5e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-makebuf.o)
+                0x00000000080058c6                __swhatbuf_r
  .text.__smakebuf_r
-                0x0000000008005864       0xae c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-makebuf.o)
-                0x0000000008005864                __smakebuf_r
+                0x0000000008005924       0xae c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-makebuf.o)
+                0x0000000008005924                __smakebuf_r
  .text.__malloc_lock
-                0x0000000008005912        0x2 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-mlock.o)
-                0x0000000008005912                __malloc_lock
+                0x00000000080059d2        0x2 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-mlock.o)
+                0x00000000080059d2                __malloc_lock
  .text.__malloc_unlock
-                0x0000000008005914        0x2 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-mlock.o)
-                0x0000000008005914                __malloc_unlock
+                0x00000000080059d4        0x2 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-mlock.o)
+                0x00000000080059d4                __malloc_unlock
  .text.__sfputc_r
-                0x0000000008005916       0x2e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf.o)
+                0x00000000080059d6       0x2e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x0000000008005944       0x48 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf.o)
-                0x0000000008005944                __sfputs_r
+                0x0000000008005a04       0x48 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000008005a04                __sfputs_r
  .text._vfprintf_r
-                0x000000000800598c      0x2c0 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf.o)
-                0x000000000800598c                _vfprintf_r
-                0x000000000800598c                _vfiprintf_r
- .text._read_r  0x0000000008005c4c       0x3a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-readr.o)
-                0x0000000008005c4c                _read_r
+                0x0000000008005a4c      0x2c0 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000008005a4c                _vfprintf_r
+                0x0000000008005a4c                _vfiprintf_r
+ .text._read_r  0x0000000008005d0c       0x3a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-readr.o)
+                0x0000000008005d0c                _read_r
  .text._fstat_r
-                0x0000000008005c86       0x38 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fstatr.o)
-                0x0000000008005c86                _fstat_r
+                0x0000000008005d46       0x38 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-fstatr.o)
+                0x0000000008005d46                _fstat_r
  .text._isatty_r
-                0x0000000008005cbe       0x36 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-isattyr.o)
-                0x0000000008005cbe                _isatty_r
- .text.memchr   0x0000000008005cf4       0x1a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-memchr.o)
-                0x0000000008005cf4                memchr
+                0x0000000008005d7e       0x36 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-isattyr.o)
+                0x0000000008005d7e                _isatty_r
+ .text.memchr   0x0000000008005db4       0x1a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-memchr.o)
+                0x0000000008005db4                memchr
  .text._printf_common
-                0x0000000008005d0e      0x10c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000008005d0e                _printf_common
+                0x0000000008005dce      0x10c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008005dce                _printf_common
  .text._printf_i
-                0x0000000008005e1a      0x2ae c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000008005e1a                _printf_i
+                0x0000000008005eda      0x2ae c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008005eda                _printf_i
  *(.gnu.linkonce.t.*)
 
 .sdata2.usbd_language_id_desc
-                0x00000000080060c8        0x4
+                0x0000000008006188        0x4
  .sdata2.usbd_language_id_desc
-                0x00000000080060c8        0x4 build/cdc_acm_core.o
-                0x00000000080060c8                usbd_language_id_desc
+                0x0000000008006188        0x4 build/cdc_acm_core.o
+                0x0000000008006188                usbd_language_id_desc
 
 .sdata2.EP0_MAXLEN
-                0x00000000080060cc        0x4
+                0x000000000800618c        0x4
  .sdata2.EP0_MAXLEN
-                0x00000000080060cc        0x4 build/drv_usb_dev.o
+                0x000000000800618c        0x4 build/drv_usb_dev.o
 
 .sdata2.USB_SPEED
-                0x00000000080060d0        0x4
+                0x0000000008006190        0x4
  .sdata2.USB_SPEED
-                0x00000000080060d0        0x4 build/drv_usbd_int.o
+                0x0000000008006190        0x4 build/drv_usbd_int.o
 
 .sdata2._global_impure_ptr
-                0x00000000080060d4        0x4
+                0x0000000008006194        0x4
  .sdata2._global_impure_ptr
-                0x00000000080060d4        0x4 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-impure.o)
-                0x00000000080060d4                _global_impure_ptr
+                0x0000000008006194        0x4 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-impure.o)
+                0x0000000008006194                _global_impure_ptr
 
-.rela.dyn       0x00000000080060d8        0x0
+.rela.dyn       0x0000000008006198        0x0
  .rela.text._sbrk
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.sdata.curbrk.1524
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.handle_trap
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.cdc_acm_req_handler
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.cdc_acm_EP0_RxReady
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.usb_rcu_config
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.ADC3powerUpInit
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.read_ph
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.read_NTU
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.startup.main
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
- .rela.init     0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
+ .rela.init     0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.trap
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.__libc_fini_array
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.__libc_init_array
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text._sbrk_r
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text._write_r
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text.__register_exitproc
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text._close_r
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text._lseek_r
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text._vfprintf_r
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text._read_r
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text._fstat_r
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
  .rela.text._isatty_r
-                0x00000000080060d8        0x0 build/gd32vf103_adc.o
+                0x0000000008006198        0x0 build/gd32vf103_adc.o
 
 .fini
  *(SORT_NONE(.fini))
-                0x00000000080060d8                . = ALIGN (0x4)
+                0x0000000008006198                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__etext = .)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (etext = .)
                 [!provide]                        PROVIDE (_eilm = .)
 
-.preinit_array  0x00000000080060d8        0x0
-                0x00000000080060d8                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008006198        0x0
+                0x0000000008006198                PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
-                0x00000000080060d8                PROVIDE (__preinit_array_end = .)
+                0x0000000008006198                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x00000000080060d8        0x0
-                0x00000000080060d8                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008006198        0x0
+                0x0000000008006198                PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
-                0x00000000080060d8                PROVIDE (__init_array_end = .)
+                0x0000000008006198                PROVIDE (__init_array_end = .)
 
-.fini_array     0x00000000080060d8        0x0
-                0x00000000080060d8                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008006198        0x0
+                0x0000000008006198                PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
-                0x00000000080060d8                PROVIDE (__fini_array_end = .)
+                0x0000000008006198                PROVIDE (__fini_array_end = .)
 
 .ctors
  *crtbegin.o(.ctors)
@@ -2608,18 +2608,18 @@ END GROUP
  *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x00000000080060d8                . = ALIGN (0x4)
+                0x0000000008006198                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_eilm = .)
 
-.lalign         0x00000000080060d8        0x0
-                0x00000000080060d8                . = ALIGN (0x4)
-                0x00000000080060d8                PROVIDE (_data_lma = .)
+.lalign         0x0000000008006198        0x0
+                0x0000000008006198                . = ALIGN (0x4)
+                0x0000000008006198                PROVIDE (_data_lma = .)
 
-.dalign         0x0000000020000000        0x0 load address 0x00000000080060d8
+.dalign         0x0000000020000000        0x0 load address 0x0000000008006198
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_data = .)
 
-.data           0x0000000020000000      0x520 load address 0x00000000080060d8
+.data           0x0000000020000000      0x520 load address 0x0000000008006198
  *(.rdata)
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
@@ -2740,7 +2740,7 @@ END GROUP
                 [!provide]                        PROVIDE (_dbg_sp = .)
 OUTPUT(build/gd32vf103.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000    0x203f8
+.debug_info     0x0000000000000000    0x2042c
  .debug_info    0x0000000000000000      0xb98 build/gd32vf103_adc.o
  .debug_info    0x0000000000000b98      0xe20 build/gd32vf103_dma.o
  .debug_info    0x00000000000019b8      0x2ac build/gd32vf103_eclic.o
@@ -2773,20 +2773,20 @@ OUTPUT(build/gd32vf103.elf elf32-littleriscv)
  .debug_info    0x0000000000018961     0x1a23 build/usbd_transc.o
  .debug_info    0x000000000001a384      0x767 build/adc.o
  .debug_info    0x000000000001aaeb      0x71f build/lioonewire.o
- .debug_info    0x000000000001b20a     0x20f2 build/main.o
- .debug_info    0x000000000001d2fc       0x26 build/start.o
- .debug_info    0x000000000001d322       0x22 build/entry.o
- .debug_info    0x000000000001d344      0x351 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
- .debug_info    0x000000000001d695      0x3bf c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
- .debug_info    0x000000000001da54      0x264 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
- .debug_info    0x000000000001dcb8      0x264 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
- .debug_info    0x000000000001df1c      0x3ac c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
- .debug_info    0x000000000001e2c8      0x351 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
- .debug_info    0x000000000001e619      0x1f7 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
- .debug_info    0x000000000001e810      0x25d c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
- .debug_info    0x000000000001ea6d      0x24a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
- .debug_info    0x000000000001ecb7      0xbd7 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
- .debug_info    0x000000000001f88e      0xb6a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clz.o)
+ .debug_info    0x000000000001b20a     0x2126 build/main.o
+ .debug_info    0x000000000001d330       0x26 build/start.o
+ .debug_info    0x000000000001d356       0x22 build/entry.o
+ .debug_info    0x000000000001d378      0x351 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
+ .debug_info    0x000000000001d6c9      0x3bf c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
+ .debug_info    0x000000000001da88      0x264 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
+ .debug_info    0x000000000001dcec      0x264 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
+ .debug_info    0x000000000001df50      0x3ac c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
+ .debug_info    0x000000000001e2fc      0x351 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
+ .debug_info    0x000000000001e64d      0x1f7 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
+ .debug_info    0x000000000001e844      0x25d c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
+ .debug_info    0x000000000001eaa1      0x24a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
+ .debug_info    0x000000000001eceb      0xbd7 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
+ .debug_info    0x000000000001f8c2      0xb6a c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clz.o)
 
 .debug_abbrev   0x0000000000000000     0x5ddf
  .debug_abbrev  0x0000000000000000      0x216 build/gd32vf103_adc.o
@@ -2836,7 +2836,7 @@ OUTPUT(build/gd32vf103.elf elf32-littleriscv)
  .debug_abbrev  0x00000000000059b5      0x242 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
  .debug_abbrev  0x0000000000005bf7      0x1e8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clz.o)
 
-.debug_loc      0x0000000000000000     0xac0b
+.debug_loc      0x0000000000000000     0xabc9
  .debug_loc     0x0000000000000000      0x7d6 build/gd32vf103_adc.o
  .debug_loc     0x00000000000007d6      0xd54 build/gd32vf103_dma.o
  .debug_loc     0x000000000000152a       0xe7 build/gd32vf103_eclic.o
@@ -2869,17 +2869,17 @@ OUTPUT(build/gd32vf103.elf elf32-littleriscv)
  .debug_loc     0x000000000000774f      0x4ec build/usbd_transc.o
  .debug_loc     0x0000000000007c3b       0x58 build/adc.o
  .debug_loc     0x0000000000007c93      0x32e build/lioonewire.o
- .debug_loc     0x0000000000007fc1      0x400 build/main.o
- .debug_loc     0x00000000000083c1      0x83c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
- .debug_loc     0x0000000000008bfd      0x758 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
- .debug_loc     0x0000000000009355      0x125 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
- .debug_loc     0x000000000000947a      0x125 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
- .debug_loc     0x000000000000959f      0x5e4 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
- .debug_loc     0x0000000000009b83      0xbdf c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
- .debug_loc     0x000000000000a762      0x12d c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
- .debug_loc     0x000000000000a88f      0x1ac c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
- .debug_loc     0x000000000000aa3b      0x165 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
- .debug_loc     0x000000000000aba0       0x6b c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
+ .debug_loc     0x0000000000007fc1      0x3be build/main.o
+ .debug_loc     0x000000000000837f      0x83c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
+ .debug_loc     0x0000000000008bbb      0x758 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
+ .debug_loc     0x0000000000009313      0x125 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
+ .debug_loc     0x0000000000009438      0x125 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
+ .debug_loc     0x000000000000955d      0x5e4 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
+ .debug_loc     0x0000000000009b41      0xbdf c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
+ .debug_loc     0x000000000000a720      0x12d c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
+ .debug_loc     0x000000000000a84d      0x1ac c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
+ .debug_loc     0x000000000000a9f9      0x165 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
+ .debug_loc     0x000000000000ab5e       0x6b c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
 
 .debug_aranges  0x0000000000000000     0x1068
  .debug_aranges
@@ -2975,7 +2975,7 @@ OUTPUT(build/gd32vf103.elf elf32-littleriscv)
  .debug_aranges
                 0x0000000000001050       0x18 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clz.o)
 
-.debug_ranges   0x0000000000000000     0x1610
+.debug_ranges   0x0000000000000000     0x1608
  .debug_ranges  0x0000000000000000      0x130 build/gd32vf103_adc.o
  .debug_ranges  0x0000000000000130       0xd8 build/gd32vf103_dma.o
  .debug_ranges  0x0000000000000208       0x40 build/gd32vf103_eclic.o
@@ -3008,20 +3008,20 @@ OUTPUT(build/gd32vf103.elf elf32-littleriscv)
  .debug_ranges  0x0000000000000f10       0x40 build/usbd_transc.o
  .debug_ranges  0x0000000000000f50       0x10 build/adc.o
  .debug_ranges  0x0000000000000f60       0xb0 build/lioonewire.o
- .debug_ranges  0x0000000000001010       0x78 build/main.o
- .debug_ranges  0x0000000000001088       0x20 build/entry.o
- .debug_ranges  0x00000000000010a8      0x140 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
- .debug_ranges  0x00000000000011e8       0xa8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
- .debug_ranges  0x0000000000001290       0x60 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
- .debug_ranges  0x00000000000012f0       0x60 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
- .debug_ranges  0x0000000000001350       0xa8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
- .debug_ranges  0x00000000000013f8      0x140 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
- .debug_ranges  0x0000000000001538       0x18 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
- .debug_ranges  0x0000000000001550       0x50 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
- .debug_ranges  0x00000000000015a0       0x50 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
- .debug_ranges  0x00000000000015f0       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
+ .debug_ranges  0x0000000000001010       0x70 build/main.o
+ .debug_ranges  0x0000000000001080       0x20 build/entry.o
+ .debug_ranges  0x00000000000010a0      0x140 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
+ .debug_ranges  0x00000000000011e0       0xa8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
+ .debug_ranges  0x0000000000001288       0x60 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
+ .debug_ranges  0x00000000000012e8       0x60 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
+ .debug_ranges  0x0000000000001348       0xa8 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
+ .debug_ranges  0x00000000000013f0      0x140 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
+ .debug_ranges  0x0000000000001530       0x18 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
+ .debug_ranges  0x0000000000001548       0x50 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
+ .debug_ranges  0x0000000000001598       0x50 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
+ .debug_ranges  0x00000000000015e8       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
 
-.debug_line     0x0000000000000000    0x161f3
+.debug_line     0x0000000000000000    0x1627e
  .debug_line    0x0000000000000000     0x14a3 build/gd32vf103_adc.o
  .debug_line    0x00000000000014a3     0x112f build/gd32vf103_dma.o
  .debug_line    0x00000000000025d2      0x34e build/gd32vf103_eclic.o
@@ -3054,20 +3054,20 @@ OUTPUT(build/gd32vf103.elf elf32-littleriscv)
  .debug_line    0x0000000000010ca8      0x893 build/usbd_transc.o
  .debug_line    0x000000000001153b      0x3c3 build/adc.o
  .debug_line    0x00000000000118fe      0x6a1 build/lioonewire.o
- .debug_line    0x0000000000011f9f      0x945 build/main.o
- .debug_line    0x00000000000128e4      0x189 build/start.o
- .debug_line    0x0000000000012a6d       0xe5 build/entry.o
- .debug_line    0x0000000000012b52      0x931 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
- .debug_line    0x0000000000013483      0x760 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
- .debug_line    0x0000000000013be3      0x2e9 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
- .debug_line    0x0000000000013ecc      0x2e9 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
- .debug_line    0x00000000000141b5      0x666 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
- .debug_line    0x000000000001481b      0x97e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
- .debug_line    0x0000000000015199      0x207 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
- .debug_line    0x00000000000153a0      0x2fb c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
- .debug_line    0x000000000001569b      0x2f6 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
- .debug_line    0x0000000000015991      0x472 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
- .debug_line    0x0000000000015e03      0x3f0 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clz.o)
+ .debug_line    0x0000000000011f9f      0x9d0 build/main.o
+ .debug_line    0x000000000001296f      0x189 build/start.o
+ .debug_line    0x0000000000012af8       0xe5 build/entry.o
+ .debug_line    0x0000000000012bdd      0x931 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
+ .debug_line    0x000000000001350e      0x760 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
+ .debug_line    0x0000000000013c6e      0x2e9 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
+ .debug_line    0x0000000000013f57      0x2e9 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
+ .debug_line    0x0000000000014240      0x666 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
+ .debug_line    0x00000000000148a6      0x97e c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
+ .debug_line    0x0000000000015224      0x207 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
+ .debug_line    0x000000000001542b      0x2fb c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
+ .debug_line    0x0000000000015726      0x2f6 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
+ .debug_line    0x0000000000015a1c      0x472 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
+ .debug_line    0x0000000000015e8e      0x3f0 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clz.o)
 
 .debug_str      0x0000000000000000     0x5af3
  .debug_str     0x0000000000000000      0x854 build/gd32vf103_adc.o
@@ -3404,7 +3404,7 @@ OUTPUT(build/gd32vf103.elf elf32-littleriscv)
  .riscv.attributes
                 0x0000000000000d3d       0x2b c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/rv32imac/ilp32\libc_nano.a(lib_a-nano-vfprintf_i.o)
 
-.debug_frame    0x0000000000000000     0x23f0
+.debug_frame    0x0000000000000000     0x23f8
  .debug_frame   0x0000000000000000      0x288 build/gd32vf103_adc.o
  .debug_frame   0x0000000000000288      0x1c0 build/gd32vf103_dma.o
  .debug_frame   0x0000000000000448       0x90 build/gd32vf103_eclic.o
@@ -3437,17 +3437,17 @@ OUTPUT(build/gd32vf103.elf elf32-littleriscv)
  .debug_frame   0x0000000000001e74      0x10c build/usbd_transc.o
  .debug_frame   0x0000000000001f80       0x38 build/adc.o
  .debug_frame   0x0000000000001fb8      0x15c build/lioonewire.o
- .debug_frame   0x0000000000002114       0xe0 build/main.o
- .debug_frame   0x00000000000021f4       0x40 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
- .debug_frame   0x0000000000002234       0x4c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
- .debug_frame   0x0000000000002280       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
- .debug_frame   0x00000000000022a0       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
- .debug_frame   0x00000000000022c0       0x48 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
- .debug_frame   0x0000000000002308       0x3c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
- .debug_frame   0x0000000000002344       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
- .debug_frame   0x0000000000002364       0x38 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
- .debug_frame   0x000000000000239c       0x34 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
- .debug_frame   0x00000000000023d0       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
+ .debug_frame   0x0000000000002114       0xe8 build/main.o
+ .debug_frame   0x00000000000021fc       0x40 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(addsf3.o)
+ .debug_frame   0x000000000000223c       0x4c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(divsf3.o)
+ .debug_frame   0x0000000000002288       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(gesf2.o)
+ .debug_frame   0x00000000000022a8       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(lesf2.o)
+ .debug_frame   0x00000000000022c8       0x48 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(mulsf3.o)
+ .debug_frame   0x0000000000002310       0x3c c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(subsf3.o)
+ .debug_frame   0x000000000000234c       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(fixsfsi.o)
+ .debug_frame   0x000000000000236c       0x38 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatsisf.o)
+ .debug_frame   0x00000000000023a4       0x34 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(floatunsisf.o)
+ .debug_frame   0x00000000000023d8       0x20 c:/users/abdul/onedrive/documents/toolchain-gd32v-v202-win/compiler/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/rv32imac/ilp32\libgcc.a(_clzsi2.o)
 
 Cross Reference Table
 
